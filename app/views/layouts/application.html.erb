@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Flipcoin is a new cryptocurrency token that allows users easier access to Coinflip, a Chicagoland bitcoin ATM.">
+  <meta name="description" content="Flipcoin is a new cryptocurrency token that allows users easier access to Coinflip, a Chicagoland bitcoin ATM.">
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="Christopher Li">
-	<title>Flipcoin - ATM tokens</title>
-    <%= csrf_meta_tags %>
+  <title><%= yield(:title) %> | Flipcoin - ATM tokens</title>
+  <%= csrf_meta_tags %>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
     <%= yield %>
   </body>
 </html>

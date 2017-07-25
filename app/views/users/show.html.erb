@@ -1,8 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% provide(:title, @user.firstName + " " + @user.lastName ) %>
+
+<!-- <p id="notice"><%= notice %></p> -->
 
 <p>
   <strong>Name:</strong>
-  <%= @user.firstName %> <%= @user.lastName %>
+  <%= @user.firstName + " " + @user.lastName %>
 </p>
 
 <p>
