@@ -1,37 +1,48 @@
 <body id="homebody">
 <!-- Navigation bar -->
-<div class="header fixed-header">
-	<div class="nav-container">
-		<div class="logo">
-			<a href="#">
-				<%= image_tag("coinflip-coin@.5x.png", :alt => "") %>
-			</a>
-		</div>
-		<div class="navigation">
-			<ul>
-				<li><a href="#">Element 1</a></li>
-				<li><a href="/login">Login</a></li>
-				<li><a href="/signup">Sign Up</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
+	<nav class="navbar">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header navbar-default">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "") %>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#team">Our Team</a></li>
+					<li><a href="/login" class="login-nav">Login</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
 <div class="main-outer text-center">
 	<!-- Home Banner -->
-	<div id="particles-js"></div>
+	<div id="particles-js" style="background-position: 50% 50%;"></div>
 	<div class="full-page-banner">
 		<div class="introduction-content max-size">
 			<div class="container">
-				<div class="logo">
-					<a href="#">
-						<%= image_tag("coinflip-logo.png", :alt => "") %>
-					</a>
+				<%= image_tag("coinflip-logo.png", :alt => "", :class => "logo") %>
+				<div class="countdown-holder">
+					<div class="countdown">
+						16 : 23 : 15 : 00
+					</div>
+					<div class="countdown-label">
+						days hours min sec
+					</div>
+					<a href="/signup" class="join-button">Join Us</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- About us section -->
-	<div class="about-us">
+	<div class="about-us-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -43,6 +54,275 @@
 		</div>
 	</div>
 	<div class="contact-us"></div>
+	<!-- Team section -->
+	<div class="team-section" id="team">
+		<h2>Our Team</h2>
+		<div class="container">
+			<div class="row team-row">
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppDaniel-Polotsky.png", :alt => "Daniel Polotsky Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Daniel Polotsky
+								</div>
+								<div class="pp-role">
+									Chief Executive Officer
+								</div>
+							</div>	
+						</div>
+						<div class="pp-description">
+							Daniel graduated from Northwestern University in 2017 with degrees in Economics and Russian Language and Literature. He came up with the idea for CoinFlip in 2014, and has previously held positions at Uber, R.J. O’Brien, Citadel, and Morgan Stanley. Daniel is responsible for idea generation, securing new investment, accounting, and compliance.
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppKris-Dayrit.png", :alt => "Kris Dayrit Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Kris Dayrit
+								</div>
+								<div class="pp-role">
+									Chief Marketing Officer
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Kris owns five popular Chicago electronic cigarette shops, heads an electronic cigarette manufacturing company, and is a practicing nurse. Kris is responsible for building CoinFlip’s brand image, acquiring new locations, and licensing the company’s name to new operators.
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppAlan-Gurevich.png", :alt => "Alan Gurevich Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Alan Gurevich
+								</div>
+								<div class="pp-role">
+									Chief Marketing Officer
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Alan has previous experience in retail, and used to be a top-performing technology salesperson for CDW. He is incredibly tech-savvy, and is responsible for customer service, implementing software upgrades, troubleshooting, and working with our ATM manufacturer to improve functionality and fix bugs.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-dark">
+			<div class="container">
+				<div class="row team-row">
+					<div class="col-sm-4">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-5">
+									<%= image_tag("ppBen-Weiss.png", :alt => "Ben Weiss Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										Ben Weiss
+									</div>
+									<div class="pp-role">
+										Chief Operating Officer
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								Ben graduated from Vanderbilt University in 2017 with a degree in Economics. He previously interned as a law clerk for the Cook County States Attorney’s Office in Chicago. Ben attends to the daily operations of the company, which include cash management, payroll, and data analysis.
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-5">
+									<%= image_tag("ppLarry-Mascolino.png", :alt => "Larry Mascolino Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										Larry Mascolino
+									</div>
+									<div class="pp-role">
+										Project Manager
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								Larry graduated from Wake Forest University in 2017 with degrees in Biology and Entrepreneurship. He was previously a clinical rotation intern at Advocate Illinois Masonic Medical Center. Larry currently assists CoinFlip with daily operations and marketing. 
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-5">
+									<%= image_tag("ppJack-Kasbeer.png", :alt => "Jack Kasbeer Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										Jack Kasbeer
+									</div>
+									<div class="pp-role">
+										Head Developer
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								Jack currently studies Mechanical Engineering at Carnegie Mellon University. He has extensive experience in web development/design, iOS development/design, computer architecture, and systems programming. Jack takes functionality and security very seriously, and has worked diligently on the sale’s smart contracts.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row team-row">
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppJethro-Au.png", :alt => "Jethro Au Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Jethro Au
+								</div>
+								<div class="pp-role">
+									Developer
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Jethro currently studies at Northwestern University with a focus in managerial analytics, machine learning and process design. He has previous experience in systems security testing, predictive analytics, and and data management. Jethro has been an active investor in cryptocurrencies for several years.
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppChristopher-Li.jpeg", :alt => "Christopher Li Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Christopher Li
+								</div>
+								<div class="pp-role">
+									Developer
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Chris graduated from Northwestern University in 2017 with degrees in Economics and Computer Science. He is a previous intern at Facebook and an incoming developer at Snap Inc. Chris is responsible for website maintenance and is assisting with the Solidity smart contracts.
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppMadin-Akpo-Esambe.png", :alt => "Madin Akpo-Esambe Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Madin Akpo-Esambe
+								</div>
+								<div class="pp-role">
+									Marketing
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Madin graduated from Northwestern University in 2017 with degrees in Economics and Organizational Change, and currently works to create growth strategy insights at the The Cambridge Group. Prior to consulting, he held roles on the regulatory and investment sides of finance, working at both The Federal Reserve Bank and Goldman Sachs. 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-dark">
+			<div class="container">
+				<div class="row team-row">
+					<div class="col-sm-4">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-5">
+									<%= image_tag("ppJohn-Mejia.png", :alt => "John Mejia Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										John Mejia
+									</div>
+									<div class="pp-role">
+										Marketing
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								John studies Biomedical Engineering at the University of Illinois at Urbana–Champaign. He is a blockchain investor, enthusiast, and supporter. John is currently Involved in multiple token sale launches, with roles in marketing, compliance and ethical practice.
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-5">
+									<%= image_tag("ppJulia-Ainbinder.png", :alt => "Julia Ainbinder Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										Julia Ainbinder
+									</div>
+									<div class="pp-role">
+										Designer
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								Julia currently studies product design at Carnegie Mellon University. She has been doing freelance design work for over 5 years, and has completed several projects for CoinFlip. Currently, she is an Industrial/UX Design intern at iRobot. She is proficient in the Adobe Suite and Solidworks, and speaks 3 languages.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h2>Advisors</h2>
+		<div class="container">
+			<div class="row team-row">
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppGadi-Cohen.png", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Gadi Cohen
+								</div>
+								<div class="pp-role">
+									Advisor
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Mr. Cohen is an established multi-family real estate developer with over 40 years of experience.  He served as an officer in the Israeli army at a young age and immigrated to the United States when he was 23 years old. He currently manages 186 employees and 16 properties throughout Illinois, Indiana, and Wisconsin. Outside of the US, he owns and operates a diving hotel in Bocas del Toro, Panama. He also owns cacao and mango farms in Peru. 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Footer bar -->
 	<footer>
 		<div class="container">

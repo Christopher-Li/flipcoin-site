@@ -1,3 +1,25 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.login .container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login .row {
+  vertical-align: center;
+}
+
+.login .login-holder {
+  border: 2px solid #F9F9F9;
+  border-radius: 10px;
+  background-color: #DDDDDD;
+  padding: 20px;
+}
+
+.login input {
+  margin-bottom: 10px;
+}

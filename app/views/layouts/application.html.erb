@@ -7,16 +7,19 @@
 	<meta name="robots" content="index, follow">
 	<meta name="author" content="Christopher Li">
   <title><%= yield(:title) %> | Flipcoin - ATM tokens</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <%= csrf_meta_tags %>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'jquery-3.2.1.min', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <% flash.each do |message_type, message| %>
-        <div class="alert alert-<%= message_type %>"><%= message %></div>
-      <% end %>
+      <div class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

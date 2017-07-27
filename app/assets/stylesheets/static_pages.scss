@@ -4169,7 +4169,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
   border: 1px solid transparent;
 }
 @media (min-width: 768px) {
@@ -4496,7 +4496,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
+  // background-color: #f8f8f8;
+  background-color: white;
   border-color: #e7e7e7;
 }
 .navbar-default .navbar-brand {
@@ -6784,6 +6785,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+  font-family: 'Roboto', sans-serif;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -6819,7 +6821,7 @@ Written by Christopher Li
 #homebody {
 	padding: 0;
 	margin: 0;
-	background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), image-url("homebackground.jpg") no-repeat center center;
+	// background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), image-url("homebackground.jpg") no-repeat center center;
 	background-attachment: fixed;
 }
 
@@ -6831,6 +6833,7 @@ Written by Christopher Li
 	position:absolute;
 	height: 100%;
 	width: 100%;
+  background-color: rgba(0,0,0,0.02);
 }
 
 .main-outer {
@@ -6855,9 +6858,9 @@ Written by Christopher Li
 	position: fixed;
 	width: 100%;
 	height: 50px;
-	background-color: rgba(0,0,0,0.2);
-	margin: 10px 0px;
+	background-color: white;
 	z-index: 175;
+  border-bottom: 1px solid #F9F9F9;
 }
 
 .nav-container {
@@ -6866,8 +6869,10 @@ Written by Christopher Li
 	line-height: 50px;
 }
 
-.header .logo {
-	float: left;
+@media (max-width: 768px) {
+  .introduction-content .logo {
+    width: 100%
+  }
 }
 
 .navigation {
@@ -6882,27 +6887,39 @@ Written by Christopher Li
 .navigation ul li a {
 	padding: 5px;
 	text-decoration: none;
-	color: white;
-	border: 1px solid transparent;
+	color: #999999;
 }
 
-.navigation ul li a:hover {
-	border: 1px solid white;
+.login-nav {
+  color: #FBB25A;
 }
 
 .introduction-content {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color:white;
+}
+
+.countdown-holder {
+  margin: auto;
+  z-index: 175;
+  position:absolute;
+  left: 50%;
+}
+
+.countdown, .countdown-label, .join-button {
+  position: relative;
+  left: -50%;
 }
 
 .container {
 	margin: auto;
 }
 
-.about-us	{
-	background-color: rgba(0,0,0,0.2);
+.about-us-section	{
+	// background-color: rgba(0,0,0,0.2);
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), image-url("homebackground.jpg") no-repeat center center;
+  // background-color: #F9F9F9;
 	padding: 30px 0;
 }
 
@@ -6925,8 +6942,62 @@ Written by Christopher Li
 	height: 100%;
 }
 
+.team-section {
+  background-color: #FAFAFA;
+}
 
+.team-section h2 {
+  font-size: 300%;
+  font-weight: bold;
+  padding: 50px 0 20px 0;
+}
 
+.team-row {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.row-dark {
+  background-color: #FFFFFF;
+}
+
+.row-inner {
+  margin-top: 20px
+}
+
+.pp-holder {
+  margin: 0 20px;
+}
+
+.pp-pic-holder {
+  // margin: 0 20px 20px 0;
+  // width: 80px;
+}
+
+.pp {
+  border-radius: 50%;
+  width: 100%;
+  border: 5px solid #FBB25A;
+}
+
+.pp-name {
+  margin: 10px 0;
+  font-size: 110%;
+  font-style: bold;
+  text-align: left;
+}
+
+.pp-role {
+  margin: 10px 0;
+  font-size: 80%;
+  color: #888888;
+  text-align: left;
+}
+
+.pp-description {
+  margin: 20px 0;
+  text-align: left;
+}
 
 
 footer {
