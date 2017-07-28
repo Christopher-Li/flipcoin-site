@@ -4170,7 +4170,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   min-height: 50px;
   // margin-bottom: 20px;
-  border: 1px solid transparent;
+  // border: 1px solid transparent;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -6825,6 +6825,10 @@ Written by Christopher Li
 	background-attachment: fixed;
 }
 
+.navbar a {
+  color: black;
+}
+
 .align-center {
 	vertical-align:center;
 }
@@ -6890,14 +6894,12 @@ Written by Christopher Li
 	color: #999999;
 }
 
-.login-nav {
+#login-nav {
   color: #FBB25A;
 }
 
-.introduction-content {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+.introduction-content .container {
+  padding-top: 125px;
 }
 
 .countdown-holder {
@@ -6910,6 +6912,22 @@ Written by Christopher Li
 .countdown, .countdown-label, .join-button {
   position: relative;
   left: -50%;
+}
+
+.countdown-label {
+  margin-top: 20px;
+  font-size: 150%;
+}
+
+.countdown {
+  font-size: 150%;
+  margin-bottom: 30px;
+}
+
+.join-button {
+  background-color: #FBB25A;
+  padding: 7px 20px;
+  border: 2px solid #717378;
 }
 
 .container {
@@ -6989,7 +7007,7 @@ Written by Christopher Li
 
 .pp-role {
   margin: 10px 0;
-  font-size: 80%;
+  font-size: 75%;
   color: #888888;
   text-align: left;
 }

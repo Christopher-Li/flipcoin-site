@@ -1,7 +1,36 @@
 <% provide(:title, "Edit") %>
 
-<h1>Editing User</h1>
+<div class="signup">
+<div class="container">
+	<div class="row">
+		<div class="signup-holder col-md-6 col-md-offset-3">
+			<%= form_for(@user) do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :firstName %>
+				<%= f.text_field :firstName, class: 'form-control' %>
+				
+				<%= f.label :lastName %>
+				<%= f.text_field :lastName, class: 'form-control' %>
+				
+				<%= f.label :email %>
+				<%= f.text_field :email, class: 'form-control' %>
+				
+				<%= f.label :admin %>
+				<br />
+				<input id="admin_true" name="admin" type="radio" value="true" />
+				<label for="admin_true">True</label>
+				<input id="admin_false" name="admin" type="radio" value="false" />
+				<label for="admin_false">False</label>
+				<br /><br />
 
+		    <%= f.submit "Update my account", class: "btn btn-primary" %>
+			<% end %>
+
+			<p>Existing user? <%= link_to "Login Here!", login_path %></p>
+		</div>
+	</div>
+</div>
+</div>
 <%= render 'form', user: @user %>
 
 <%= link_to 'Show', @user %> |

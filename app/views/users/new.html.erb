@@ -1,32 +1,31 @@
 <% provide(:title, "Sign Up") %>
 
-<h1>New User</h1>
+<div class="signup">
+<div class="container">
+	<div class="row">
+		<div class="signup-holder col-md-6 col-md-offset-3">
+			<%= form_for(@user, url: '/signup') do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :firstName %>
+				<%= f.text_field :firstName, class: 'form-control' %>
+				
+				<%= f.label :lastName %>
+				<%= f.text_field :lastName, class: 'form-control' %>
+				
+				<%= f.label :email %>
+				<%= f.text_field :email, class: 'form-control' %>
 
-<%= form_for(@user, url: '/signup') do |f| %>
-	<%= render 'shared/error_messages' %>
-	<div>
-		<%= f.label :firstName %>
-		<%= f.text_field :firstName %>
-	</div>
-	<div>
-		<%= f.label :lastName %>
-		<%= f.text_field :lastName %>
-	</div>
-	<div>
-		<%= f.label :email %>
-		<%= f.text_field :email %>
-	</div>
-	<div>
-		<%= f.label :password %>
-		<%= f.password_field :password %>
-	</div>
-	<div>
-		<%= f.label :password_confirmation, "Confirmation" %>
-	    <%= f.password_field :password_confirmation %>
-	</div>
-	<div>
-    	<%= f.submit "Create my account", class: "btn btn-primary" %>
-	</div>
-<% end %>
+				<%= f.label :password %>
+				<%= f.password_field :password, class: 'form-control' %>
 
-<%= link_to 'Back', users_path %>
+				<%= f.label :password_confirmation, "Password Confirmation" %>
+			  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+		    <%= f.submit "Create my account", class: "btn btn-primary" %>
+			<% end %>
+
+			<p>Existing user? <%= link_to "Login Here!", login_path %></p>
+		</div>
+	</div>
+</div>
+</div>

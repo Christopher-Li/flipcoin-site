@@ -2,24 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.login .container {
+.login .container, .signup .container {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.login .row {
+.login .row, .signup .row {
   vertical-align: center;
 }
 
-.login .login-holder {
+.login .login-holder, .signup .signup-holder {
   border: 2px solid #F9F9F9;
   border-radius: 10px;
   background-color: #DDDDDD;
   padding: 20px;
 }
 
-.login input {
+.login input, .signup input {
   margin-bottom: 10px;
+}
+
+.login a, .signup a {
+  color: #0000EE;
 }
