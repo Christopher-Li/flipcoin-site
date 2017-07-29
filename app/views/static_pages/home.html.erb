@@ -1,9 +1,14 @@
+<% provide(:title, "Home") %>
+
 <body id="homebody">
+	<script>
+		document.getElementById("application-navbar").remove();
+	</script>
 <!-- Navigation bar -->
-	<nav class="navbar">
+	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header navbar-default">
+	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
 	      </button>
@@ -14,7 +19,11 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#team">Our Team</a></li>
-					<li><a href="/login" id="login-nav">Login</a></li>
+	        <% if current_user %>
+	        	<li><a href="/login" id="login-nav">Profile</a></li>
+	        <% else %>
+						<li><a href="/login" id="login-nav">Login</a></li>
+					<% end %>
 	      </ul>
 	    </div>
 	  </div>
@@ -27,11 +36,11 @@
 			<div class="container">
 				<%= image_tag("flipcoin-logo.png", :alt => "", :class => "logo") %>
 				<div class="countdown-holder">
-					<div class="countdown-label">
+					<p class="countdown-label">
 						Distribution ends in:	
-					</div>
-					<div class="countdown" id="countdown">
-					</div>
+					</p>
+					<p class="countdown" id="countdown">
+					</p>
 					<a href="/signup" class="join-button">Join Us</a>
 				</div>
 			</div>
@@ -323,7 +332,8 @@
 	<footer>
 		<div class="container">
 			<div class="row text-center">
-				<div>© CoinFlip 2017. All Rights Reserved.</div>
+				<p>© CoinFlip 2017. All Rights Reserved.</p>
+				<p>Please direct any questions you may have to flipcoinhelp[at]gmail[dot]com</p>
 			</div>
 		</div>
 	</footer>
@@ -346,9 +356,7 @@
 		document.getElementById("countdown").innerHTML = totalDiff
 
 		setTimeout(displayTime,1000);
-
 	}
-
 	displayTime();
 </script>
 </body>

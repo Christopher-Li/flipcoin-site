@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :logged_in_user, only: [:edit, :update, :show]
+  before_action :if_logged_in_redirect, only: [:new]
+  before_action :user_must_be_admin, only: [:index]
   # GET /users
   # GET /users.json
   def index
@@ -10,6 +12,14 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if current_user && (current_user.admin || current_user.id == params[:id])
+    else
+      # redirect_to current_user
+      logger.debug "redirected"
+      logger.debug "params #{params[:id]}"
+      logger.debug "current_user #{current_user.id}"
+      logger.debug "eq #{current_user.id.to_f == params[:id].to_f}"
+    end
   end
 
   # GET /users/new
@@ -21,8 +31,10 @@ class UsersController < ApplicationController
   def edit
     curr = current_user
     if curr && curr.admin
-    else
+    elsif curr
       redirect_to curr
+    else
+      redirect_to log_in
     end
   end
 
@@ -81,5 +93,28 @@ class UsersController < ApplicationController
 
     def user_params_wa_np
       params.require(:user).permit(:firstName, :lastName, :email, :admin)
+    end
+
+    def logged_in_user
+      unless logged_in?
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      end
+    end
+
+    def if_logged_in_redirect
+      if logged_in?
+        redirect_to current_user
+      end
+    end
+
+    def user_must_be_admin
+      if !current_user
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+      elsif !current_user.admin
+        flash[:danger] = "You must be an admin to view this page."
+        redirect_to current_user
+      end
     end
 end
