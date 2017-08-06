@@ -1,28 +1,11 @@
 <% provide(:title, @user.firstName + " " + @user.lastName ) %>
 
 <!-- <p id="notice"><%= notice %></p> -->
-
-<p>
-  <strong>Name:</strong>
-  <%= @user.firstName + " " + @user.lastName %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
-</p>
-
-<p>
-  <strong>Password:</strong>
-  <%= @user.password %>
-</p>
+<div class="container">
+  <h2 class="greeting">Welcome <%= @user.firstName %></h2>
+  <p>We are currently in Presale. Once we begin distribution, you will find the address to the Crowdsale contract here.</p>
+</div>
 
 <% if current_user.admin %>
-	<%= link_to 'Edit', edit_user_path(@user) %> |
+	<%= link_to 'Edit', edit_user_path(@user) %>
 <% end %>
-<%= link_to 'Home', '/' %>

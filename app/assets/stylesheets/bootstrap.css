@@ -6794,7 +6794,7 @@ html, body{margin:0; padding:0; font-size:15px; line-height:1.6em;}
 .circle{border-radius:50%; background-clip:padding-box;}
 
 
-.btn{display:inline-block; padding:15px 25px 17px; text-transform:uppercase; border:1px solid;}
+.btn{display:inline-block; padding:10px 25px; text-transform:uppercase; border:1px solid;}
 .btn.medium{padding:10px 20px 12px;}
 .btn.small{padding:8px 18px 10px; text-transform:none;}
 

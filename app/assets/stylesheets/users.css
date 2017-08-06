@@ -1,4 +1,12 @@
-// Place all the styles related to the Users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
+.greeting {
+  line-height: 2.3em;
+  font-size: 2.3em;
+  color: #9E6D1D;
+}
+
+p {
+  line-height: 1.2em;
+  font-size: 1.2em;
+  color: #414141; 
+}
