@@ -1,9 +1,7 @@
 <% provide(:title, "Home") %>
+<% provide(:noNav, "Home") %>
 
 <body id="homebody">
-	<script>
-		document.getElementById("application-navbar").remove();
-	</script>
 <!-- Navigation bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
@@ -18,7 +16,10 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#team">Our Team</a></li>
+	        <li><a href="#home">Home</a></li>
+	        <li><a href="#about">About</a></li>
+	        <li><a href="#team">Team</a></li>
+	        <li><a href="/faq">FAQ</a></li>
 	        <% if current_user %>
 	        	<li><a href="/login" id="login-nav">Profile</a></li>
 	        <% else %>
@@ -28,7 +29,7 @@
 	    </div>
 	  </div>
 	</nav>
-<div class="main-outer text-center">
+<div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
 	<div id="particles-js" style="background-position: 50% 50%;"></div>
 	<div class="full-page-banner">
@@ -36,18 +37,25 @@
 			<div class="container">
 				<%= image_tag("flipcoin-logo.png", :alt => "", :class => "logo") %>
 				<div class="countdown-holder">
-					<p class="countdown-label">
-						Distribution ends in:	
-					</p>
-					<p class="countdown" id="countdown">
-					</p>
-					<a href="/signup" class="join-button">Join Us</a>
+					<!-- <div class="image-caption">
+						Slogan
+					</div> -->
+					<div class="countdown-label">
+						Presale ends in:
+					</div>
+					<div class="countdown" id="countdown">
+					</div>
+					<div class="row">
+						<a href="#about" class="col-sm-offset-2 col-sm-2 button">About</a>
+						<a href="/faq" class="col-sm-offset-1 col-sm-2 button">FAQ</a>
+						<a href="/signup" class="col-sm-offset-1 col-sm-2 button">Join Us</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- How it works section -->
-	<div class="how-it-works-section">
+	<div id="about" class="how-it-works-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -184,7 +192,7 @@
 										Jack Kasbeer
 									</div>
 									<div class="pp-role">
-										Head Developer
+										Head Software Engineer
 									</div>
 								</div>
 							</div>
@@ -333,22 +341,49 @@
 		</div>
 	</div>
 	<!-- Footer bar -->
-	<footer>
+	<div id="footer">
 		<div class="container">
-			<div class="row text-center">
-				<p>© CoinFlip 2017. All Rights Reserved.</p>
-				<p>Please direct any questions you may have to flipcoinhelp[at]gmail[dot]com</p>
+			<div class="row">
+				<div class="col-sm-6">
+					<h6 class="title">Contact Us</h6>
+					<ul class="nospace linklist contact">
+		        <li><i class="fa fa-map-marker"></i>
+		          <address>
+		          Illinois, United States of America
+		          </address>
+		        </li>
+		        <li><i class="fa fa-phone"></i>(773)-800-0106</li>
+		        <li><i class="fa fa-envelope-o"></i>info<span class="x">[at]</span>coinflip<span class="x">[dot]</span>tech</li>
+		        <li><i class="fa fa-twitter"></i><a href="https://twitter.com/coinflipatm" class="linki blk">Twitter</a></li>
+		        <li><i class="fa fa-facebook"></i><a href="https://www.facebook.com/coinflipllc/" class="linki blk">Facebook</a></li>
+		      </ul>
+				</div>
+				<div class="col-sm-6">
+					<h6 class="title">Important Links</h6>
+		      <ul class="nospace linklist">
+		        <li><a class="linki blk" href="https://www.youtube.com/watch?v=Ai35-5q_wZIz">What is CoinFlip?</a></li>
+		        <li><a class="linki blk" href="http://thebubbashow.org/bitcoin-atms-make-buying-and-selling-simple/">Daniel &amp; Todd “Bubba” Horwitz talk CoinFlip (Bubba Show)</a></li>
+		        <li><a class="linki blk" href="https://cointelegraph.com/news/coinflip-atms-only-support-btc-not-bcc">CoinFlip's stance on the bitcoin hard fork</a></li>
+		        <li><a class="linki blk" href="https://www.cryptoninjas.net/2017/08/02/coinflip-bitcoin-atm-adds-ether-litecoin-capabilities/">CoinFlip Bitcoin ATMs add Ether and Litecoin capabilities</a></li>
+		      </ul>
+				</div>
 			</div>
+		</div>
+	</div>
+	<footer class="copyrightbar">
+		<div class="container">
+			© GPD Holdings, LLC 2016  FinCEN MSB BSA # 31000077968050
 		</div>
 	</footer>
 </div>
 <%= javascript_include_tag 'particles', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'particles-app', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
 <script>
 	var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;
 	function displayTime(){
 		day = new Date();
-		saleEnd = new Date(2017,7,5,0,0,0,0);
+		saleEnd = new Date(2017,7,15,0,0,0,0);
 		timeDiff = Math.abs(saleEnd.getTime() - day.getTime());
 		diffDay = Math.floor(timeDiff / (1000 * 3600 * 24)); 
 		diffHour = Math.floor(timeDiff / (1000 * 3600)) % 24; 

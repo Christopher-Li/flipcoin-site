@@ -1,7 +1,7 @@
 <!-- 
+Official Flipcoin Website
 Author: Christopher Li
 Github.com/Christopher-Li
-Linkedin.com/in/Christopherli1
 Created: July 2017
  -->
 
@@ -19,40 +19,43 @@ Created: July 2017
   <%= csrf_meta_tags %>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <%= javascript_include_tag 'jquery-3.2.1.min', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <nav id="application-navbar" class="navbar navbar-default">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-          </button>
-          <a href="/">
-            <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
-          </a>
-        </div>
+    <% if yield(:noNav) %>
+      <nav id="application-navbar" class="navbar navbar-default">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a href="/">
+              <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
+            </a>
+          </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right">
-            <% if current_user %>
-              <% if current_user.admin %>
-                <li><%= link_to 'All Users', '/users' %></li>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <% if current_user %>
+                <% if current_user.admin %>
+                  <li><%= link_to 'All Users', '/users' %></li>
+                <% end %>
+                <li><%= link_to 'Profile', current_user %></li>
+                <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+              <% else %>
+                <li><a href="/login">Login</a></li>
               <% end %>
-              <li><%= link_to 'Profile', current_user %></li>
-              <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-            <% else %>
-              <li><a href="/login">Login</a></li>
-            <% end %>
-          </ul>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    <% end %>
     <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>

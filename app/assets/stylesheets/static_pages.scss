@@ -58,6 +58,9 @@ table {
 Written by Christopher Li
 */
 
+*, *::before, *::after{transition:all .3s ease-in-out;}
+#mainav form *{transition:none !important;}
+
 #homebody {
 	padding: 0;
 	margin: 0;
@@ -67,6 +70,14 @@ Written by Christopher Li
 
 .navbar-header a {
   color: black;
+}
+
+.logo {
+  padding: 10px 0px;
+}
+
+.navbar-right {
+  padding: 10px 0px;
 }
 
 .align-center {
@@ -147,9 +158,10 @@ Written by Christopher Li
   z-index: 175;
   position:absolute;
   left: 50%;
+  width: 100%;
 }
 
-.countdown, .countdown-label, .join-button {
+.countdown-holder div {
   position: relative;
   left: -50%;
 }
@@ -166,11 +178,16 @@ Written by Christopher Li
   color: #717378;
 }
 
-.join-button {
-  background-color: #FBB25A;
-  padding: 7px 30px;
-  border: 1px solid #717378;
-  color: #717378;
+.button {
+  background-color: #DFA94F;
+  padding: 10px 40px;
+  color: white;
+  border: 1px solid #DFA94F;
+}
+
+.button:hover {
+  background-color: transparent;
+  color: #FBB25A;
 }
 
 .container {
@@ -260,8 +277,74 @@ Written by Christopher Li
   text-align: left;
 }
 
+/* Footer
+--------------------------------------------------------------------------------------------------------------- */
+#footer {text-align: left;color:#FFFFFF; background-color:#313131; border-color:#DFA94F; line-height:1.6;}
+#footer .title{}
+#footer .linklist li{border-color:#414141;}
 
-footer {
+#footer input, #footer button{border-color:transparent;}
+#footer input{color:#FFFFFF; background-color:#414141;}
+#footer input:focus{border-color:#DFA94F;}
+#footer button{color:#FFFFFF; background-color:#DFA94F;}
+
+#footer{padding:80px 0;}
+
+#footer .title{margin:0 0 50px 0; padding:0; font-size:1.2rem; text-transform:uppercase;}
+
+#footer .linklist li{display:block; margin-bottom:15px; padding:0 0 15px 0; border-bottom:1px solid #414141;}
+#footer .linklist li:last-child{margin:0; padding:0; border:none;}
+#footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
+#footer .linklist li, #footer .linklist li::after{clear:both;}
+
+#footer .contact{}
+#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
+#footer .contact li *{margin:0; padding:0; }
+#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
+
+#footer input, #footer button{border:1px solid;}
+#footer input{display:block; width:100%; padding:8px;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+
+#footer a{color:#9E6D1D;}
+#footer a:hover{color:inherit;}
+
+
+.copyrightbar {
 	background-color: white;
 	padding-top: 50px;
+  padding-bottom: 20px;
+  color: #888888;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+.faqbody {
+
+h1 {
+  line-height: 2.3em;
+  font-size: 2.3em;
+  color: #9E6D1D;
+}
+
+.sections {
+  padding: 30px 0;
+}
+
+.sections h4 {
+  line-height: 1.6em;
+  font-size: 1.6em;
+  color: #DFA94F;
+}
+
+.sections p {
+  line-height: 1.2em;
+  font-size: 1.2em;
+  color: #414141;
+}
+
+a {
+  color: #9E6D1D;
+}
+
 }

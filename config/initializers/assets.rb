@@ -11,6 +11,7 @@ Rails.application.config.assets.precompile += %w( particles.js )
 Rails.application.config.assets.precompile += %w( particles-app.js )
 Rails.application.config.assets.precompile += %w( bootstrap.js )
 Rails.application.config.assets.precompile += %w( jquery-3.2.1.min.js )
+Rails.application.config.assets.precompile += %w( general.js )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
