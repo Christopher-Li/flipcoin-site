@@ -44,6 +44,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.admin = false
     
+
+    logger.debug "User params: #{@user}"
     if @user.save
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
