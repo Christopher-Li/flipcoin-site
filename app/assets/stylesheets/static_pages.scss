@@ -154,6 +154,10 @@ Written by Christopher Li
     padding-top: 150px;
   }
 
+  .image-caption {
+    color: #717378;
+  }
+
   .countdown-holder {
     margin: auto;
     z-index: 175;
@@ -276,6 +280,103 @@ Written by Christopher Li
   .pp-description {
     margin: 20px 0;
     text-align: left;
+  }
+
+  .jump-right-in-section {
+    padding: 50px 0;
+    background-color: #DFA94F;
+  }
+
+  .jri-li {
+    display: inline-block;
+    font-size: 1.6em;
+    border-radius: 5px;
+    margin: 0 10px;
+  }
+  
+  .jri-inner-li {
+    padding: 10px;
+  }
+
+  .slack-link {
+    background-color: #42C299;
+    color: white;
+  }
+
+  .github-link {
+    background-color: #24292E;
+    color: white;
+  }
+
+  .token-sale-link {
+    background-color: white;
+    color: #DFA94F;
+  }
+
+  .what-is-flipcoin-section {
+    padding: 50px 0;
+    text-align: left;
+  }
+
+  .subsection-header {
+    font-size: 3em;
+    color: #DFA94F;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .subsection-header-inverse {
+    font-size: 3em;
+    color: #9E6D1D;
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .subsubsection-header {
+    font-size: 2.5em;
+    color: #DFA94F;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .subsubsection-header-inverse {
+    font-size: 2.5em;
+    color: #9E6D1D;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .paragraph-inverse {
+    color: white;
+  }
+
+  .link-inverse, .paragraph {
+    color: #888888;
+  }
+
+  .link {
+    color: black; 
+  }
+
+  .so-what-is-flipcoin {
+    text-align: left;
+    padding: 50px 0;
+    background-color: #DFA94F;
+  }
+
+  .swif-section {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 10px;
+  }
+
+  .token-sale-terms {
+    text-align: left;
+    color: #888888;
+  }
+
+  .token-sale-terms i {
+    margin: 0px 10px;
   }
 
   /* Footer
