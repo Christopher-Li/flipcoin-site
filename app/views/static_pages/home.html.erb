@@ -61,32 +61,45 @@
 			<div>
 				<a class="github-link jri-li" href="https://github.com/jcksber/flipcoin">
 					<div class="jri-inner-li">
-						<i class="fa fa-github"></i> Github
+						<i class="fa fa-github" target="_blank"></i> GITHUB
 					</div>
 				</a>
 				<a class="slack-link jri-li" href="https://coinflip-team.slack.com/">
 					<div class="jri-inner-li">
-						<i class="fa fa-slack"></i> Slack
+						<i class="fa fa-slack" target="_blank"></i> SLACK
 					</div>
 				</a>
-				<a class="token-sale-link jri-li">
+				<a class="facebook-link jri-li" href="https://www.facebook.com/coinflipatm/">
 					<div class="jri-inner-li">
-						Token Sale
+						<i class="fa fa-facebook" target="_blank"></i> FACEBOOK
+					</div>
+				</a>
+				<a class="twitter-link jri-li" href="https://twitter.com/coinflipatm">
+					<div class="jri-inner-li">
+						<i class="fa fa-twitter" target="_blank"></i> TWITTER
+					</div>
+				</a>
+				<a class="token-sale-link jri-li" target="_blank">
+					<div class="jri-inner-li">
+						TOKEN SALE
 					</div>
 				</a>
 			</div>
-			<h2 class="subsection-header-inverse">FlipCoin Token Sale Documents</h2>
+			<h2 class="subsection-header-inverse">FLIPCOIN TOKEN SALE DOCUMENTATION</h2>
 			<div>
-				<a class="token-sale-link jri-li" href="https://github.com/jcksber/flipcoin">
+				<a class="token-sale-link jri-li" href="https://github.com/jcksber/flipcoin" target="_blank">
 					<div class="jri-inner-li">
-						<i class="fa fa-download"></i> One-Page White Paper
+						<i class="fa fa-download"></i> ONE PAGER
 					</div>
 				</a>
-				<a class="token-sale-link jri-li" href="https://coinflip-team.slack.com/">
-					<div class="jri-inner-li">
-						<i class="fa fa-download"></i> English White Paper
+				<%= link_to "Whitepaper.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
+					<div class="jri-image-holder">
+						<%= image_tag("Whitepaper-img.png", :alt => "Whitepaper image", :class => "jri-image") %>
+						<div class="jri-inner-li">
+							<i class="fa fa-download"></i> FLIPCOIN WHITEPAPER
+						</div>
 					</div>
-				</a>
+				<% end %>
 			</div>
 		</div>
 	</div>
@@ -95,19 +108,17 @@
 		<div class="container">
 			<h2 class="subsection-header">What is CoinFlip?</h2>
 			<br />
-			<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that this exchange of different coins (like Bitcoin and
-			Ether) into fiat currency should be a seamless and intuitive process. We are an
+			<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
+			ether) into fiat currency should be a seamless and intuitive process. We are an
 			established company in the Midwest that adheres to Know Your Customer
 			and Anti-Money Laundering compliance protocols. Our goal is to create a
 			global network of cryptocurrency ATMs that allow users to easily convert their
 			highly-available fiat currency into relatively unobtainable digital assets and
 			vice versa.</p>
-			<br />
 			<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
 			exchanges, ATMs do provide a location where users can take advantage of a
 			quick registration process and the convenience of being able to exchange cash
 			for cryptocurrencies in a matter of minutes.</p>
-			<br />
 			<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
 			components of cryptocurrency exchanges. In order to increase general
 			awareness and encourage mass adoption, these facets need to be optimized.
@@ -148,9 +159,8 @@
 				<div class="col-sm-6">
 					<div class="swif-section">
 						<h3 class="subsubsection-header-inverse">CoinFlip Success</h3>
-						<p class="paragraph-inverse">CoinFlip turns purchasing cryptocurrencies into an easy and straightforward process. What we do is simple; we deploy cryptocurrency ATMs and conduct in-person bitcoin trades, and earn a profit by making a market. </p>
-						<br />
-						<p class="paragraph-inverse">The Skokie, Illinois-based company was officially incorporated in December 2015. Currently, the firm operates 13 ATMs, with locations in Third Lake, Elk Grove Village, Skokie, Lincoln Park, Wicker Park, Pilsen, Garfield Park, Woodlawn, Alsip, Rockford, Champaign, Naperville, and Calumet City.</p>	
+						<p class="paragraph-inverse">The two biggest draws for purchasing FlipCoin are for customers and potential business partners. Paying 100 dollars grants purchasers a bolded( lifetime discount on all CoinFlip purchases). Paying 5000 dollars grants aspiring ATM operators the right tokens <strong>a lifetime 50% reduction in fees for CoinFlip's brand licensing, managed tech support, customer service assistance, and compliance consulting</strong>. </p>
+						<p class="paragraph-inverse">Purchasing these tokens allow for a mutualistic relationship between the buyer and our company. The buyer pays upfront in order to help us expand our operations and make the token more useful, and in return he or she receives an unheard-of discount that can pay for itself in as little as one purchase, or one year in business.</p>
 					</div>
 				</div>
 				<div class="col-sm-6">
@@ -160,14 +170,19 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<%= link_to "Whitepaper.pdf", :class => "read-wp-button col-sm-4 col-sm-offset-4", :target => "_blank" do %>
+					Read The Whitepaper
+				<% end %>
+			</div>
 		</div>
 	</div>
 	<!-- Token Sale Terms section -->
 	<div class="token-sale-terms">
 		<div class="container">
 			<h2 class="subsection-header">Token Sale Terms</h2>
+			<p class="paragraph">Target on token sale: $5 million</p>
 			<p class="paragraph">Target on crowdsale: $5 million</p>
-			<br />
 			<p class="paragraph">Total token supply: 50 million composed of:</p>
 			<ul>
 				<li><i class="fa fa-arrow-right"></i>50% will be used for expansion</li>
@@ -175,11 +190,8 @@
 				<li><i class="fa fa-arrow-right"></i>15% will fund the core team</li>
 				<li><i class="fa fa-arrow-right"></i>10% will be used to globally upgrade software</li>
 			</ul>
-			<br />
 			<p class="paragraph">Ethereum ERC20 Token</p>
 			<p class="paragraph">Purchase methods accepted: BTC and ETH</p>
-			<br />
-			
 		</div>
 	</div>
 	<!-- How to buy section -->
@@ -433,10 +445,68 @@
 		<h2>Advisors</h2>
 		<div class="container">
 			<div class="row team-row">
-				<div class="col-sm-4">
+				<div class="col-sm-12">
 					<div class="pp-holder">
 						<div class="row row-inner">
-							<div class="pp-pic-holder col-xs-5">
+							<div class="pp-pic-holder col-sm-2 col-xs-5">
+								<%= image_tag("ppMike-Marasco.jpg", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Mike Marasco
+								</div>
+								<div class="pp-role">
+									Advisor
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							After 20+ years as experienced manager, leader, intrapreneur, and entrepreneur, Michael joined the full-time faculty (adjunct professor since 1998) of the Northwestern University (NU) McCormick School of Engineering and Applied Sciences in January 2007. Today he is a Clinical Professor and Director of the Farley Center for Entrepreneurship and Innovation (FCEI.)
+							<br /><br />
+							Michael currently serves on the Innovation Advisory Council of HAVI, a $9+ billion company in the analytics, marketing, supply chain, and packaging industries.
+							<br /><br />
+							He also continues to be an early stage investor. He currently sits on the board and/or advises a number of companies including Chimu, Agile Health, and Ullo. He is an angel investor in over 10 companies currently. He was recognized recently by Crain’s Chicago Business and TechWeek as a leader in the Chicago technology ecosystem.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-dark">
+			<div class="container">
+				<div class="row team-row">
+					<div class="col-sm-12">
+						<div class="pp-holder">
+							<div class="row row-inner">
+								<div class="pp-pic-holder col-xs-2">
+									<%= image_tag("ppJoe-Ciccolo.jpg", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
+								</div>
+								<div class="col-xs-7">
+									<div class="pp-name">
+										Joe Ciccolo
+									</div>
+									<div class="pp-role">
+										Advisor
+									</div>
+								</div>
+							</div>
+							<div class="pp-description">
+								Joe is the Founder of BitAML, a compliance advisory firm exclusively serving the bitcoin and digital currency market. BitAML clients include bitcoin ATM operators, exchanges, traders and trading platforms, altcoins, token sales, and token sale platforms.  
+								<br /><br />
+								Prior to launching BitAML, Joe was a founding member and architect of the BSA/AML program of a top 100 U.S.-based online financial institution. He also served as a project manager for a top 20 global bank, where he led several regulatory and AML audit remediation projects, and consulted on the enhancement of existing documentation and record retention procedures. Before entering the field of BSA/AML, Joe held leadership positions within various risk management disciplines, including vendor due diligence, fraud prevention, and corporate investigations.
+								<br /><br />
+								He is a frequent guest speaker at both bitcoin and compliance industry events, and regularly consults with regulators and policymakers.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row team-row">
+				<div class="col-sm-12">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-2">
 								<%= image_tag("ppGadi-Cohen.png", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
 							</div>
 							<div class="col-xs-7">

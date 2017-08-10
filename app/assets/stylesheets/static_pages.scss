@@ -85,6 +85,11 @@ Written by Christopher Li
 }
 
 .staticPagesBody {
+
+  body, html {
+    overflow-x: hidden;
+  }
+
   #particles-js {
   	position:absolute;
   	height: 100%;
@@ -184,10 +189,10 @@ Written by Christopher Li
   }
 
   .button {
-    background-color: #DFA94F;
     padding: 10px 40px;
-    color: white;
     border: 1px solid #DFA94F;
+    background-color: #DFA94F;
+    color: white;
   }
 
   .button:hover {
@@ -238,6 +243,7 @@ Written by Christopher Li
   .team-row {
     padding-top: 20px;
     padding-bottom: 20px;
+    display: relative;
   }
 
   .row-dark {
@@ -284,12 +290,11 @@ Written by Christopher Li
 
   .jump-right-in-section {
     padding: 50px 0;
-    background-color: #DFA94F;
+    background-color: white;
   }
 
   .jri-li {
     display: inline-block;
-    font-size: 1.6em;
     border-radius: 5px;
     margin: 0 10px;
   }
@@ -308,50 +313,84 @@ Written by Christopher Li
     color: white;
   }
 
+  .facebook-link {
+    background-color: #3b5998;
+    color: white;
+  }
+  
+  .twitter-link {
+    background-color: #1DA1F2;
+    color: white;
+  }
+
   .token-sale-link {
-    background-color: white;
-    color: #DFA94F;
+    background-color: #DFA94F;
+    // border: 1px solid #DFA94F;
+    color: white;
+  }
+
+  .jri-image-holder {
+    margin: 10px 40px;
+  }
+
+  .jri-image {
+    margin: 10px;
   }
 
   .what-is-flipcoin-section {
     padding: 50px 0;
     text-align: left;
+    background-color: #F5F5F5;
   }
 
   .subsection-header {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #DFA94F;
     margin: 40px 0;
     text-align: center;
   }
 
   .subsection-header-inverse {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #9E6D1D;
     margin: 40px 0;
     text-align: center;
   }
 
   .subsubsection-header {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #DFA94F;
     margin: 20px 0;
     text-align: center;
   }
 
   .subsubsection-header-inverse {
-    font-size: 2.5em;
+    font-size: 2em;
     color: #9E6D1D;
     margin: 20px 0;
+    text-align:
+    center;
+  }
+
+  .read-wp-button {
+    background-color: white;
+    color: #FBB25A;
+    padding: 10px 40px;
     text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
   }
 
   .paragraph-inverse {
     color: white;
+    margin: 10px 0;
+    font-size: 16px;
   }
 
   .link-inverse, .paragraph {
     color: #888888;
+    margin: 10px 0;
+    font-size: 16px;
   }
 
   .link {
@@ -367,7 +406,8 @@ Written by Christopher Li
   .swif-section {
     border: 1px solid white;
     border-radius: 10px;
-    padding: 20px 10px;
+    padding: 20px 20px;
+    min-height: 450px;
   }
 
   .token-sale-terms {
