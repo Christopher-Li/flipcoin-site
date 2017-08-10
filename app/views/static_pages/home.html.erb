@@ -87,11 +87,14 @@
 			</div>
 			<h2 class="subsection-header-inverse">FLIPCOIN TOKEN SALE DOCUMENTATION</h2>
 			<div>
-				<a class="token-sale-link jri-li" href="https://github.com/jcksber/flipcoin" target="_blank">
-					<div class="jri-inner-li">
+				<%= link_to "Onepager.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
+					<div class="jri-image-holder">
+						<%= image_tag("Onepager-img.png", :alt => "One Pager image", :class => "jri-image") %>
+						<div class="jri-inner-li">
 						<i class="fa fa-download"></i> ONE PAGER
 					</div>
-				</a>
+					</div>
+				<% end %>
 				<%= link_to "Whitepaper.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
 					<div class="jri-image-holder">
 						<%= image_tag("Whitepaper-img.png", :alt => "Whitepaper image", :class => "jri-image") %>
