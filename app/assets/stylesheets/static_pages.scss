@@ -189,11 +189,11 @@ Written by Christopher Li
   }
 
   .button {
-    padding: 10px 40px;
+    padding: 10px 30px;
     border: 1px solid #DFA94F;
     background-color: #DFA94F;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .button:hover {
@@ -430,6 +430,15 @@ Written by Christopher Li
   .lg-bubba {
     background-color: rgba(0,0,0,0.2);
     padding: 2px;
+  }
+
+  .customer-testimonial {
+    background-color: #FAFAFA;
+    padding-bottom: 30px;
+  }
+
+  .ct-name {
+    text-align: center;
   }
 
   /* Footer
