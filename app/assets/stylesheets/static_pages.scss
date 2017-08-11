@@ -297,6 +297,7 @@ Written by Christopher Li
     display: inline-block;
     border-radius: 5px;
     margin: 0 10px;
+    margin-bottom: 30px;
   }
   
   .jri-inner-li {
@@ -357,24 +358,9 @@ Written by Christopher Li
     text-align: center;
   }
 
-  .subsubsection-header {
-    font-size: 2em;
-    color: #DFA94F;
-    margin: 20px 0;
-    text-align: center;
-  }
-
-  .subsubsection-header-inverse {
-    font-size: 2em;
-    color: #9E6D1D;
-    margin: 20px 0;
-    text-align:
-    center;
-  }
-
   .read-wp-button {
     background-color: white;
-    color: #FBB25A;
+    color: #888888;
     padding: 10px 40px;
     text-align: center;
     margin-top: 30px;
@@ -394,20 +380,13 @@ Written by Christopher Li
   }
 
   .link {
-    color: black; 
+    color: #DFA94F;
   }
 
   .so-what-is-flipcoin {
     text-align: left;
     padding: 50px 0;
     background-color: #DFA94F;
-  }
-
-  .swif-section {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 20px 20px;
-    min-height: 450px;
   }
 
   .token-sale-terms {
@@ -418,6 +397,10 @@ Written by Christopher Li
 
   .token-sale-terms i {
     margin: 0px 10px;
+  }
+
+  .bold {
+    color: #9E6D1D;
   }
 
   /* Footer
