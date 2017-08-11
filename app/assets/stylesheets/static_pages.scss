@@ -193,6 +193,7 @@ Written by Christopher Li
     border: 1px solid #DFA94F;
     background-color: #DFA94F;
     color: white;
+    font-size: 12px;
   }
 
   .button:hover {
@@ -232,6 +233,7 @@ Written by Christopher Li
 
   .team-section {
     background-color: #FAFAFA;
+    padding-top:20px;
   }
 
   .team-section h2 {
@@ -258,11 +260,6 @@ Written by Christopher Li
     margin: 0 20px;
   }
 
-  .pp-pic-holder {
-    // margin: 0 20px 20px 0;
-    // width: 80px;
-  }
-
   .pp {
     border-radius: 50%;
     width: 100%;
@@ -286,6 +283,7 @@ Written by Christopher Li
   .pp-description {
     margin: 20px 0;
     text-align: left;
+    color: #888888;
   }
 
   .jump-right-in-section {
@@ -413,6 +411,7 @@ Written by Christopher Li
     text-align: left;
     color:#888888;
     min-height:200px;
+    margin: 0 20px;
   }
 
   .news-block:hover {
@@ -464,18 +463,22 @@ Written by Christopher Li
 
   #footer a{color:#9E6D1D;}
   #footer a:hover{color:inherit;}
+
+  .copyrightbar {
+  	background-color: white;
+  	padding-top: 50px;
+    padding-bottom: 20px;
+    color: #888888;
+    font-size: 1.4em;
+    line-height: 1.4em;
+  }
+
+  .disclaimer {
+    color: #888888;
+    margin-top: 10px;
+    font-size: 12px;
+  }
 }
-
-
-.copyrightbar {
-	background-color: white;
-	padding-top: 50px;
-  padding-bottom: 20px;
-  color: #888888;
-  font-size: 1.4em;
-  line-height: 1.4em;
-}
-
 .faqbody {
 
 h1 {

@@ -10,20 +10,21 @@
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
 	      </button>
-	      <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
+	      <a href="#home">
+	      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
+	      </a>
 	    </div>
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#home">Home</a></li>
 	        <li><a href="#about">About</a></li>
+	        <li><a href="#token-sale">Token Sale</a></li>
 	        <li><a href="#team">Team</a></li>
-	        <li><a href="/faq">FAQ</a></li>
 	        <% if current_user %>
 	        	<li><a href="/login" id="login-nav">Profile</a></li>
 	        <% else %>
-						<li><a href="/login" id="login-nav">Login</a></li>
+						<li><a href="/login" id="login-nav">Register</a></li>
 					<% end %>
 	      </ul>
 	    </div>
@@ -47,15 +48,15 @@
 					</div>
 					<div class="row">
 						<a href="#about" class="col-sm-offset-2 col-sm-2 button">About</a>
-						<a href="/faq" class="col-sm-offset-1 col-sm-2 button">FAQ</a>
-						<a href="/signup" class="col-sm-offset-1 col-sm-2 button">Join Us</a>
+						<a href="#token-sale" class="col-sm-offset-1 col-sm-2 button">Token Sale</a>
+						<%= link_to "Whitepaper", "Whitepaper.pdf", :class => "col-sm-offset-1 col-sm-2 button", :target => "_blank" %>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Jump Right in Section -->
-	<div class="jump-right-in-section">
+	<div class="jump-right-in-section" id="about">
 		<div class="container">
 			<h2 class="subsection-header-inverse">Jump Right in</h2>
 			<div>
@@ -107,30 +108,30 @@
 		</div>
 	</div>
 	<!-- What is Flipcoin Section -->
-	<div class="what-is-flipcoin-section" id="about">
+	<div class="what-is-flipcoin-section" id="token-sale">
 		<div class="container">
 			<h2 class="subsection-header">What is CoinFlip?</h2>
-			<br />
-			<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
-			ether) into fiat currency should be a seamless and intuitive process. We are an
-			established company in the Midwest that adheres to Know Your Customer
-			and Anti-Money Laundering compliance protocols. Our goal is to create a
-			global network of cryptocurrency ATMs that allow users to easily convert their
-			highly-available fiat currency into relatively unobtainable digital assets and
-			vice versa.</p>
-			<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
-			exchanges, ATMs do provide a location where users can take advantage of a
-			quick registration process and the convenience of being able to exchange cash
-			for cryptocurrencies in a matter of minutes.</p>
-			<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
-			components of cryptocurrency exchanges. In order to increase general
-			awareness and encourage mass adoption, these facets need to be optimized.
-			These are core values at CoinFlip as we are actively trying to expand the ATM
-			network across the country and eventually, the globe. People should be able
-			to make bitcoin and other cryptocurrency purchases without hassle and time
-			constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
-			versa, the faster the overall crypto sphere will grow.</p>
-			<br />
+			<div class="row">
+				<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
+				ether) into fiat currency should be a seamless and intuitive process. We are an
+				established company in the Midwest that adheres to Know Your Customer
+				and Anti-Money Laundering compliance protocols. Our goal is to create a
+				global network of cryptocurrency ATMs that allow users to easily convert their
+				highly-available fiat currency into relatively unobtainable digital assets and
+				vice versa.</p>
+				<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
+				exchanges, ATMs do provide a location where users can take advantage of a
+				quick registration process and the convenience of being able to exchange cash
+				for cryptocurrencies in a matter of minutes.</p>
+				<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
+				components of cryptocurrency exchanges. In order to increase general
+				awareness and encourage mass adoption, these facets need to be optimized.
+				These are core values at CoinFlip as we are actively trying to expand the ATM
+				network across the country and eventually, the globe. People should be able
+				to make bitcoin and other cryptocurrency purchases without hassle and time
+				constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
+				versa, the faster the overall crypto sphere will grow.</p>
+			</div>
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="responsive-embed responsive-embed-16by9">
@@ -485,7 +486,7 @@
 					<div class="col-sm-12">
 						<div class="pp-holder">
 							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-2">
+								<div class="pp-pic-holder col-sm-2 col-xs-5">
 									<%= image_tag("ppJoe-Ciccolo.jpg", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
 								</div>
 								<div class="col-xs-7">
@@ -514,7 +515,7 @@
 				<div class="col-sm-12">
 					<div class="pp-holder">
 						<div class="row row-inner">
-							<div class="pp-pic-holder col-xs-2">
+							<div class="pp-pic-holder col-sm-2 col-xs-5">
 								<%= image_tag("ppGadi-Cohen.png", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
 							</div>
 							<div class="col-xs-7">
@@ -608,6 +609,7 @@
 	<footer class="copyrightbar">
 		<div class="container">
 			© GPD Holdings, LLC 2016  FinCEN MSB BSA # 31000077968050
+			<p class="disclaimer">These tokens do not have any value outside of CoinFlip’s network, do not indicate how well or poorly CoinFlip is performing, do not represent an ownership stake in CoinFlip, and should not be expected to rise in price/value over time.</p
 		</div>
 	</footer>
 </div>
