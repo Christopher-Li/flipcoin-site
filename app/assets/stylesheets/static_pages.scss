@@ -403,6 +403,36 @@ Written by Christopher Li
     color: #9E6D1D;
   }
 
+  .latest-news {
+    padding: 40px 0;
+  }
+
+  .news-block {
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    text-align: left;
+    color:#888888;
+    min-height:200px;
+  }
+
+  .news-block:hover {
+    box-shadow:0 0 6px 0 rgba(0, 0, 0, 0.5)
+  }
+
+  .news-article-title {
+    margin: 20px 0;
+    font-size: 1.2em;
+  }
+
+  .news-date {
+    font-size: .8em;
+  }
+
+  .lg-bubba {
+    background-color: rgba(0,0,0,0.2);
+    padding: 2px;
+  }
+
   /* Footer
   --------------------------------------------------------------------------------------------------------------- */
   #footer {text-align: left;color:#FFFFFF; background-color:#313131; border-color:#DFA94F; line-height:1.6;}
