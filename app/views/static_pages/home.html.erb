@@ -24,7 +24,7 @@
 	        <% if current_user %>
 	        	<li><a href="/login" id="login-nav">Profile</a></li>
 	        <% else %>
-						<li><a href="/login" id="login-nav">Register</a></li>
+						<li><a href="/register" id="login-nav">Register</a></li>
 					<% end %>
 	      </ul>
 	    </div>
@@ -49,7 +49,7 @@
 					<div class="row">
 						<a href="#about" class="col-sm-offset-2 col-sm-2 button">About</a>
 						<a href="#token-sale" class="col-sm-offset-1 col-sm-2 button">Token Sale</a>
-						<%= link_to "Whitepaper", "Whitepaper.pdf", :class => "col-sm-offset-1 col-sm-2 button", :target => "_blank" %>
+						<%= link_to "White Paper", "Whitepaper.pdf", :class => "col-sm-offset-1 col-sm-2 button", :target => "_blank" %>
 					</div>
 				</div>
 			</div>
@@ -100,7 +100,7 @@
 					<div class="jri-image-holder">
 						<%= image_tag("Whitepaper-img.png", :alt => "Whitepaper image", :class => "jri-image") %>
 						<div class="jri-inner-li">
-							<i class="fa fa-download"></i> FLIPCOIN WHITEPAPER
+							<i class="fa fa-download"></i> FLIPCOIN WHITE PAPER
 						</div>
 					</div>
 				<% end %>
@@ -178,8 +178,14 @@
 				<br />
 			</div>
 			<div class="row">
+				<%= link_to "Whitepaper.pdf", :class => "read-wp-button col-sm-3 col-sm-offset-2", :target => "_blank" do %>
+					Read The White Paper
+				<% end %>
+				<a href="/register" class="read-wp-button col-sm-3 col-sm-offset-2">
+					
+				</a>
 				<%= link_to "Whitepaper.pdf", :class => "read-wp-button col-xs-4 col-xs-offset-4", :target => "_blank" do %>
-					Read The Whitepaper
+					Read The White Paper
 				<% end %>
 			</div>
 		</div>
@@ -329,7 +335,7 @@
 										Jack Kasbeer
 									</div>
 									<div class="pp-role">
-										Head Software Engineer
+										Head Developer
 									</div>
 								</div>
 							</div>
@@ -354,7 +360,7 @@
 									Jethro Au
 								</div>
 								<div class="pp-role">
-									Developer
+									Ethereum Developer
 								</div>
 							</div>
 						</div>
@@ -374,7 +380,7 @@
 									Christopher Li
 								</div>
 								<div class="pp-role">
-									Developer
+									Web Developer
 								</div>
 							</div>
 						</div>
@@ -574,7 +580,7 @@
 			<h2 class="subsection-header">Customer Testimonials</h2>
 			<div class="row row-inner">
 				<div class="pp-pic-holder col-sm-2">
-					<%= image_tag("ppGenevieve-Thiers.jpg", :alt => "Genevieve Thiers Profile Picture", :class => "pp") %>
+					<%= image_tag("ppTodd-Horberg.png", :alt => "Todd Horberg Profile Picture", :class => "pp") %>
 					<div class="ct-name">
 						Todd Horberg
 					</div>
