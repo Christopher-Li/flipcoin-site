@@ -28,6 +28,8 @@ hr { visibility: hidden; padding: 6px 0; }
 }
 .subsection-header { line-height: 1.3em !important; }
 
+.m-bottom-40 { margin-bottom: 40px; }
+
 
 /* SPLASH
  ****************************************/
@@ -179,6 +181,15 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding: 3px;
 	color: #888;
 }
+#sale-terms h4 {
+    color: #777;
+    font-size: 1.5em;
+    padding-left: 3px;
+    margin-bottom: 28px;
+}
+#sale-terms h4 > a {
+	font-size: 10px;
+}
 
 
 
@@ -310,6 +321,11 @@ and (min-width : 768px) {
 	.kamikaze_btn {
 		display: inline-block;
 		margin: 10px 20px;
+	}
+
+	#what-is-flipcoin .kamikaze_btn {
+		display: block;
+		margin: 20px auto;
 	}
 
 
