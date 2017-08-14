@@ -1,5 +1,4 @@
 /*A KAMIKAZE PRODUCTION IN FULL IN THE LINES BELOW DESTRUCTION UNFOLDS 8.13.17*/
-
 /*
  * DESIGNED FOR MOBILE FROM THE START,
  * STYLES CASCADE FROM THERE, ONTO LARGER 
@@ -18,20 +17,27 @@ and (min-width : 321px) {}*/
 /*@media only screen 
 and (max-width : 320px) {}*/
 
+
 hr { visibility: hidden; padding: 6px 0; }
+.paragraph {
+	font-size: 1.2em;
+	line-height: 1.4em;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+}
+.subsection-header { line-height: 1.3em !important; }
+
 
 /* SPLASH
  ****************************************/
-.full-page-banner > .introduction-content > .container {
- 	padding-top: 70px !important;
-}
-
+#particles-js { height: 90%; }
+#home > .full-page-banner { height: 95%; }
+.full-page-banner > .introduction-content > .container { padding-top: 70px !important; }
 nav .navbar-toggle.collapsed i { display:block; }
 nav .navbar-header button { margin: 15px !important; }
 nav .navbar-header a img { margin: auto 15px !important; }
 
-#particles-js { height: 90%; }
-#home > .full-page-banner { height: 95%; }
 #landing-logo,
 #landing-caption {
 	width: 300px;
@@ -41,14 +47,16 @@ nav .navbar-header a img { margin: auto 15px !important; }
  	margin-bottom: 10px;
 }
 #logo-caption {
-	font-size: 1.4em;
+	width: 300px;
+	margin: 0 auto;
+	font-size: 1.7em;
 	color: #666;
 	line-height: 1.3em;
-	margin-top: 8px; margin-top: 8px; margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 #ctdn-label {
-	font-size: 2.0em;
+	font-size: 1.7em;
 	padding-bottom: 10px;
 }
 #countdown {
@@ -83,7 +91,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	background-color:transparent; 
 	border-color:#DFA94F;
 }
-
 
 
 /* ABOUT
@@ -150,13 +157,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #what-is-flipcoin .subsection-header {
 	font-size: 2.4em !important;
 }
-#what-is-flipcoin .paragraph {
-	font-size: 1.2em;
-	line-height: 1.4em;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 5px;
-}
 #what-is-flipcoin .kamikaze_btn a {
 	margin-top: 20px !important;
 }
@@ -172,13 +172,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 #sale-terms .subsection-header {
 	font-size: 2.4em !important;
-}
-#sale-terms .paragraph {
-	font-size: 1.2em;
-	line-height: 1.4em;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 5px;
 }
 #sale-terms ul li {
 	font-size: 1.1em;
@@ -202,30 +195,39 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin-top: 70px !important;
 	margin-bottom: 10px !important;
 }
-#team .paragraph {
-	font-size: 1.2em;
-	line-height: 1.4em;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 5px;
-}
 #team .team-row {
 	padding: 0 !important;
 }
 #team .pp-holder {
 	padding: 3px 0;
 }
+#team .pp-holder .pp-pic-holder {
+	margin: 0 auto;
+	width: 200px; height: auto;
+}
+#team .pp-holder .pp-info-holder {
+	margin: -11px auto;
+	margin-top: 12px;
+	text-align: center;
+}
 #team .pp-holder .pp-name {
 	font-size: 1.4em;
+}
+#team .pp-holder .pp-name,
+#team .pp-holder .pp-role {
+	text-align: center;
 }
 #team .pp-holder .pp-role {
 	font-size: 1.0em;
 	line-height: 1.1em;
+	color: #9E6D1D;
 }
 #team .pp-holder .pp-description {
 	font-size: 1.0em;
 	line-height: 1.3em;
 	padding: 3px 16px;
+	margin-top: 8px !important;
+	text-align: center;
 }
 
 
@@ -239,13 +241,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 #token-sale .subsection-header {
 	font-size: 2.4em !important;
-}
-#token-sale .paragraph {
-	font-size: 1.2em;
-	line-height: 1.4em;
-	padding-left: 15px;
-	padding-right: 15px;
-	padding-top: 5px;
 }
 #token-sale .responsive-embed {
 	margin: 40px auto;
@@ -263,14 +258,18 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 .customer-testimonial .pp-pic-holder > .ct-name {
-	
+	font-size: 1.35em;
+	margin: 20px auto;
 }
 
 
 
 
-
-
+/* OCD IS REAL */
+@media only screen
+and (min-width: 350px) {
+	#social-links { height: 90px; }
+}
 
 /* iPads(portrait and landscape) + ----------- */
 @media only screen 

@@ -1,0 +1,75 @@
+## CHANGES TO BE MADE ##
+# flipcoinsale.com
+
+
+# August 14, 2017
+
+6. Change "lifetime discount on all CoinFlip purchases" to "lifetime discount on all CoinFlip domestic wire (2% fee) and ATM (3.5% fee) purchases. These fee are roughly 1/5 of what some of our competitors charge."
+7. There are 3 links under "what is flipcoin?" 2 say "read the white paper" and one says nothing. get rid of them.
+8. Token Sale Terms
+
+Token Sale Goal: $5 million
+
+Total token supply: Up to 50 million tokens
+
+An ether or bitcoin wallet address will be displayed upon logging in on the sale’s website on the date of the crowd fund. Contributors will be able to send ether or bitcoin to the address in exchange for FlipCoin tokens for the entire duration of the sale. If you would like to participate, simply register (LINK TO REGISTER).
+
+Summary 
+
+Presale: 10 million tokens at $0.08 per token 
+
+Sale: 30 million tokens at $0.10 per token 
+
+Last Chance: 10 million tokens at $0.12 per token 
+
+The ETH price of the tokens will be locked in one hour prior to the presale. CoinFlip reserves the right to readjust the ETH price in order to align correctly with the above dollar amounts. 
+
+Ethereum ERC20 Token
+
+Purchase methods accepted: BTC and ETH
+
+Pie chart showing what we will be using everything on---
+
+55% Expansion (30% Crypto Inventory, 15% Marketing, 10% New Machines)
+
+ 20% Compliance, Accounting and Legal 
+
+15% Core Team Annual Salary 
+
+10% Software Upgrades
+
+
+9. Change Chris from Chris graduated from Northwestern University in 2017 with degrees in Economics and Computer Science. He is a previous intern at Facebook and an incoming developer at Snap Inc. Chris is responsible for website maintenance and is assisting with the Solidity smart contracts.
+
+to 
+
+Chris graduated from Northwestern University in 2017 with degrees in Economics and Computer Science. He is a previous intern at Facebook and an incoming developer at SNAPCHAT. Chris is responsible for website maintenance DELETION.
+
+
+10. Change John Mejia's School from the University of Illinois at Urbana-Champaign to the University of Illinois
+
+
+11. Advisor Order should be as follows---Joe, Genevieve, Gadi, Michael 
+
+
+12. Change Todd's head to not be so big on mobile version
+
+
+13. "Facebook" link at bottom heads to a broken page
+
+
+***14. "Register" should take a person to filling out "first name (required), last name (required), email (required), phone number, btc address, eth address, and planned purchase amount****. All copies of registration should be sent to daniel@coinflip.tech
+
+
+15. Design/stuff I missed. Potentially escrow?
+
+
+16. Github link doesn't lead anywhere. Also should we add telegraph and other sites like reddit and bitcointalk?
+
+
+17. Make the website (coinflipatms.com) right under flipcoin or somewhere very visible.
+
+
+18. "At CoinFlip, " leads to "coinflip.tech" It should lead to coinflipatms.com
+
+19. We should add a bar showing how much we raised/how much has been pledged
