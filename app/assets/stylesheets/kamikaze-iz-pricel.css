@@ -18,9 +18,13 @@ and (min-width : 321px) {}*/
 and (max-width : 320px) {}*/
 
 
-hr { visibility: hidden; padding: 6px 0; }
+hr { 
+	visibility: hidden; 
+	padding: 0 !important; 
+	margin-top: 0 !important;
+}
 .paragraph {
-	font-size: 1.2em;
+	font-size: 1.2em !important;
 	line-height: 1.4em;
 	padding-left: 15px;
 	padding-right: 15px;
@@ -29,6 +33,15 @@ hr { visibility: hidden; padding: 6px 0; }
 .subsection-header { line-height: 1.3em !important; }
 
 .m-bottom-40 { margin-bottom: 40px; }
+.pp-center {
+	width: 50%; 
+	padding: 0 4px; 
+	margin: 0 auto;
+}
+.x {
+    color: #ddd;
+    font-size: 12px;
+}
 
 
 /* SPLASH
@@ -55,8 +68,17 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	color: #666;
 	line-height: 1.3em;
 	margin-bottom: 50px;
+	left: 0;
 }
 
+.countdown-holder {
+	position: relative !important;
+	margin: 5px auto;
+	left: 0 !important;
+}
+.countdown-holder div {
+	left: 0 !important;
+}
 #ctdn-label {
 	font-size: 1.7em;
 	padding-bottom: 10px;
@@ -67,7 +89,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 #btn-nest {
-	left: 4%;
+	margin: 0 auto;
 }
 .kamikaze_btn a,
 .kamikaze_btn.inv a {
@@ -102,6 +124,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 #about .subsection-header-inverse {
 	color: #DFA94F !important;
+	margin-top: 70px !important;
 }
 #social-links {
 	height: 160px;
@@ -145,10 +168,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 
-
-
-
-
 /* WHAT IS FLIPCOIN?
  ****************************************/
 #what-is-flipcoin {
@@ -162,7 +181,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #what-is-flipcoin .kamikaze_btn a {
 	margin-top: 20px !important;
 }
-
 
 
 /* TOKEN SALE TERMS
@@ -190,8 +208,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #sale-terms h4 > a {
 	font-size: 10px;
 }
-
-
 
 
 /* OUR TEAM
@@ -242,22 +258,19 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 
-
 /* WHAT IS COINFLIP?
  ****************************************/
-#token-sale {
+.jump-right-in-section {
 	background: white;
 	padding-top: 20px !important;
 	padding-bottom: 50px !important;
 }
-#token-sale .subsection-header {
+.jump-right-in-section .subsection-header {
 	font-size: 2.4em !important;
 }
-#token-sale .responsive-embed {
+.jump-right-in-section .responsive-embed {
 	margin: 40px auto;
 }
-
-
 
 
 /* CUSTOMER TESTIMONIAL
@@ -276,6 +289,20 @@ nav .navbar-header a img { margin: auto 15px !important; }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* OCD IS REAL */
 @media only screen
 and (min-width: 350px) {
@@ -285,7 +312,10 @@ and (min-width: 350px) {
 /* iPads(portrait and landscape) + ----------- */
 @media only screen 
 and (min-width : 768px) {
-/* Styles */
+	.paragraph {
+		font-size: 1.2em !important;
+		line-height: 1.5em !important;
+	}
 	#particles-js,
 	#home > .full-page-banner { height: 95%; }
 	.full-page-banner > .introduction-content > .container {
@@ -304,6 +334,7 @@ and (min-width : 768px) {
 		margin-top: 20px;
 		margin-top: 20px;
 		margin-bottom: 30px;
+		width: 530px;
 	}
 
 	#countdown,
@@ -313,6 +344,7 @@ and (min-width : 768px) {
 	#countdown {
 		color: #888;
 		margin-left: 10px;
+		margin-bottom: 25px;
 	}
 	#btn-nest {
 		width: 530px;
@@ -328,11 +360,30 @@ and (min-width : 768px) {
 		margin: 20px auto;
 	}
 
-
-
 	.token-doc,
 	.token-doc a {
 		display: inline-block;
+	}
+
+	#sale-terms h4 {
+		font-size: 1.6em !important;
+	}
+
+	#chart-key {
+		padding-top: 50px;
+	}
+
+	#team .pp-holder .pp-role {
+		font-size: 1.2em;
+	}
+	#team .pp-holder .pp-description {
+		font-size: 1.15em;
+	}
+}
+@media only screen
+and (min-width: 980px) {
+	#chart-key {
+		padding-top: 133px;
 	}
 }
 
@@ -348,9 +399,6 @@ and (min-width : 1224px) {
 and (min-width: 1824px) {
 	
 }
-
-
-
 
 /* iPhone 4 ----------- */
 @media
