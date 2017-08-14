@@ -1,7 +1,9 @@
 <!-- 
 Official Flipcoin Website
 Author: Christopher Li
+        Jack Kasbeer
 Github.com/Christopher-Li
+github.com/jcksber
 Created: July 2017
  -->
 
@@ -9,20 +11,20 @@ Created: July 2017
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Flipcoin is a new cryptocurrency token that allows users easier access to Coinflip, a Chicagoland bitcoin ATM.">
 	<meta name="robots" content="index, follow">
-	<meta name="author" content="Christopher Li">
-  <title><%= yield(:title) %> | FlipCoin - ATM tokens</title>
+	<meta name="author" content="Christopher Li, Jack Kasbeer">
+  <title><%= yield(:title) %> | FlipCoin (ATM) | Official Page</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <%= favicon_link_tag 'favicon.png' %>
   <%= csrf_meta_tags %>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- -->
   <%= javascript_include_tag 'jquery-3.2.1.min', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="assets/stylesheets/kamikaze-iz-pricel.css">
   </head>
 
   <body>
@@ -46,10 +48,15 @@ Created: July 2017
                 <% if current_user.admin %>
                   <li><%= link_to 'All Users', '/users' %></li>
                 <% end %>
+              <% else %>
+                <li><a href="/login">Register</a></li>
+              <% end %>
+              <li><a href="#about">About</a></li>
+              <li><a href="#token-sale">Token Sale</a></li>
+              <li><a href="#team">Team</a></li>
+              <% if current_user %>
                 <li><%= link_to 'Profile', current_user %></li>
                 <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-              <% else %>
-                <li><a href="/login">Login</a></li>
               <% end %>
             </ul>
           </div>
@@ -60,6 +67,8 @@ Created: July 2017
       <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <%= yield %>
+    <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
   </body>
 </html>

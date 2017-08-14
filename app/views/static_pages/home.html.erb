@@ -9,6 +9,7 @@
 	    <div class="navbar-header">
 	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
+	        <i class="fa fa-navicon" id="ham"></i>
 	      </button>
 	      <a href="#home">
 	      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
@@ -20,36 +21,47 @@
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#about">About</a></li>
 	        <li><a href="#token-sale">Token Sale</a></li>
-	        <li><a href="#team">Team</a></li>
+	        <li><a href="#our-team">Team</a></li>
 	        <% if current_user %>
-	        	<li><a href="/login" id="login-nav">Profile</a></li>
+	        	<li><a href="/login" id="login-nav">Login</a></li>
 	        <% else %>
-						<li><a href="/register" id="login-nav">Register</a></li>
-					<% end %>
+				<li><a href="/register" id="login-nav">Register</a></li>
+			<% end %>
 	      </ul>
 	    </div>
 	  </div>
 	</nav>
+
 <div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
 	<div id="particles-js" style="background-position: 50% 50%;"></div>
 	<div class="full-page-banner">
 		<div class="introduction-content max-size">
 			<div class="container">
-				<%= image_tag("flipcoin-logo.png", :alt => "", :class => "logo") %>
+				<div id="landing-logo">
+					<%= image_tag("flipcoin-logo.png", :alt => "", :class => "logo") %>
+				</div>
 				<div class="countdown-holder">
-					<div class="image-caption">
-						Bridging the gap between consumer and crypto
+					<div class="image-caption" id="logo-caption">
+						Bridging the gap <br>
+						between consumer and crypto.
 					</div>
-					<div class="countdown-label">
+					<div class="countdown-label" id="ctdn-label">
 						Presale ends in:
 					</div>
 					<div class="countdown" id="countdown">
 					</div>
-					<div class="row">
-						<a href="#about" class="col-sm-offset-2 col-sm-2 button">About</a>
-						<a href="#token-sale" class="col-sm-offset-1 col-sm-2 button">Token Sale</a>
-						<%= link_to "White Paper", "Whitepaper.pdf", :class => "col-sm-offset-1 col-sm-2 button", :target => "_blank" %>
+					<div class="row" id="btn-nest">
+						<div class="kamikaze_btn">
+							<% if current_user %>
+				        		<a href="/login" id="landing-login">Login</a>
+				        	<% else %>
+								<a href="/register" id="landing-register">Register</a>
+							<% end %>
+						</div>
+						<div class="kamikaze_btn inv">
+							<a style="margin-top:25px;" href="#learn-more">Learn More</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -59,139 +71,86 @@
 	<div class="jump-right-in-section" id="about">
 		<div class="container">
 			<h2 class="subsection-header-inverse">Jump Right in</h2>
-			<div>
+			<div id="social-links">
 				<a class="github-link jri-li" href="https://github.com/jcksber/flipcoin">
 					<div class="jri-inner-li">
-						<i class="fa fa-github" target="_blank"></i> GITHUB
+						<i class="fa fa-github fa-3x" target="_blank"></i> 
 					</div>
 				</a>
 				<a class="slack-link jri-li" href="https://coinflip-team.slack.com/">
 					<div class="jri-inner-li">
-						<i class="fa fa-slack" target="_blank"></i> SLACK
+						<i class="fa fa-slack fa-3x" target="_blank"></i>
 					</div>
 				</a>
 				<a class="facebook-link jri-li" href="https://www.facebook.com/coinflipatm/">
 					<div class="jri-inner-li">
-						<i class="fa fa-facebook" target="_blank"></i> FACEBOOK
+						<i class="fa fa-facebook-f fa-3x" target="_blank"></i>
 					</div>
 				</a>
 				<a class="twitter-link jri-li" href="https://twitter.com/coinflipatm">
 					<div class="jri-inner-li">
-						<i class="fa fa-twitter" target="_blank"></i> TWITTER
+						<i class="fa fa-twitter fa-3x" target="_blank"></i>
 					</div>
 				</a>
-				<a class="token-sale-link jri-li" target="_blank">
-					<div class="jri-inner-li">
-						TOKEN SALE
-					</div>
-				</a>
+				<hr id="token-sale">
 			</div>
-			<h2 class="subsection-header-inverse">FLIPCOIN TOKEN SALE DOCUMENTATION</h2>
-			<div>
-				<%= link_to "Onepager.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
-					<div class="jri-image-holder">
-						<%= image_tag("Onepager-img.png", :alt => "One Pager image", :class => "jri-image") %>
-						<div class="jri-inner-li">
-						<i class="fa fa-download"></i> ONE PAGER
-					</div>
-					</div>
-				<% end %>
-				<%= link_to "Whitepaper.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
-					<div class="jri-image-holder">
-						<%= image_tag("Whitepaper-img.png", :alt => "Whitepaper image", :class => "jri-image") %>
-						<div class="jri-inner-li">
-							<i class="fa fa-download"></i> FLIPCOIN WHITE PAPER
+			<h2 class="subsection-header-inverse">Token Sale Documentation</h2>
+			<section>
+				<div class="token-doc">
+					<%= link_to "Onepager.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
+						<div class="jri-image-holder">
+							<%= image_tag("Onepager-img.png", :alt => "One Pager image", :class => "jri-image") %>
+							<div class="jri-inner-li">
+							<i class="fa fa-download"></i> One-Pager
 						</div>
-					</div>
-				<% end %>
-			</div>
+						</div>
+					<% end %>
+				</div>
+				<div class="token-doc">
+					<%= link_to "Whitepaper.pdf", :class => "token-sale-link jri-li", :target => "_blank" do %>
+						<div class="jri-image-holder">
+							<%= image_tag("Whitepaper-img.png", :alt => "Whitepaper image", :class => "jri-image") %>
+							<div class="jri-inner-li">
+								<i class="fa fa-download"></i> White Paper
+							</div>
+						</div>
+					<% end %>
+				</div>
+			</section>
 		</div>
+		<hr id="learn-more">
 	</div>
-	<!-- What is Flipcoin Section -->
-	<div class="what-is-flipcoin-section" id="token-sale">
+	<!-- So what is Flipcoin section -->
+	<div class="so-what-is-flipcoin" id="what-is-flipcoin">
 		<div class="container">
-			<h2 class="subsection-header">What is CoinFlip?</h2>
-			<div class="row">
-				<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
-				ether) into fiat currency should be a seamless and intuitive process. We are an
-				established company in the Midwest that adheres to Know Your Customer
-				and Anti-Money Laundering compliance protocols. Our goal is to create a
-				global network of cryptocurrency ATMs that allow users to easily convert their
-				highly-available fiat currency into relatively unobtainable digital assets and
-				vice versa.</p>
-				<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
-				exchanges, ATMs do provide a location where users can take advantage of a
-				quick registration process and the convenience of being able to exchange cash
-				for cryptocurrencies in a matter of minutes.</p>
-				<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
-				components of cryptocurrency exchanges. In order to increase general
-				awareness and encourage mass adoption, these facets need to be optimized.
-				These are core values at CoinFlip as we are actively trying to expand the ATM
-				network across the country and eventually, the globe. People should be able
-				to make bitcoin and other cryptocurrency purchases without hassle and time
-				constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
-				versa, the faster the overall crypto sphere will grow.</p>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="responsive-embed responsive-embed-16by9">
-						<iframe class="responsive-embed-item" src="https://www.youtube.com/embed/Ai35-5q_wZI?&rel=0" frameborder="0" allowfullscreen></iframe>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- How it works section -->
-	<!-- <div class="how-it-works-section">
-		<div class="container">
-			<h2 class="subsection-header-inverse">So What Is FlipCoin?</h2>
-			<div class="row">
-				<div class="col-sm-6">
-					
-				</div>
-				<div class="col-sm-6">
-					
-				</div>
-			</div>
-		</div>
-	</div> -->
-<!-- So what is Flipcoin section -->
-	<div class="so-what-is-flipcoin">
-		<div class="container">
-			<h2 class="subsection-header-inverse">So What is FlipCoin?</h2>
-			<div class="row">
-				<p class="paragraph-inverse">
-					We are now excited to offer FlipCoin tokens to our dedicated supporters. They
+			<h2 class="subsection-header">What is FlipCoin (ATM)?</h2>
+			<div>
+				<p class="paragraph">
+					We are now excited to offer FlipCoin (ATM) tokens to our dedicated supporters. They
 					will be treated as a membership token that will provide benefits for those own
 					it, with access to significant discounts, consulting, crypto networking events,
 					and educational literature/videos created by CoinFlip (among other things).  
 				</p>
-				<p class="paragraph-inverse">
+				<p class="paragraph">
 					The two biggest draws for purchasing FlipCoin are for customers and potential business partners. Paying 100 dollars grants purchasers a <span class="bold">lifetime discount on all CoinFlip purchases</span>. Paying 5000 dollars grants aspiring ATM operators the right to <span class="bold">a lifetime 50% reduction in fees for CoinFlip's brand licensing, managed tech support, customer service assistance, and compliance consulting</span>. 
 				</p>
-				<p class="paragraph-inverse">
+				<p class="paragraph">
 					Purchasing these tokens allows for a mutualistic relationship between the buyer and our company. The buyer pays upfront in order to help us expand our operations and make the token more useful, and in return he or she receives an unheard-of discount that can pay for itself in as little as one purchase, or one year in business.
 				</p>
-				<p class="paragraph-inverse">
+				<p class="paragraph">
 					Your funds will also be used to generate adoption in the crypto sphere as a whole, because our company seeks to make crypto more accessible to the average consumer via a familiar purchasing model (an ATM) with a familiar asset (cash).
 				</p>
 				<br />
 			</div>
 			<div class="row">
-				<%= link_to "Whitepaper.pdf", :class => "read-wp-button col-sm-3 col-sm-offset-2", :target => "_blank" do %>
-					Read The White Paper
-				<% end %>
-				<a href="/register" class="read-wp-button col-sm-3 col-sm-offset-2">
-					
-				</a>
-				<%= link_to "Whitepaper.pdf", :class => "read-wp-button col-xs-4 col-xs-offset-4", :target => "_blank" do %>
-					Read The White Paper
-				<% end %>
+				<div class="kamikaze_btn">
+					<a href="/register" class="col-sm-3 col-sm-offset-2">Register Now</a>
+				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Token Sale Terms section -->
-	<div class="token-sale-terms">
+	<div id="sale-terms" class="token-sale-terms">
 		<div class="container">
 			<h2 class="subsection-header">Token Sale Terms</h2>
 			<div class="row">
@@ -209,10 +168,12 @@
 						<li><i class="fa fa-arrow-right"></i>10% will be used to globally upgrade software</li>
 					</ul>
 					<p class="paragraph">Ethereum ERC20 Token</p>
-					<p class="paragraph">Purchase methods accepted: BTC and ETH</p>
+					<p class="paragraph">Purchase methods accepted: BTC and ETH
+					</p>
 				</div>
 			</div>
 		</div>
+		<hr id="our-team">
 	</div>
 	<!-- Team section -->
 	<div class="team-section" id="team">
@@ -280,74 +241,68 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row-dark">
-			<div class="container">
-				<div class="row team-row">
-					<div class="col-sm-4">
-						<div class="pp-holder">
-							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-5">
-									<%= image_tag("ppBen-Weiss.png", :alt => "Ben Weiss Profile Picture", :class => "pp") %>
-								</div>
-								<div class="col-xs-7">
-									<div class="pp-name">
-										Ben Weiss
-									</div>
-									<div class="pp-role">
-										Chief Operating Officer
-									</div>
-								</div>
+			<div class="row team-row">
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppBen-Weiss.png", :alt => "Ben Weiss Profile Picture", :class => "pp") %>
 							</div>
-							<div class="pp-description">
-								Ben graduated from Vanderbilt University in 2017 with a degree in Economics. He previously interned as a law clerk for the Cook County States Attorney’s Office in Chicago. Ben attends to the daily operations of the company, which include cash management, payroll, and data analysis.
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Ben Weiss
+								</div>
+								<div class="pp-role">
+									Chief Operating Officer
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="pp-holder">
-							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-5">
-									<%= image_tag("ppLarry-Mascolino.png", :alt => "Larry Mascolino Profile Picture", :class => "pp") %>
-								</div>
-								<div class="col-xs-7">
-									<div class="pp-name">
-										Larry Mascolino
-									</div>
-									<div class="pp-role">
-										Project Manager
-									</div>
-								</div>
-							</div>
-							<div class="pp-description">
-								Larry graduated from Wake Forest University in 2017 with degrees in Biology and Entrepreneurship. He was previously a clinical rotation intern at Advocate Illinois Masonic Medical Center. Larry currently assists CoinFlip with daily operations and marketing. 
-							</div>
+						<div class="pp-description">
+							Ben graduated from Vanderbilt University in 2017 with a degree in Economics. He previously interned as a law clerk for the Cook County States Attorney’s Office in Chicago. Ben attends to the daily operations of the company, which include cash management, payroll, and data analysis.
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="pp-holder">
-							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-5">
-									<%= image_tag("ppJack-Kasbeer.png", :alt => "Jack Kasbeer Profile Picture", :class => "pp") %>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppLarry-Mascolino.png", :alt => "Larry Mascolino Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Larry Mascolino
 								</div>
-								<div class="col-xs-7">
-									<div class="pp-name">
-										Jack Kasbeer
-									</div>
-									<div class="pp-role">
-										Head Developer
-									</div>
+								<div class="pp-role">
+									Project Manager
 								</div>
 							</div>
-							<div class="pp-description">
-								Jack currently studies Mechanical Engineering at Carnegie Mellon University. He has extensive experience in web development/design, iOS development/design, computer architecture, and systems programming. Jack takes functionality and security very seriously, and has worked diligently on the sale’s smart contracts.
+						</div>
+						<div class="pp-description">
+							Larry graduated from Wake Forest University in 2017 with degrees in Biology and Entrepreneurship. He was previously a clinical rotation intern at Advocate Illinois Masonic Medical Center. Larry currently assists CoinFlip with daily operations and marketing. 
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppJack-Kasbeer.png", :alt => "Jack Kasbeer Profile Picture", :class => "pp") %>
 							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Jack Kasbeer
+								</div>
+								<div class="pp-role">
+									Head Developer
+								</div>
+							</div>
+						</div>
+						<div class="pp-description">
+							Jack currently studies Mechanical Engineering at Carnegie Mellon University. He has extensive experience in web development/design, iOS development/design, computer architecture, and systems programming. Jack takes functionality and security very seriously, and has worked diligently on the sale’s smart contracts.
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container">
 			<div class="row team-row">
 				<div class="col-sm-4">
 					<div class="pp-holder">
@@ -410,57 +365,53 @@
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="row-dark">
-			<div class="container">
-				<div class="row team-row">
-					<div class="col-sm-4">
-						<div class="pp-holder">
-							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-5">
-									<%= image_tag("ppJohn-Mejia.png", :alt => "John Mejia Profile Picture", :class => "pp") %>
-								</div>
-								<div class="col-xs-7">
-									<div class="pp-name">
-										John Mejia
-									</div>
-									<div class="pp-role">
-										Marketing
-									</div>
-								</div>
+			<div class="row team-row">
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppJohn-Mejia.png", :alt => "John Mejia Profile Picture", :class => "pp") %>
 							</div>
-							<div class="pp-description">
-								John studies Biomedical Engineering at the University of Illinois at Urbana–Champaign. He is a blockchain investor, enthusiast, and supporter. John is currently Involved in multiple token sale launches, with roles in marketing, compliance and ethical practice.
+							<div class="col-xs-7">
+								<div class="pp-name">
+									John Mejia
+								</div>
+								<div class="pp-role">
+									Marketing
+								</div>
 							</div>
 						</div>
+						<div class="pp-description">
+							John studies Biomedical Engineering at the University of Illinois at Urbana–Champaign. He is a blockchain investor, enthusiast, and supporter. John is currently Involved in multiple token sale launches, with roles in marketing, compliance and ethical practice.
+						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="pp-holder">
-							<div class="row row-inner">
-								<div class="pp-pic-holder col-xs-5">
-									<%= image_tag("ppJulia-Ainbinder.png", :alt => "Julia Ainbinder Profile Picture", :class => "pp") %>
+				</div>
+				<div class="col-sm-4">
+					<div class="pp-holder">
+						<div class="row row-inner">
+							<div class="pp-pic-holder col-xs-5">
+								<%= image_tag("ppJulia-Ainbinder.png", :alt => "Julia Ainbinder Profile Picture", :class => "pp") %>
+							</div>
+							<div class="col-xs-7">
+								<div class="pp-name">
+									Julia Ainbinder
 								</div>
-								<div class="col-xs-7">
-									<div class="pp-name">
-										Julia Ainbinder
-									</div>
-									<div class="pp-role">
-										Designer
-									</div>
+								<div class="pp-role">
+									Designer
 								</div>
 							</div>
-							<div class="pp-description">
-								Julia currently studies product design at Carnegie Mellon University. She has been doing freelance design work for over 5 years, and has completed several projects for CoinFlip. Currently, she is an Industrial/UX Design intern at iRobot. She is proficient in the Adobe Suite and Solidworks, and speaks 3 languages.
-							</div>
+						</div>
+						<div class="pp-description">
+							Julia currently studies product design at Carnegie Mellon University. She has been doing freelance design work for over 5 years, and has completed several projects for CoinFlip. Currently, she is an Industrial/UX Design intern at iRobot. She is proficient in the Adobe Suite and Solidworks, and speaks 3 languages.
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<h2 class="subsection-header">Advisors</h2>
 		<div class="container">
+			<h2 class="subsection-header">Advisors</h2>
 			<div class="row team-row">
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
 							<div class="pp-pic-holder col-sm-2 col-xs-5">
@@ -484,12 +435,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row-dark">
-			<div class="container">
-				<div class="row team-row">
-					<div class="col-sm-12">
+				<div class="col-sm-6">
 						<div class="pp-holder">
 							<div class="row row-inner">
 								<div class="pp-pic-holder col-sm-2 col-xs-5">
@@ -512,13 +458,12 @@
 								He is a frequent guest speaker at both bitcoin and compliance industry events, and regularly consults with regulators and policymakers.
 							</div>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 		<div class="container">
 			<div class="row team-row">
-				<div class="col-sm-12">
+				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
 							<div class="pp-pic-holder col-sm-2 col-xs-5">
@@ -538,12 +483,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="row-dark">
-			<div class="container">
-				<div class="row team-row">
-					<div class="col-sm-12">
+				<div class="col-sm-6">
 						<div class="pp-holder">
 							<div class="row row-inner">
 								<div class="pp-pic-holder col-sm-2 col-xs-5">
@@ -569,6 +509,39 @@
 								Currently, she also heads the Rise Movement, which aims to tackle the economic apprehensions of the marginalized by holding tech leaders responsible for creating job opportunities, while upholding an emphasis on equal rights for genders, races and sexual orientations.
 							</div>
 						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- What is CoinFlip Section -->
+	<div class="what-is-flipcoin-section" id="token-sale">
+		<div class="container">
+			<h2 class="subsection-header">What is CoinFlip?</h2>
+			<div>
+				<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
+				ether) into fiat currency should be a seamless and intuitive process. We are an
+				established company in the Midwest that adheres to Know Your Customer
+				and Anti-Money Laundering compliance protocols. Our goal is to create a
+				global network of cryptocurrency ATMs that allow users to easily convert their
+				highly-available fiat currency into relatively unobtainable digital assets and
+				vice versa.</p>
+				<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
+				exchanges, ATMs do provide a location where users can take advantage of a
+				quick registration process and the convenience of being able to exchange cash
+				for cryptocurrencies in a matter of minutes.</p>
+				<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
+				components of cryptocurrency exchanges. In order to increase general
+				awareness and encourage mass adoption, these facets need to be optimized.
+				These are core values at CoinFlip as we are actively trying to expand the ATM
+				network across the country and eventually, the globe. People should be able
+				to make bitcoin and other cryptocurrency purchases without hassle and time
+				constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
+				versa, the faster the overall crypto sphere will grow.</p>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="responsive-embed responsive-embed-16by9">
+						<iframe class="responsive-embed-item" src="https://www.youtube.com/embed/Ai35-5q_wZI?&rel=0" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -682,6 +655,7 @@
 <%= javascript_include_tag 'particles', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'particles-app', 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
+<a href="htts://jackkasbeer.co" style="display:none;">kamikaze was here</a>
 <script>
 	var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;
 	function displayTime(){
