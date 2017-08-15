@@ -120,7 +120,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 /* ABOUT
  ****************************************/
 #about {
-	padding-bottom: 0;
+	background: white;
+	padding-top: 20px !important;
+	padding-bottom: 50px !important;
 }
 #about .subsection-header-inverse {
 	color: #DFA94F !important;
@@ -143,7 +145,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .twitter-link {
 	color: #1DA1F2;
 }
-
 .token-doc a {
 	width: 210px;
 	height: 230px;
@@ -173,13 +174,31 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #what-is-flipcoin {
 	background: #FAFAFA;
 	padding-top: 20px !important;
-	padding-bottom: 50px !important;
+	/*padding-bottom: 50px !important;*/
 }
 #what-is-flipcoin .subsection-header {
 	font-size: 2.4em !important;
 }
+#what-is-flipcoin .subsection-header.sub {
+	text-align: left;
+}
 #what-is-flipcoin .kamikaze_btn a {
 	margin-top: 20px !important;
+}
+
+
+/* WHAT IS COINFLIP?!
+ ****************************************/
+#token-sale {
+	background: #FAFAFA !important;
+	padding-top: 20px !important;
+	padding-bottom: 50px !important;
+}
+#token-sale .subsection-header {
+	font-size: 2.4em !important;
+}
+#token-sale .responsive-embed {
+	margin: 40px auto;
 }
 
 
@@ -258,21 +277,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 
-/* WHAT IS COINFLIP?
- ****************************************/
-.jump-right-in-section {
-	background: white;
-	padding-top: 20px !important;
-	padding-bottom: 50px !important;
-}
-.jump-right-in-section .subsection-header {
-	font-size: 2.4em !important;
-}
-.jump-right-in-section .responsive-embed {
-	margin: 40px auto;
-}
-
-
 /* CUSTOMER TESTIMONIAL
  ****************************************/
 .customer-testimonial .pp-pic-holder {
@@ -315,9 +319,13 @@ and (min-width : 768px) {
 	.paragraph {
 		font-size: 1.2em !important;
 		line-height: 1.5em !important;
+		padding-left: 55px !important;
+		padding-right: 55px !important;
 	}
 	#particles-js,
-	#home > .full-page-banner { height: 95%; }
+	#home > .full-page-banner { 
+		height: 95%; 
+	}
 	.full-page-banner > .introduction-content > .container {
 	 	padding-top: 110px !important;
 	}

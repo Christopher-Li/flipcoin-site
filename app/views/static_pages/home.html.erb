@@ -20,7 +20,7 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
 	        <li><a href="#about">About</a></li>
-	        <li><a href="#token-sale">Token Sale</a></li>
+	        <li><a href="#tokensale">Token Sale</a></li>
 	        <li><a href="#our-team">Team</a></li>
 	        <% if current_user %>
 	        	<li><a href="/login" id="login-nav">Login</a></li>
@@ -95,7 +95,7 @@
 					</div>
 				</a>
 			</div>
-			<hr id="token-sale">
+			<hr id="tokensale">
 			<h2 class="subsection-header-inverse">Token Sale Documentation</h2>
 			<section>
 				<div class="token-doc">
@@ -125,7 +125,14 @@
 	<!-- So what is Flipcoin section -->
 	<div class="so-what-is-flipcoin" id="what-is-flipcoin">
 		<div class="container">
-			<h2 class="subsection-header">What is FlipCoin (ATM)?</h2>
+			<div style="text-align:left;">
+				<div class="col-sm-6" style="padding-right: 0;">
+					<h2 class="subsection-header">FlipCoin (ticker "BTC"):</h2>
+				</div>
+				<div class="col-sm-6" style="padding-left: 0;">
+					<h2 class="subsection-header sub">the Official Membership Token for CoinFlip</h2>
+				</div>
+			</div>
 			<div>
 				<p class="paragraph">
 					We are now excited to offer FlipCoin (ATM) tokens to our dedicated supporters. They
@@ -151,8 +158,42 @@
 			</div>
 		</div>
 	</div>
+	<!-- What is CoinFlip Section -->
+	<div class="what-is-flipcoin-section" id="token-sale">
+		<div class="container">
+			<h2 class="subsection-header">What is CoinFlip?</h2>
+			<div>
+				<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
+				ether) into fiat currency should be a seamless and intuitive process. We are an
+				established company in the Midwest that adheres to Know Your Customer
+				and Anti-Money Laundering compliance protocols. Our goal is to create a
+				global network of cryptocurrency ATMs that allow users to easily convert their
+				highly-available fiat currency into relatively unobtainable digital assets and
+				vice versa.</p>
+				<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
+				exchanges, ATMs do provide a location where users can take advantage of a
+				quick registration process and the convenience of being able to exchange cash
+				for cryptocurrencies in a matter of minutes.</p>
+				<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
+				components of cryptocurrency exchanges. In order to increase general
+				awareness and encourage mass adoption, these facets need to be optimized.
+				These are core values at CoinFlip as we are actively trying to expand the ATM
+				network across the country and eventually, the globe. People should be able
+				to make bitcoin and other cryptocurrency purchases without hassle and time
+				constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
+				versa, the faster the overall crypto sphere will grow.</p>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="responsive-embed responsive-embed-16by9">
+						<iframe class="responsive-embed-item" src="https://www.youtube.com/embed/Ai35-5q_wZI?&rel=0" frameborder="0" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<!-- Token Sale Terms section -->
-	<div id="sale-terms" class="token-sale-terms">
+	<div class="token-sale-terms" id="sale-terms">
 		<div class="container">
 			<h2 class="subsection-header">Token Sale Terms</h2>
 			<div>
@@ -186,9 +227,9 @@
 						<li><i class="fa fa-arrow-right"></i>15% Core Team Annual Salary</li>
 						<li><i class="fa fa-arrow-right"></i>10% Software Upgrades</li>
 					</ul>
-					<p class="paragraph">
+					<p class="paragraph" style="padding-left: 0px !important;">
 					Ethereum ERC20 Token <br>
-					<span class="bold">Purchase methods accepted:</span> BTC and ETH
+					<span class="bold">Purchase methods accepted:<br></span> BTC and ETH
 					</p>
 				</div>
 			</div>
@@ -439,7 +480,7 @@
 					<div class="pp-holder">
 						<div class="row row-inner">
 							<div class="pp-pic-holder">
-								<%= image_tag("ppJoe-Ciccolo.jpg", :alt => "Gadi Cohen Profile Picture", :class => "pp") %>
+								<%= image_tag("ppJoe-Ciccolo.jpg", :alt => "Joe Ciccolo Profile Picture", :class => "pp") %>
 							</div>
 							<div class="pp-info-holder">
 								<div class="pp-name">
@@ -475,12 +516,9 @@
 							</div>
 						</div>
 						<div class="pp-description">
-							Genevieve is the founder of Sittercity.com, America’s  rst online caregiving company.
-							She was recognized by President Bush as
-							the Small Business Administration Young Entrepreneur Champion of the Year for 2006, and her companies have won close to 20 major accolades. She has been featured on the TODAY show, Ellen, the View, the CBS Early Show,
-							CNN, Live & Style, The Wall Street Journal, The New York Times, Redbook, Parents, Parenting, Marie Clare, TIME, Better Homes and Gardens, and Working Mother.  
-							<br />
-							Genevieve is also on faculty at the Farley School at Northwestern University; additionally she heads the Rise Movement.
+							Genevieve is the founder of Sittercity.com, America’s first online caregiving company. She was recognized by President Bush as the Small Business Administration Young Entrepreneur Champion of the Year for 2006, and her companies have won close to 20 major accolades. She has been featured on the TODAY show, Ellen, the View, the CBS Early Show, CNN, Live & Style, The Wall Street Journal, The New York Times, Redbook, Parents, Parenting, Marie Clare, TIME, Better Homes and Gardens, and Working Mother. <br><br>
+							Genevieve is on faculty at the Farley School at Northwestern University, and has previously spoken or lectured at Harvard business school, Kellogg, Columbia, Babson, Boston College, U Chicago, and Microsoft. <br><br>
+							Currently, she also heads the Rise Movement, which aims to tackle the economic apprehensions of the marginalized by holding tech leaders responsible for creating job opportunities, while upholding an emphasis on equal rights for genders, races and sexual orientations. 
 						</div>
 					</div>
 				</div>
@@ -504,7 +542,14 @@
 							</div>
 						</div>
 						<div class="pp-description">
-							Mr. Cohen is an established multi-family real estate developer with over 40 years of experience.  He served as an officer in the Israeli army at a young age and immigrated to the United States when he was 23 years old. He currently manages 186 employees and 16 properties throughout Illinois, Indiana, and Wisconsin. Outside of the US, he owns and operates a diving hotel in Bocas del Toro, Panama. He also owns cacao and mango farms in Peru. 
+							Mr. Cohen is an established multi-family real estate developer with over 40 years of experience.
+							He served as an officer in the Israeli army at a young age and immigrated to the United States
+							when he was 23 years old. He currently manages 186 employees and 16 properties throughout
+							Illinois, Indiana, and Wisconsin. Outside of the US, he owns and operates a diving hotel in Bocas
+							del Toro, Panama. He also owns cacao and mango farms in Peru. In addition to real estate
+							development, Gadi has previous experience in the plastic manufacturing industry. Gadi is a
+							family man with 3 daughters and when he is not busy curating his successful businesses, you
+							may find him skydiving, flying, or scuba diving in his spare time.
 						</div>
 					</div>
 				</div>
@@ -530,40 +575,6 @@
 							<br /><br />
 							He also continues to be an early stage investor. He currently sits on the board and/or advises a number of companies including Chimu, Agile Health, and Ullo. He is an angel investor in over 10 companies currently. He was recognized recently by Crain’s Chicago Business and TechWeek as a leader in the Chicago technology ecosystem.
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- What is CoinFlip Section -->
-	<div class="what-is-flipcoin-section" id="token-sale">
-		<div class="container">
-			<h2 class="subsection-header">What is CoinFlip?</h2>
-			<div>
-				<p class="paragraph">At <a href="http://www.coinflip.tech" target="_blank" class="link">CoinFlip</a>, we feel that the exchange of different coins (like bitcoin and
-				ether) into fiat currency should be a seamless and intuitive process. We are an
-				established company in the Midwest that adheres to Know Your Customer
-				and Anti-Money Laundering compliance protocols. Our goal is to create a
-				global network of cryptocurrency ATMs that allow users to easily convert their
-				highly-available fiat currency into relatively unobtainable digital assets and
-				vice versa.</p>
-				<p class="paragraph">While the cryptocurrency ATM network is not as expansive as the online
-				exchanges, ATMs do provide a location where users can take advantage of a
-				quick registration process and the convenience of being able to exchange cash
-				for cryptocurrencies in a matter of minutes.</p>
-				<p class="paragraph">Speed, convenience of acquisition, and a fair price are three sought-after
-				components of cryptocurrency exchanges. In order to increase general
-				awareness and encourage mass adoption, these facets need to be optimized.
-				These are core values at CoinFlip as we are actively trying to expand the ATM
-				network across the country and eventually, the globe. People should be able
-				to make bitcoin and other cryptocurrency purchases without hassle and time
-				constraints. The easier it is to freely exchange fiat for cryptocurrency and vice
-				versa, the faster the overall crypto sphere will grow.</p>
-			</div>
-			<div class="row">
-				<div class="col-xs-12">
-					<div class="responsive-embed responsive-embed-16by9">
-						<iframe class="responsive-embed-item" src="https://www.youtube.com/embed/Ai35-5q_wZI?&rel=0" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 			</div>
@@ -649,14 +660,13 @@
 		        		</li>
 		        		<li><i class="fa fa-phone"></i>(773)-800-0106</li>
 		        		<li><i class="fa fa-envelope-o"></i>info<span class="x">[at]</span>coinflip<span class="x">[dot]</span>tech</li>
-		        		<li>
-		        			<a href="https://twitter.com/coinflipatm" class="linki blk">
-		        				<i class="fa fa-twitter"></i>
-		        			</a>
-		        			<a href="https://www.facebook.com/coinflipatm/" class="linki blk">
-		        				<i class="fa fa-facebook"></i>
-		        			</a>
-		        		</li>
+		        		<ul class="nospace">
+		        			<li>
+		        				<a href="https://twitter.com/coinflipatm" class="linki blk"><i class="fa fa-twitter"></i></a>
+		        			</li>
+		        			<li><a href="https://www.facebook.com/coinflipatm/" class="linki blk"><i class="fa fa-facebook"></i></a>
+		        			</li>
+		        		</ul>
 		      		</ul>
 				</div>
 				<div class="col-sm-6">
@@ -674,7 +684,7 @@
 	<footer class="copyrightbar">
 		<div class="container">
 			© GPD Holdings, LLC 2016  FinCEN MSB BSA # 31000077968050
-			<p class="disclaimer">These tokens do not have any value outside of CoinFlip’s network, do not indicate how well or poorly CoinFlip is performing, do not represent an ownership stake in CoinFlip, and should not be expected to rise in price/value over time.</p
+			<p class="disclaimer">These tokens do not have any value outside of CoinFlip’s network, do not indicate how well or poorly CoinFlip is performing, do not represent an ownership stake in CoinFlip, and should not be expected to rise in price/value over time.</p>
 		</div>
 	</footer>
 </div>
