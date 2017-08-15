@@ -268,7 +268,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	line-height: 1.1em;
 	color: #9E6D1D;
 }
-#team .pp-holder .pp-description {
+.pp-description {
 	font-size: 1.0em;
 	line-height: 1.3em;
 	padding: 3px 16px;
