@@ -2,7 +2,7 @@
 <% provide(:noNav, "Home") %>
 
 <body id="homebody" class="staticPagesBody">
-<!-- Navigation bar -->
+	<!-- Navigation bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -15,7 +15,6 @@
 	      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
 	      </a>
 	    </div>
-
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
@@ -30,11 +29,9 @@
 	      </ul>
 	    </div>
 	  </div>
-	</nav>
+	</nav> 	<!-- CHANGE PRESALE TIME !!! -->
 
-	<!-- CHANGE PRESALE TIME !!! -->
-
-<div class="main-outer text-center" id="home">
+	<div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
 	<div id="particles-js" style="background-position: 50% 50%;"></div>
 	<div class="full-page-banner">
@@ -125,13 +122,9 @@
 	<!-- So what is Flipcoin section -->
 	<div class="so-what-is-flipcoin" id="what-is-flipcoin">
 		<div class="container">
-			<div style="text-align:left;">
-				<div class="col-sm-6" style="padding-right: 0;">
-					<h2 class="subsection-header">FlipCoin (ticker "ATM"):</h2>
-				</div>
-				<div class="col-sm-6" style="padding-left: 0;">
-					<h2 class="subsection-header sub">the Official Membership Token for CoinFlip</h2>
-				</div>
+			<div>
+				<h2 class="subsection-header" style="margin-bottom:20px;"><span class="br">FlipCoin&nbsp;</span>(ticker "ATM")</h2>
+				<h4 class="subsection-header sub">The Official Membership Token for CoinFlip</h4>
 			</div>
 			<div>
 				<p class="paragraph">
@@ -228,8 +221,8 @@
 						<li><i class="fa fa-arrow-right"></i>10% Software Upgrades</li>
 					</ul>
 					<p class="paragraph" style="padding-left: 0px !important;">
-					Ethereum ERC20 Token <br>
-					<span class="bold">Purchase methods accepted:<br></span> BTC and ETH
+					<span class="bold">Purchase methods accepted:</span> BTC and ETH<br><br>
+					Ethereum ERC20 Token
 					</p>
 				</div>
 			</div>
@@ -651,55 +644,55 @@
 			<p class="disclaimer">These tokens do not have any value outside of CoinFlip’s network, do not indicate how well or poorly CoinFlip is performing, do not represent an ownership stake in CoinFlip, and should not be expected to rise in price/value over time.</p>
 		</div>
 	</footer>
-</div>
-<%= javascript_include_tag 'particles', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'particles-app', 'data-turbolinks-track': 'reload' %>
-<%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
-<a href="htts://jackkasbeer.co" style="display:none;">kamikaze was here</a>
-<script>
-	var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;
-	function displayTime(){
-		day = new Date();
-		saleEnd = new Date(2017,7,15,0,0,0,0);
-		timeDiff = Math.abs(saleEnd.getTime() - day.getTime());
-		diffDay = Math.floor(timeDiff / (1000 * 3600 * 24)); 
-		diffHour = Math.floor(timeDiff / (1000 * 3600)) % 24; 
-		diffMin = Math.floor(timeDiff / (1000 * 60)) % 60; 
-		diffSec = Math.floor(timeDiff / (1000)) % 60; 
+	</div>
+	<%= javascript_include_tag 'particles', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'particles-app', 'data-turbolinks-track': 'reload' %>
+	<%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
+	<a href="htts://jackkasbeer.co" style="display:none;">kamikaze was here</a>
+	<script>
+		var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;
+		function displayTime(){
+			day = new Date();
+			saleEnd = new Date(2017,7,15,0,0,0,0);
+			timeDiff = Math.abs(saleEnd.getTime() - day.getTime());
+			diffDay = Math.floor(timeDiff / (1000 * 3600 * 24)); 
+			diffHour = Math.floor(timeDiff / (1000 * 3600)) % 24; 
+			diffMin = Math.floor(timeDiff / (1000 * 60)) % 60; 
+			diffSec = Math.floor(timeDiff / (1000)) % 60; 
 
-		totalDiff = ("0" + diffDay).slice(-2) + " : " + ("0" + diffHour).slice(-2) + " : " + ("0" + diffMin).slice(-2) + " : " + ("0" + diffSec).slice(-2);
+			totalDiff = ("0" + diffDay).slice(-2) + " : " + ("0" + diffHour).slice(-2) + " : " + ("0" + diffMin).slice(-2) + " : " + ("0" + diffSec).slice(-2);
 
-		document.getElementById("countdown").innerHTML = totalDiff
+			document.getElementById("countdown").innerHTML = totalDiff
 
-		setTimeout(displayTime,1000);
-	}
-	displayTime();
+			setTimeout(displayTime,1000);
+		}
+		displayTime();
 
-	var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
-                              document.body.style['MozPerspective'] !== undefined;
-	function linkify( selector ) {
-	    if( supports3DTransforms ) {
-	        
-	        var nodes = document.querySelectorAll( selector );
+		var supports3DTransforms =  document.body.style['webkitPerspective'] !== undefined || 
+	                              document.body.style['MozPerspective'] !== undefined;
+		function linkify( selector ) {
+		    if( supports3DTransforms ) {
+		        
+		        var nodes = document.querySelectorAll( selector );
 
-	        for( var i = 0, len = nodes.length; i < len; i++ ) {
-	            var node = nodes[i];
+		        for( var i = 0, len = nodes.length; i < len; i++ ) {
+		            var node = nodes[i];
 
-	            if( !node.className || !node.className.match( /roll/g ) ) {
-	                node.className += ' roll';
-	                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
-	            }
-	        };
-	    }
-	} 
-	linkify( 'a.linki' );
-</script>
-<style>
-#footer > .container .contact li > a > i {
-		position: relative !important;
-		display: inline-block !important;
-		margin: 0 50px !important;
-		padding: 2px !important;
-	}
-</style>
+		            if( !node.className || !node.className.match( /roll/g ) ) {
+		                node.className += ' roll';
+		                node.innerHTML = '<span data-title="'+ node.text +'">' + node.innerHTML + '</span>';
+		            }
+		        };
+		    }
+		} 
+		linkify( 'a.linki' );
+	</script>
+	<style>
+	#footer > .container .contact li > a > i {
+			position: relative !important;
+			display: inline-block !important;
+			margin: 0 50px !important;
+			padding: 2px !important;
+		}
+	</style>
 </body>
