@@ -34,7 +34,7 @@ hr {
 
 .m-bottom-40 { margin-bottom: 40px; }
 .pp-center {
-	width: 50%; 
+	width: 85%; 
 	padding: 0 4px; 
 	margin: 0 auto;
 }
@@ -181,6 +181,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 #what-is-flipcoin .subsection-header.sub {
 	text-align: left;
+	color: #656565;
 }
 #what-is-flipcoin .kamikaze_btn a {
 	margin-top: 20px !important;
@@ -238,7 +239,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #team .subsection-header {
 	font-size: 2.4em !important;
 	padding: 0 !important;
-	margin-top: 70px !important;
 	margin-bottom: 10px !important;
 }
 #team .team-row {
@@ -291,8 +291,34 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 
 
-
-
+/* FOOTER
+ ****************************************/
+#footer {
+	padding: 50px 0 !important;
+}
+#footer .title {
+	margin-bottom: 30px !important;
+}
+#foot-social {
+	list-style: none;
+	margin-bottom: 35px;
+	border: none;
+}
+#footer .contact.linklist #foot-social li {
+	display: inline-block;
+	margin: 5px !important;
+	padding-bottom: 15px;
+	border: none;
+}
+#footer .contact #foot-social li a {
+	color: white;
+}
+#footer .contact #foot-social li a:hover {
+	color: #DFA94F;
+}
+#footer .contact #foot-social li i {
+	font-size: 22px !important;
+}
 
 
 
@@ -321,6 +347,9 @@ and (min-width : 768px) {
 		line-height: 1.5em !important;
 		padding-left: 55px !important;
 		padding-right: 55px !important;
+	}
+	.pp-center {
+		width: 60%;
 	}
 	#particles-js,
 	#home > .full-page-banner { 
