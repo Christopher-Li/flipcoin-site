@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
   #
   def account_activation(user)
     @user = user
-    mail to: user.email, subject: "Activate your Flipcoin account today!"
+    mail to: user.email, subject: "Activate your FlipCoin account today!"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
