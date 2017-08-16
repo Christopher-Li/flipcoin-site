@@ -28,7 +28,7 @@ Created: July 2017
   </head>
 
   <body>
-    <% if yield(:noNav) %>
+    <% if yield(:nav) != "noNav" %>
       <nav id="application-navbar" class="navbar navbar-default">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
