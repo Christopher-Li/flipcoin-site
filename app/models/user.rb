@@ -12,6 +12,8 @@ class User < ApplicationRecord
 		length: {maximum: 50}
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
+  validates :estimatedContribution, presence: true
+  # validates :ethAdd, allow_nil: true, length: {is: 42}
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
