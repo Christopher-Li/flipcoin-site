@@ -6,17 +6,26 @@
 		<div class="signup-holder col-md-6 col-md-offset-3">
 			<%= form_for(@user, url: '/signup') do |f| %>
 				<%= render 'shared/error_messages' %>
-				<%= f.label :firstName %>
+				<%= f.label :firstName, value: 'First Name *' %>
 				<%= f.text_field :firstName, class: 'form-control' %>
 				
-				<%= f.label :lastName %>
+				<%= f.label :lastName, value: 'Last Name *' %>
 				<%= f.text_field :lastName, class: 'form-control' %>
 				
-				<%= f.label :email %>
+				<%= f.label :email, value: 'Email *' %>
 				<%= f.text_field :email, class: 'form-control' %>
 
-				<%= f.label :phoneNumber %>
+				<%= f.label :phoneNumber, value: 'Phone Number' %>
 				<%= f.text_field :phoneNumber, class: 'form-control' %>
+
+				<%= f.label :ethAdd, value: 'Ethereum Address' %>
+				<%= f.text_field :ethAdd, class: 'form-control' %>
+
+				<%= f.label :bitAdd, value: 'Bitcoin Address' %>
+				<%= f.text_field :bitAdd, class: 'form-control' %>
+
+				<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+				<%= f.text_field :estimatedContribution, class: 'form-control' %>
 
 				<%= f.label :password %>
 				<%= f.password_field :password, class: 'form-control' %>

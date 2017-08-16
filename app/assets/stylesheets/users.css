@@ -10,3 +10,5 @@ p {
   font-size: 1.2em;
   color: #414141; 
 }
+
+.required-label:after{content:" *"}

@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # include ActiveModel::Validations
+  # validates_with BitcoinAddressValidator :bitAdd
   attr_accessor :activation_token
 	before_save :downcase_email
   before_save :create_activation_digest
@@ -47,4 +49,22 @@ class User < ApplicationRecord
       self.activation_token = User.new_token
       self.activation_digest = User.digest(activation_token)
     end
+
+    def validate(record)
+      unless record.ethAdd.starts_with? '0x'
+        record.errors[:ethAdd] << "Need address starting with '0x'!"
+      end
+    end
 end
+
+
+# class MyValidator < ActiveModel::Validator
+#   def validate(record)
+#     unless record.ethAdd.starts_with? '0x'
+#       record.errors[:ethAdd] << "Need address starting with '0x'!"
+#     end
+#     unless record.bitAdd.starts_with? '0x'
+#       record.errors[:ethAdd] << "Need address starting with '0x'!"
+#     end
+#   end
+# end
