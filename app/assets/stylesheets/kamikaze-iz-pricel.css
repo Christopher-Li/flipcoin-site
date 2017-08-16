@@ -368,7 +368,7 @@ and (min-width : 768px) {
 		line-height: 1.5em !important;
 		padding-left: 55px !important;
 	}
-	.pp-description { width: 100%; }
+	.pp-description { width: 100%; text-align:center!important; }
 	.pp-center { width: 60%; }
 	#particles-js,
 	#home > .full-page-banner { height: 95%; }
