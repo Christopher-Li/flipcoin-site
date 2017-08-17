@@ -40,6 +40,11 @@ class User < ApplicationRecord
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
   end
+
+  # Sends Thank you email
+  def send_thank_you_email
+    UserMailer.thank_you(self).deliver_now
+  end
   
   private
 

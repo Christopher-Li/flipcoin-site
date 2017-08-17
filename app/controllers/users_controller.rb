@@ -12,13 +12,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if current_user && (current_user.admin || current_user.id == params[:id])
+    # Can only view page if you are an admin or the logged in user
+    if current_user && (current_user.admin || current_user.id.to_f == params[:id].to_f)
     else
-      # redirect_to current_user
-      logger.debug "redirected"
-      logger.debug "params #{params[:id]}"
-      logger.debug "current_user #{current_user.id}"
-      logger.debug "eq #{current_user.id.to_f == params[:id].to_f}"
+      redirect_to current_user
     end
   end
 
