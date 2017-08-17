@@ -7,30 +7,48 @@
 			<%= form_for(@user, url: '/signup') do |f| %>
 				<%= render 'shared/error_messages' %>
 				<%= f.label :firstName, value: 'First Name *' %>
-				<%= f.text_field :firstName, class: 'form-control' %>
+				<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
 				
 				<%= f.label :lastName, value: 'Last Name *' %>
-				<%= f.text_field :lastName, class: 'form-control' %>
+				<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
 				
 				<%= f.label :email, value: 'Email *' %>
-				<%= f.text_field :email, class: 'form-control' %>
+				<%= f.text_field :email, class: 'form-control', placeholder: "JohnDoe123@gmail.com" %>
 
 				<%= f.label :phoneNumber, value: 'Phone Number' %>
-				<%= f.text_field :phoneNumber, class: 'form-control' %>
+				<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-123-123-1234" %>
 
 				<%= f.label :ethAdd, value: 'Ethereum Address' %>
-				<%= f.text_field :ethAdd, class: 'form-control' %>
+				<%= f.text_field :ethAdd, class: 'form-control', placeholder: "0x..." %>
 
 				<%= f.label :bitAdd, value: 'Bitcoin Address' %>
-				<%= f.text_field :bitAdd, class: 'form-control' %>
+				<%= f.text_field :bitAdd, class: 'form-control', placeholder: "1... or 3..." %>
 
-				<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
-				<%= f.text_field :estimatedContribution, class: 'form-control' %>
+				<%= f.label :estimatedContribution, value: 'Estimated Value (USD) *' %>
+				<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "10000" %>
 
-				<%= f.label :password %>
+				<%= f.label :address1, value: 'Address Line 1 *' %>
+				<%= f.text_field :address1, class: 'form-control' %>
+
+				<%= f.label :address2, value: 'Address Line 2 *' %>
+				<%= f.text_field :address2, class: 'form-control' %>
+
+				<%= f.label :city, value: 'City *' %>
+				<%= f.text_field :city, class: 'form-control' %>
+
+				<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+				<%= f.text_field :zipCode, class: 'form-control' %>
+
+				<%= f.label :state, value: 'State/Province *' %>
+				<%= f.text_field :state, class: 'form-control' %>
+
+				<%= f.label :dob, value: 'Date of Birth *' %>
+				<%= f.date_field :dob, class: 'form-control' %>				
+
+				<%= f.label :password, value: 'Password *' %>
 				<%= f.password_field :password, class: 'form-control' %>
 
-				<%= f.label :password_confirmation, "Password Confirmation" %>
+				<%= f.label :password_confirmation, "Password Confirmation *" %>
 			  <%= f.password_field :password_confirmation, class: 'form-control' %>
 
 		    <%= f.submit "Create my account", class: "btn btn-primary" %>

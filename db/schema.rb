@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170816010024) do
+ActiveRecord::Schema.define(version: 20170817172326) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -27,6 +27,12 @@ ActiveRecord::Schema.define(version: 20170816010024) do
     t.string "bitAdd"
     t.decimal "estimatedContribution"
     t.string "phoneNumber"
+    t.string "address1"
+    t.string "address2"
+    t.string "state"
+    t.string "zipCode"
+    t.string "city"
+    t.date "dob"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
