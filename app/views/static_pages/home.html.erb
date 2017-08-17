@@ -654,7 +654,7 @@
 		var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;
 		function displayTime(){
 			day = new Date();
-			saleEnd = new Date(2017,8,14,7,0,0,0);
+			saleEnd = new Date(2017,8,14,21,0,0,0);
 			timeDiff = Math.abs(saleEnd.getTime() - day.getTime());
 			diffDay = Math.floor(timeDiff / (1000 * 3600 * 24)); 
 			diffHour = Math.floor(timeDiff / (1000 * 3600)) % 24; 
