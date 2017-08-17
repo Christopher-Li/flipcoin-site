@@ -47,7 +47,7 @@ hr {
  ****************************************/
 #particles-js { height: 90%; }
 #home > .full-page-banner { height: 95%; }
-.full-page-banner > .introduction-content > .container { padding-top: 70px !important; }
+.full-page-banner > .introduction-content > .container { padding-top: 130px !important; }
 nav .navbar-toggle.collapsed i { display:block; }
 nav .navbar-header button { margin: 15px !important; }
 nav .navbar-header a img { margin: auto 15px !important; }
@@ -373,7 +373,7 @@ and (min-width : 768px) {
 	#particles-js,
 	#home > .full-page-banner { height: 95%; }
 	.full-page-banner > .introduction-content > .container {
-	 	padding-top: 110px !important;
+	 	padding-top: 170px !important;
 	}
 	nav .navbar-toggle.collapsed i { 
 		display: none; 
