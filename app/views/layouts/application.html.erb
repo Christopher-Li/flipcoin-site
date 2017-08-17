@@ -21,14 +21,16 @@ Created: July 2017
   <%= csrf_meta_tags %>
 	
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'kamikaze-iz-pricel', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- -->
   <%= javascript_include_tag 'jquery-3.2.1.min', 'data-turbolinks-track': 'reload' %>
-  <link rel="stylesheet" href="assets/stylesheets/kamikaze-iz-pricel.css">
+  <!-- <link rel="stylesheet" href="assets/stylesheets/kamikaze-iz-pricel.css"> -->
+
   </head>
 
   <body>
-    <% if yield(:noNav) %>
+    <% if yield(:nav) != "noNav" %>
       <nav id="application-navbar" class="navbar navbar-default">
         <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->

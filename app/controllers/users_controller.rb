@@ -12,13 +12,10 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    if current_user && (current_user.admin || current_user.id == params[:id])
+    # Can only view page if you are an admin or the logged in user
+    if current_user && (current_user.admin || current_user.id.to_f == params[:id].to_f)
     else
-      # redirect_to current_user
-      logger.debug "redirected"
-      logger.debug "params #{params[:id]}"
-      logger.debug "current_user #{current_user.id}"
-      logger.debug "eq #{current_user.id.to_f == params[:id].to_f}"
+      redirect_to current_user
     end
   end
 
@@ -96,7 +93,22 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:firstName, :lastName, :email, :password, :password_confirmation, :ethAdd, :bitAdd, :estimatedContribution, :phoneNumber)
+      params.require(:user).permit(
+        :firstName, 
+        :lastName, 
+        :email, 
+        :password, 
+        :password_confirmation, 
+        :ethAdd, 
+        :bitAdd, 
+        :estimatedContribution, 
+        :phoneNumber,
+        :address1,
+        :address2,
+        :city,
+        :state,
+        :zipCode,
+        :dob)
     end
 
     def user_params_wa_np

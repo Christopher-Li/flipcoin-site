@@ -13,6 +13,12 @@ class User < ApplicationRecord
 	has_secure_password
 	validates :password, presence: true, length: { minimum: 8 }, allow_nil: true
   validates :estimatedContribution, presence: true
+  validates :address1, presence: true
+  validates :address2, presence: true
+  validates :zipCode, presence: true
+  validates :city, presence: true
+  validates :state, presence: true
+  validates :dob, presence: true
   # validates :ethAdd, allow_nil: true, length: {is: 42}
 
   def User.digest(string)
@@ -39,6 +45,11 @@ class User < ApplicationRecord
   # Sends activation email.
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  # Sends Thank you email
+  def send_thank_you_email
+    UserMailer.thank_you(self).deliver_now
   end
   
   private

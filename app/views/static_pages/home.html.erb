@@ -1,5 +1,5 @@
 <% provide(:title, "Home") %>
-<% provide(:noNav, "Home") %>
+<% provide(:nav, "noNav") %>
 
 <body id="homebody" class="staticPagesBody">
 	<!-- Navigation bar -->
@@ -24,8 +24,8 @@
 	        <% if current_user %>
 	        	<li><a href="/login" id="login-nav">Login</a></li>
 	        <% else %>
-				<li><a href="/signup" id="login-nav">Register</a></li>
-			<% end %>
+						<li><a href="/signup" id="login-nav">Register</a></li>
+					<% end %>
 	      </ul>
 	    </div>
 	  </div>
