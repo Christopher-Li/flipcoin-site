@@ -1,34 +1,52 @@
 <% provide(:title, "Users") %>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
 
-<table>
+<p>Green indicates admin</p>
+<p>Yellow indicates that the user hasn't authenticated his email</p>
+<div class="table-responsive">
+<table class="table table-striped table-condensed table-hover">
   <thead>
     <tr>
       <th>ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
+      <th>Name</th>
       <th>Email</th>
-      <th>Admin</th>
+      <th>Phone Number</th>
       <th>Estimated Contribution</th>
       <th>Ethereum Address</th>
       <th>Bitcoin Address</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>City</th>
+      <th>State/Province</th>
+      <th>Zip Code</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
+      <% if user.admin == true %>
+        <tr class="success">
+      <% elsif user.activated == false %>
+        <tr class="warning">
+      <% else %>
+        <tr>
+      <% end %>
         <td><%= user.id %></td>
-        <td><%= user.firstName %></td>
-        <td><%= user.lastName %></td>
+        <td><%= user.firstName %> <%= user.lastName %></td>
         <td><%= user.email %></td>
-        <td><%= user.admin %></td>
+        <td><%= user.phoneNumber %></td>
         <td><%= user.estimatedContribution %></td>
         <td><%= user.ethAdd %></td>
         <td><%= user.bitAdd %></td>
+        <td><%= user.address1 %></td>
+        <td><%= user.address2 %></td>
+        <td><%= user.city %></td>
+        <td><%= user.state %></td>
+        <td><%= user.zipCode %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -36,8 +54,7 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
+</div>
 
 <%= link_to 'New User', new_user_path %>
 <%= link_to 'Login', login_path %>
