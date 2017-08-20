@@ -18,6 +18,7 @@ and (min-width : 321px) {}*/
 and (max-width : 320px) {}*/
 
 
+
 hr { 
 	visibility: hidden; 
 	padding: 0 !important; 
@@ -79,8 +80,8 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	left: 0 !important;
 }
 #countdown-container {
-	background: rgba(240,240,240,0.9);
-	border: 1px solid rgba(235,235,235,0.9);
+	background: rgb(240,240,240);
+	border: 1px solid rgba(235,235,235);
 	padding: 5px;
 	width: 300px;
 	margin: 0 auto;
