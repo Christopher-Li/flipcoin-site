@@ -9,7 +9,4 @@ Rails.application.routes.draw do
   resources :account_activations, only: [:edit]
   root 'static_pages#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace :admin do
-    get 'mailer(/:action(/:id(.:format)))' => 'mailer#:action'
-  end
 end
