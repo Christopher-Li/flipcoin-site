@@ -41,13 +41,15 @@
 				</div>
 				<div class="countdown-holder">
 					<div class="image-caption" id="logo-caption">
-						Bridging the gap <br>
+						Bridging the gap
 						between consumer and crypto.
 					</div>
-					<div class="countdown-label" id="ctdn-label">
-						Presale ends in:
-					</div>
-					<div class="countdown" id="countdown">
+					<div id="countdown-container">
+						<div class="countdown-label" id="ctdn-label">
+							Presale ends in:
+						</div>
+						<div class="countdown" id="countdown">
+						</div>
 					</div>
 					<div class="row" id="btn-nest">
 						<div class="kamikaze_btn">
@@ -182,6 +184,11 @@
 					</div>
 				</div>
 			</div>
+			<!-- <div class="row">
+				<div class="col-sm-6 pp-center">
+					<img src="assets/images/AvalonDark.png" style="width: 100%; padding: 0; margin: 0;">
+				</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- Token Sale Terms section -->
@@ -276,24 +283,6 @@
 					<div class="pp-holder">
 						<div class="row row-inner">
 							<div class="pp-pic-holder">
-								<%= image_tag("ppAlan-Gurevich.png", :alt => "Alan Gurevich Profile Picture", :class => "pp") %>
-							</div>
-							<div class="pp-info-holder">
-								<div class="pp-name">Alan Gurevich
-								</div>
-								<div class="pp-role">Chief Technology Officer
-								</div>
-							</div>
-						</div>
-						<div class="pp-description">
-							Alan has previous experience in retail, and used to be a top-performing technology salesperson for CDW. He is incredibly tech-savvy, and is responsible for customer service, implementing software upgrades, troubleshooting, and working with our ATM manufacturer to improve functionality and fix bugs.
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-6">
-					<div class="pp-holder">
-						<div class="row row-inner">
-							<div class="pp-pic-holder">
 								<%= image_tag("ppBen-Weiss.png", :alt => "Ben Weiss Profile Picture", :class => "pp") %>
 							</div>
 							<div class="pp-info-holder">
@@ -308,8 +297,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -328,6 +315,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -347,8 +336,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -367,6 +354,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -385,8 +374,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -405,6 +392,8 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row team-row">
 				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
@@ -423,9 +412,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<div class="row team-row">
-				<div class="pp-center">
+				<div class="col-sm-6">
 					<div class="pp-holder">
 						<div class="row row-inner">
 							<div class="pp-pic-holder">
@@ -544,19 +531,33 @@
 			</div>
 		</div>
 	</div>
+	<!-- Partners Section -->
+	<div id="partners">
+		<div class="container">
+			<h2 class="subsection-header">Proudly Partnered</h2>
+			<div class="row">
+				<div class="partner-logo" style="width:350px !important;margin:5px auto !important;">
+					<%= image_tag("AvalonDark.png", :alt => "Avalon", :class => "partner-logo")%>
+				</div>
+				<!-- <div class="col-sm-4">
+				</div>
+				<div class="col-sm-4">
+				</div> -->
+			</div>
+		</div>
+	</div>
 	<!-- Customer Testimonial Section -->
 	<div class="customer-testimonial">
 		<div class="container">
-			<h2 class="subsection-header" style="margin-top:0!important;margin-bottom:30px!important;">Customer Testimonials</h2>
+			<h2 class="subsection-header" style="margin-bottom:30px!important;">Customer Testimonials</h2>
 			<div class="row row-inner">
 				<div class="pp-pic-holder">
-					
 					<div class="ct-name">Todd Horberg
 					</div>
 				</div>
 				<div class="pp-center">
 					<div class="pp-description">
-						“As a sophisticated trader, my top two concerns entering the crypto space are security and a good deal. CoinFlip’s team has the best prices in the cash-to-crypto game by far; I saw one of their competitors charging north of a 15% mark up and was astonished by what CoinFlip offers in comparison.  A heavy discount off of the lowest fees simply can’t be beat.”
+						<em>“As a sophisticated trader, my top two concerns entering the crypto space are security and a good deal. CoinFlip’s team has the best prices in the cash-to-crypto game by far; I saw one of their competitors charging north of a 15% mark up and was astonished by what CoinFlip offers in comparison.  A heavy discount off of the lowest fees simply can’t be beat.”</em>
 					</div>
 				</div>
 			</div>

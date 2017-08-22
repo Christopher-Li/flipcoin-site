@@ -18,6 +18,7 @@ and (min-width : 321px) {}*/
 and (max-width : 320px) {}*/
 
 
+
 hr { 
 	visibility: hidden; 
 	padding: 0 !important; 
@@ -29,39 +30,45 @@ hr {
 	padding-left: 15px;
 	padding-top: 5px;
 }
+.subsection-header { line-height: 1.3em !important; }
+
+.m-bottom-40 { margin-bottom: 40px; }
 .pp-center {
 	width: 85%; 
 	padding: 0 4px; 
 	margin: 0 auto;
 }
-.subsection-header { line-height: 1.3em !important; }
-.m-bottom-40 { margin-bottom: 40px; }
-.x { color: #ddd; font-size: 12px; }
+.x {
+    color: #ddd;
+    font-size: 12px;
+}
 
 
 /* SPLASH
  ****************************************/
 #particles-js { height: 90%; }
 #home > .full-page-banner { height: 95%; }
-
+.full-page-banner > .introduction-content > .container { padding-top: 130px !important; }
 nav .navbar-toggle.collapsed i { display:block; }
 nav .navbar-header button { margin: 15px !important; }
 nav .navbar-header a img { margin: auto 15px !important; }
 
-.full-page-banner > .introduction-content > .container
-{ padding-top: 130px !important; }
-
-#landing-logo 
-{ margin: 0 auto; margin-bottom: 10px; }
-#landing-caption { width: 300px; }
+#landing-logo,
+#landing-caption {
+	width: 300px;
+}
+#landing-logo {
+ 	margin: 0 auto;
+ 	margin-bottom: 10px;
+}
 #logo-caption {
 	width: 300px;
-	left: 0;
 	margin: 0 auto;
-	margin-bottom: 30px; margin-top: 10px;
 	font-size: 1.7em;
 	color: #666;
 	line-height: 1.3em;
+	margin-bottom: 30px;
+	left: 0;
 }
 
 .countdown-holder {
@@ -69,10 +76,12 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin: 5px auto;
 	left: 0 !important;
 }
-.countdown-holder div { left: 0 !important; }
+.countdown-holder div {
+	left: 0 !important;
+}
 #countdown-container {
-	background: rgba(240,240,240,0.9);
-	border: 1px solid rgba(235,235,235,0.9);
+	background: rgb(240,240,240);
+	border: 1px solid rgba(235,235,235);
 	padding: 5px;
 	width: 300px;
 	margin: 0 auto;
@@ -87,8 +96,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin-bottom: 25px;
 }
 
-#btn-nest { margin: 0 auto; }
-
+#btn-nest {
+	margin: 0 auto;
+}
 .kamikaze_btn a,
 .kamikaze_btn.inv a {
 	font-size: 1.4em;
@@ -173,14 +183,20 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	background: #FAFAFA;
 	padding-top: 20px !important;
 }
-#what-is-flipcoin .subsection-header { font-size: 2.2em !important; }
-#what-is-flipcoin .subsection-header .br { display: block; }
+#what-is-flipcoin .subsection-header {
+	font-size: 2.2em !important;
+}
+#what-is-flipcoin .subsection-header .br {
+	display: block;
+}
 #what-is-flipcoin .subsection-header.sub {
 	color: #656565;
 	font-size: 1.5em !important;
 	margin-top: 5px !important;
 }
-#what-is-flipcoin .kamikaze_btn a { margin-top: 20px !important; }
+#what-is-flipcoin .kamikaze_btn a {
+	margin-top: 20px !important;
+}
 
 
 /* WHAT IS COINFLIP?!
@@ -190,8 +206,12 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-top: 20px !important;
 	padding-bottom: 50px !important;
 }
-#token-sale .subsection-header { font-size: 2.4em !important; }
-#token-sale .responsive-embed { margin: 40px auto; }
+#token-sale .subsection-header {
+	font-size: 2.4em !important;
+}
+#token-sale .responsive-embed {
+	margin: 40px auto;
+}
 
 
 /* TOKEN SALE TERMS
@@ -201,9 +221,13 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-bottom: 50px !important;
 	margin: 0 !important;
 }
-#sale-terms .subsection-header { font-size: 2.4em !important; }
+#sale-terms .subsection-header {
+	font-size: 2.4em !important;
+}
 #sale-terms .col-sm-6:first-of-type .paragraph:last-of-type
-{ margin-bottom:40px; }
+{
+	margin-bottom:40px;
+}
 #sale-terms ul li {
 	font-size: 1.1em;
 	line-height: 1.3em;
@@ -216,7 +240,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
     padding-left: 3px;
     margin-bottom: 28px;
 }
-#sale-terms h4 > a { font-size: 10px; }
+#sale-terms h4 > a {
+	font-size: 10px;
+}
 
 
 /* OUR TEAM
@@ -230,8 +256,12 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding: 0 !important;
 	margin-bottom: 10px !important;
 }
-#team .team-row { padding: 0 !important; }
-#team .pp-holder { padding: 3px 0; }
+#team .team-row {
+	padding: 0 !important;
+}
+#team .pp-holder {
+	padding: 3px 0;
+}
 #team .pp-holder .pp-pic-holder {
 	margin: 0 auto;
 	width: 200px; height: auto;
@@ -241,10 +271,13 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin-top: 12px;
 	text-align: center;
 }
+#team .pp-holder .pp-name {
+	font-size: 1.4em;
+}
 #team .pp-holder .pp-name,
-#team .pp-holder .pp-role 
-{ text-align: center; }
-#team .pp-holder .pp-name { font-size: 1.4em; }
+#team .pp-holder .pp-role {
+	text-align: center;
+}
 #team .pp-holder .pp-role {
 	font-size: 1.0em;
 	line-height: 1.1em;
@@ -260,25 +293,10 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin: 0 auto !important; margin-top: 20px !important;
 }
 
-/* PARTNER SECTION
- ****************************************/
-#partners {
-	padding-top: 20px !important;
-	padding-bottom: 50px !important;
-}
-.partner-logo {
-	width: 350px !important;
-	position: relative;
-	margin: 5px auto;
-}
-
-
 
 /* CUSTOMER TESTIMONIAL
  ****************************************/
 .customer-testimonial {
-	background: white;
-	padding-top: 40px !important;
  	padding-bottom: 50px !important;
 }
 .customer-testimonial .pp-pic-holder {
@@ -287,14 +305,20 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin: 0px auto;
 }
 
-.customer-testimonial .pp-pic-holder > .ct-name 
-{ font-size: 1.35em; margin: 20px auto; }
+.customer-testimonial .pp-pic-holder > .ct-name {
+	font-size: 1.35em;
+	margin: 20px auto;
+}
 
 
 /* FOOTER
  ****************************************/
-#footer { padding: 50px 0 !important; }
-#footer .title { margin-bottom: 30px !important; }
+#footer {
+	padding: 50px 0 !important;
+}
+#footer .title {
+	margin-bottom: 30px !important;
+}
 #foot-social {
 	list-style: none;
 	margin-bottom: 35px;
@@ -306,9 +330,15 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-bottom: 15px;
 	border: none;
 }
-#footer .contact #foot-social li a { color: white; }
-#footer .contact #foot-social li a:hover { color: #DFA94F; }
-#footer .contact #foot-social li i { font-size: 22px !important; }
+#footer .contact #foot-social li a {
+	color: white;
+}
+#footer .contact #foot-social li a:hover {
+	color: #DFA94F;
+}
+#footer .contact #foot-social li i {
+	font-size: 22px !important;
+}
 
 
 

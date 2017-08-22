@@ -1,4 +1,5 @@
-<table style="background-color: #DFA94F;background-size:100% 100%;background-position:top center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="2b2e34">
+
+  <table style="background-color: #DFA94F);background-size:100% 100%;background-position:top center" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="2b2e34">
     <tbody>
       <tr>
         <td>
@@ -18,7 +19,24 @@
                   </table>
                 </td>
               </tr>
-              
+              <tr>
+                <td>
+                  <table width="510" cellspacing="0" cellpadding="0" border="0" align="center">
+                    <tbody>
+                      <tr>
+                        <td align="center">
+                          <a href="https://www.flipcoinsale.com" style="display:block;border-style:none!important;border:0!important">
+                            <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
+                          </a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size:35px;line-height:35px" height="35">&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
             </tbody>
           </table>
         </td>
@@ -28,33 +46,15 @@
           <table style="width:510px;background-color:white!important" width="510" cellspacing="0" cellpadding="0" border="0" bgcolor="ffffff" align="center">
             <tbody>
               <tr>
-                <td style="font-size:40px;line-height:40px" height="40">&nbsp;</td>
-              </tr>
-              <tr>
                 <td>
                   <table style="width:510px;background-color:white!important" width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
                     <tbody>
-                    	<tr>
-			                <td>
-			                  <table width="510" cellspacing="0" cellpadding="0" border="0" align="center">
-			                    <tbody>
-			                      <tr>
-			                        <td align="center">
-			                          <a href="https://www.flipcoinsale.com" style="display:block;border-style:none!important;border:0!important">
-			                            <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
-			                          </a>
-			                        </td>
-			                      </tr>
-			                      <tr>
-			                        <td style="font-size:35px;line-height:0" height="15">&nbsp;</td>
-			                      </tr>
-			                    </tbody>
-			                  </table>
-			                </td>
-			            		</tr>
+                      <tr>
+                        <td style="font-size:40px;line-height:40px" height="40">&nbsp;</td>
+                      </tr>
                       <tr>
                         <td align="center">
-                          <table width="440" cellspacing="0" cellpadding="0" border="0" align="center">
+                          <table height="580" width="440" cellspacing="0" cellpadding="0" border="0" align="center">
                             <tbody>
                               <tr>
                                 <td style="color:#656565;font-size:24px;font-family:'Varela Round',sans-serif;line-height:30px" align="left">
@@ -68,21 +68,26 @@
                         </td>
                       </tr>
                       <tr>
+                        <td style="font-size:20px;line-height:20px" height="20">&nbsp;</td>
+                      </tr>
+                      <tr>
                         <td>
                           <table width="440" cellspacing="0" cellpadding="0" border="0" align="center">
                             <tbody>
                               <tr>
                                 <td style="color:#737b8c;font-size:16px;font-family:'Varela Round',sans-serif;line-height:24px" align="left">
                                   <div style="line-height:24px">
-                                    <p class="p-kamikaze-style">
-                                        Thank you for joining <a href="https://coinflip.tech" class="link" style="color: #DFA94F; text-decoration: none;">CoinFlip</a>! To finish signing up, please click on 
-                                        <span><%= link_to "this link", edit_account_activation_url(@user.activation_token,
-                                                    email: @user.email) %></span> to confirm your email address.<br><br>
+                                    <p>
+                                        Thank you for joining <a href="https://coinflip.tech" class="link">CoinFlip</a>! To finish signing up, please click on 
+                                        <span style="color:#1c2029">
+                                          <%= link_to "this link", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+                                        </span> to confirm your email address.<br><br>
                                     </p>
-                                    <p class="p-kamikaze-style">
-                                        If you have trouble opening it in your browser, please contact us IMMEDIATELY via email (<span class="bold">info <span>[at]</span> coinflip <span>[dot]</span> tech</span>) or by phone (<span class="bold">+1 773 800 0106</span>).<br><br>
+                                    <p>
+                                        If you have trouble opening it in your browser, please contact us IMMEDIATELY via email (info [at] coinflip [dot] tech) or by phone (+1.224.688.9977).<br><br>
                                     </p>
-                                    <p class="p-kamikaze-style">
+                                    <p>
                                         Thank you,<br>
                                         The CoinFlip Team
                                     </p>
@@ -92,6 +97,9 @@
                             </tbody>
                           </table>
                         </td>
+                      </tr>
+                      <tr>
+                        <td style="font-size:35px;line-height:35px" height="35">&nbsp;</td>
                       </tr>
                       <tr>
                         <td style="font-size:30px;line-height:30px" height="30">&nbsp;</td>
@@ -160,9 +168,9 @@
                                                     <tbody>
                                                       <tr>
                                                         <td style="color:#757575;font-size:14px;font-family:'Questrial',Helvetica,sans-serif;line-height:22px" align="center">
-                                                          <div style="line-height:32px">
+                                                          <div style="line-height:22px">
                                                             <span>
-                                                              <a href="https://flipcoinsale/login" style="color:#DFA94F;" class="link" target="_blank">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://coinflip.tech/#footer" style="color:#DFA94F;text-decoration:none" class="link" target="_blank">Contact us</a>
+                                                              <a href="https://flipcoinsale/login" style="color:#DFA94F;text-decoration:none" class="link" target="_blank">Sign in</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://coinflip.tech/#footer" style="color:#DFA94F;text-decoration:none" class="link" target="_blank">Contact us</a>
                                                             </span>
                                                           </div>
                                                         </td>
@@ -207,6 +215,8 @@
     </tr>
   </tbody>
 </table>
+
+
 
 
 
