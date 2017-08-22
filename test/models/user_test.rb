@@ -7,9 +7,15 @@ class UserTest < ActiveSupport::TestCase
   def setup
     @user = User.new(firstName: "Example", 
       lastName: "Name", 
+      email: "user@example.com",
+      address1: "testtest",
+      zipCode: "12345",
+      city: "testtest",
+      state: "testtest",
+      dob: Date.parse('2012-12-20'),
+      estimatedContribution: 1.0,
       password: "testtest", 
-      password_confirmation: "testtest", 
-      email: "user@example.com")
+      password_confirmation: "testtest")
   end
 
   test "should be valid" do

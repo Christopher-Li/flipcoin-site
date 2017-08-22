@@ -2,12 +2,30 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @user = {admin: false, email: "testemail@email.com", firstName: "firstName", lastName: "lastName", password: "testingpassword"}
+    # @user = User.new(firstName: "Example", 
+    #   lastName: "Name", 
+    #   email: "user@example.com",
+    #   address1: "testtest",
+    #   zipCode: "12345",
+    #   city: "testtest",
+    #   state: "testtest",
+    #   dob: Date.parse('2012-12-20'),
+    #   estimatedContribution: 1.0,
+    #   password: "testtest", 
+    #   password_confirmation: "testtest")
+    @user = User.first
   end
 
-  test "should get index" do
+  # test "should get index" do
+  #   log_in @user
+  #   get users_url
+  #   assert_response :success
+  # end
+
+  test "User access restricted to logged in users" do
+    log_in_as(@user)
     get users_url
-    assert_response :success
+    assert_redirected_to '/login'
   end
 
   test "should get new" do
