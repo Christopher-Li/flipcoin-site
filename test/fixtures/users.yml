@@ -3,17 +3,33 @@
 one:
   firstName: MyString
   lastName: MyString
-  email: MyString
+  email: MyString@gmail.com
   admin: false
-  password_digest: MyString
+  estimatedContribution: 0
+  phoneNumber: 1231231234
+  address1: 1234 address
+  address2: apt# 1234
+  state: illinois
+  zipCode: 12345
+  city: sacremento
+  dob: Date.today
+  password_digest: $2a$10$dekW1Xm2nPjclC0OebL/KuROMh8jQbkHOICWGstEhf5FomwdkekhK # Encrypted 'password' string
   activated: true
   activated_at: <%= Time.zone.now %>
 
 two:
   firstName: MyString
   lastName: MyString
-  email: MyString2
+  email: MyString2@gmail.com
   admin: false
-  password_digest: MyString
+  estimatedContribution: 0
+  phoneNumber: 1231231234
+  address1: 1234 address
+  address2: apt# 1234
+  state: illinois
+  zipCode: 12345
+  city: sacremento
+  dob: Date.today
+  password_digest: password # Encrypted 'password' string
   activated: true
   activated_at: <%= Time.zone.now %>

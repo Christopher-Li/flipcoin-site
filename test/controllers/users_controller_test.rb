@@ -2,28 +2,17 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
-    # @user = User.new(firstName: "Example", 
-    #   lastName: "Name", 
-    #   email: "user@example.com",
-    #   address1: "testtest",
-    #   zipCode: "12345",
-    #   city: "testtest",
-    #   state: "testtest",
-    #   dob: Date.parse('2012-12-20'),
-    #   estimatedContribution: 1.0,
-    #   password: "testtest", 
-    #   password_confirmation: "testtest")
     @user = User.first
   end
 
-  # test "should get index" do
-  #   log_in @user
-  #   get users_url
-  #   assert_response :success
-  # end
+  test "should get index" do
+    log_in_as @user
+    get users_url
+    assert_response :success
+  end
 
   test "User access restricted to logged in users" do
-    log_in_as(@user)
+    log_in_as @user
     get users_url
     assert_redirected_to '/login'
   end
@@ -35,7 +24,20 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { admin: false, email: @user.email, firstName: @user.firstName, lastName: @user.lastName, password: @user.password } }
+      post users_url, 
+        params: { 
+          user: { 
+            firstName: "Example", 
+            lastName: "Name", 
+            email: "user@example.com",
+            address1: "testtest",
+            zipCode: "12345",
+            city: "testtest",
+            state: "testtest",
+            dob: Date.parse('2012-12-20'),
+            estimatedContribution: 1.0,
+            password: "password", 
+            password_confirmation: "password" } }
     end
 
     assert_redirected_to user_url(User.last)
@@ -47,6 +49,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get edit" do
+    log_in_as @user
     get edit_user_url(@user)
     assert_response :success
   end
