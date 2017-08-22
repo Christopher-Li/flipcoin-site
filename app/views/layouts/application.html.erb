@@ -54,7 +54,10 @@ Created: July 2017
   <body>
     <% if yield(:nav) != "noNav" %>
       <nav id="application-navbar" class="navbar navbar-default">
-        <div class="container">
+        <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+      <div class="container">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -84,9 +87,6 @@ Created: July 2017
           </div>
         </div>
       </nav>
-    <% end %>
-    <% flash.each do |message_type, message| %>
-      <div class="alert alert-<%= message_type %>"><%= message %></div>
     <% end %>
     <%= yield %>
     <%= javascript_include_tag 'bootstrap', 'data-turbolinks-track': 'reload' %>

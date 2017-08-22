@@ -4,6 +4,9 @@
 <body id="homebody" class="staticPagesBody">
 	<!-- Navigation bar -->
 	<nav class="navbar navbar-default navbar-fixed-top">
+	  <% flash.each do |message_type, message| %>
+	    <div class="alert alert-<%= message_type %>"><%= message %></div>
+	  <% end %>
 	  <div class="container">
 	    <!-- Brand and toggle get grouped for better mobile display -->
 	    <div class="navbar-header">
@@ -29,7 +32,7 @@
 	      </ul>
 	    </div>
 	  </div>
-	</nav> 	
+	</nav>
 	<div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
 	<div id="particles-js" style="background-position: 50% 50%;"></div>
