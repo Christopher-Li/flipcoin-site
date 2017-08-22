@@ -2,60 +2,82 @@
 
 <div class="signup">
 <div class="container">
-	<div class="row">
-		<div class="signup-holder col-md-6 col-md-offset-3">
-			<%= form_for(@user, url: '/signup') do |f| %>
-				<%= render 'shared/error_messages' %>
-				<%= f.label :firstName, value: 'First Name *' %>
-				<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
-				
-				<%= f.label :lastName, value: 'Last Name *' %>
-				<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
-				
-				<%= f.label :email, value: 'Email *' %>
-				<%= f.text_field :email, class: 'form-control', placeholder: "JohnDoe123@gmail.com" %>
-
-				<%= f.label :phoneNumber, value: 'Phone Number' %>
-				<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-123-123-1234" %>
-
-				<%= f.label :ethAdd, value: 'Ethereum Address' %>
-				<%= f.text_field :ethAdd, class: 'form-control', placeholder: "0x..." %>
-
-				<%= f.label :bitAdd, value: 'Bitcoin Address' %>
-				<%= f.text_field :bitAdd, class: 'form-control', placeholder: "1... or 3..." %>
-
-				<%= f.label :estimatedContribution, value: 'Estimated Value (USD) *' %>
-				<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "10000" %>
-
-				<%= f.label :address1, value: 'Address Line 1 *' %>
-				<%= f.text_field :address1, class: 'form-control' %>
-
-				<%= f.label :address2, value: 'Address Line 2' %>
-				<%= f.text_field :address2, class: 'form-control' %>
-
-				<%= f.label :city, value: 'City *' %>
-				<%= f.text_field :city, class: 'form-control' %>
-
-				<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
-				<%= f.text_field :zipCode, class: 'form-control' %>
-
-				<%= f.label :state, value: 'State/Province *' %>
-				<%= f.text_field :state, class: 'form-control' %>
-
-				<%= f.label :dob, value: 'Date of Birth *' %>
-				<%= f.date_select :dob, class: 'form-control' %>				
-
-				<%= f.label :password, value: 'Password *' %>
-				<%= f.password_field :password, class: 'form-control' %>
-
-				<%= f.label :password_confirmation, "Password Confirmation *" %>
-			  <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-		    <%= f.submit "Create my account", class: "btn btn-primary" %>
-			<% end %>
-
-			<p>Existing user? <%= link_to "Login Here!", login_path %></p>
-		</div>
+	<div class="signup-holder col-sm-9">
+		<h2>FlipCoin Token Sale Registration</h2>
+		<p id="ERRexistence" class="pp-description">Existing user? <%= link_to "Login", login_path %></p>
+		<%= form_for(@user, url: '/signup') do |f| %>
+			<%= render 'shared/error_messages' %>
+				<div class="center-block">
+					<div id="REGfname" class="REG">
+						<%= f.label :firstName, value: 'First Name *' %>
+						<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
+					</div>
+					<div id="REGlname" class="REG">
+						<%= f.label :lastName, value: 'Last Name *' %>
+						<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
+					</div>
+				</div>
+				<div class="center-block">
+					<div id="REGemail" class="REG">
+						<%= f.label :email, value: 'Email *' %>
+						<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
+					</div>
+					<div id="REGphone" class="REG">
+						<%= f.label :phoneNumber, value: 'Phone Number' %>
+						<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
+					</div>
+				</div>
+					<!-- DELETED ADDRESS INPUTS -->
+				<div class="center-block">
+					<div id="REGadd1" class="REG">
+						<%= f.label :address1, value: 'Address Line 1 *' %>
+						<%= f.text_field :address1, class: 'form-control' %>
+					</div>
+					<div id="REGadd2" class="REG">
+						<%= f.label :address2, value: 'Address Line 2' %>
+						<%= f.text_field :address2, class: 'form-control' %>
+					</div>
+				</div>
+				<div class="center-block">
+					<div id="REGcity" class="REG">
+						<%= f.label :city, value: 'City *' %>
+						<%= f.text_field :city, class: 'form-control' %>
+					</div>
+					<div id="REGzip" class="REG">
+						<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+						<%= f.text_field :zipCode, class: 'form-control' %>
+					</div>
+				</div>
+				<div class="center-block">
+					<div id="REGstate" class="REG">
+						<%= f.label :state, value: 'State/Province *' %>
+						<%= f.text_field :state, class: 'form-control' %>
+					</div>
+					<div id="REGdob" class="REG">
+						<%= f.label :dob, value: 'Date of Birth *' %>
+						<%= f.date_select :dob, class: 'form-control' %>
+					</div>
+				</div>
+				<div class="center-block">	
+					<div id="REGpass" class="REG">
+						<%= f.label :password, value: 'Password *' %>
+						<%= f.password_field :password, class: 'form-control' %>
+					</div>
+					<div id="REGconfirm" class="REG">
+						<%= f.label :password_confirmation, "Password Confirmation *" %>
+				  		<%= f.password_field :password_confirmation, class: 'form-control' %>
+			  		</div>
+			  	</div>
+			  	<div class="center-block">
+			  		<div id="REGestimate" class="REG">
+				  		<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+						<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
+					</div>
+					<div id="REGsubmit">
+		    			<%= f.submit "Submit", class: "kamikaze_btn" %>
+		    		</div>
+		    	</div>
+		<% end %>
 	</div>
 </div>
 </div>
