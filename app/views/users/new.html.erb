@@ -2,6 +2,7 @@
 
 <div class="signup">
 <div class="container">
+<<<<<<< Updated upstream
 	<div class="signup-holder col-sm-9">
 		<h2>FlipCoin Token Sale Registration</h2>
 		<p id="ERRexistence" class="pp-description">Existing user? <%= link_to "Login", login_path %></p>
@@ -55,7 +56,7 @@
 					</div>
 					<div id="REGdob" class="REG">
 						<%= f.label :dob, value: 'Date of Birth *' %>
-						<%= f.date_select :dob, class: 'form-control' %>
+						<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 70, end_year: Date.today.year %>
 					</div>
 				</div>
 				<div class="center-block">	
@@ -78,6 +79,62 @@
 		    		</div>
 		    	</div>
 		<% end %>
+=======
+	<div class="row">
+		<div class="signup-holder col-md-6 col-md-offset-3">
+			<%= form_for(@user, url: '/signup') do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :firstName, value: 'First Name *' %>
+				<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
+				
+				<%= f.label :lastName, value: 'Last Name *' %>
+				<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
+				
+				<%= f.label :email, value: 'Email *' %>
+				<%= f.text_field :email, class: 'form-control', placeholder: "JohnDoe123@gmail.com" %>
+
+				<%= f.label :phoneNumber, value: 'Phone Number' %>
+				<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-123-123-1234" %>
+
+				<%= f.label :ethAdd, value: 'Ethereum Address' %>
+				<%= f.text_field :ethAdd, class: 'form-control', placeholder: "0x..." %>
+
+				<%= f.label :bitAdd, value: 'Bitcoin Address' %>
+				<%= f.text_field :bitAdd, class: 'form-control', placeholder: "1... or 3..." %>
+
+				<%= f.label :estimatedContribution, value: 'Estimated Value (USD) *' %>
+				<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "10000" %>
+
+				<%= f.label :address1, value: 'Address Line 1 *' %>
+				<%= f.text_field :address1, class: 'form-control' %>
+
+				<%= f.label :address2, value: 'Address Line 2' %>
+				<%= f.text_field :address2, class: 'form-control' %>
+
+				<%= f.label :city, value: 'City *' %>
+				<%= f.text_field :city, class: 'form-control' %>
+
+				<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+				<%= f.text_field :zipCode, class: 'form-control' %>
+
+				<%= f.label :state, value: 'State/Province *' %>
+				<%= f.text_field :state, class: 'form-control' %>
+
+				<%= f.label :dob, value: 'Date of Birth *' %>
+				<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 70, end_year: Date.today.year %>				
+
+				<%= f.label :password, value: 'Password *' %>
+				<%= f.password_field :password, class: 'form-control' %>
+
+				<%= f.label :password_confirmation, "Password Confirmation *" %>
+			  <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+		    <%= f.submit "Create my account", class: "btn btn-primary" %>
+			<% end %>
+
+			<p>Existing user? <%= link_to "Login Here!", login_path %></p>
+		</div>
+>>>>>>> Stashed changes
 	</div>
 </div>
 </div>
