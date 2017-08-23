@@ -14,7 +14,31 @@
 				
 				<%= f.label :email %>
 				<%= f.text_field :email, class: 'form-control' %>
+
+				<%= f.label :phoneNumber, value: 'Phone Number' %>
+				<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
 				
+				<%= f.label :address1, value: 'Address Line 1 *' %>
+				<%= f.text_field :address1, class: 'form-control' %>
+
+				<%= f.label :address2, value: 'Address Line 2' %>
+				<%= f.text_field :address2, class: 'form-control' %>
+
+				<%= f.label :city, value: 'City *' %>
+				<%= f.text_field :city, class: 'form-control' %>
+
+				<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+				<%= f.text_field :zipCode, class: 'form-control' %>
+
+				<%= f.label :state, value: 'State/Province *' %>
+				<%= f.text_field :state, class: 'form-control' %>
+
+				<%= f.label :dob, value: 'Date of Birth *' %>
+				<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
+
+				<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+				<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
+
 <!-- 				<%= f.label :admin %>
 				<br />
 				<input id="admin_true" name="admin" type="radio" value="true" />
@@ -29,7 +53,7 @@
 	</div>
 </div>
 </div>
-<%= render 'form', user: @user %>
+<!-- <%= render 'form', user: @user %> -->
 
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
