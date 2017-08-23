@@ -5,6 +5,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     @user = User.first
   end
 
+  test "test number of users" do
+    # assert_match 2, @user.authenticate('password')
+    assert_match 2, User.find_by(email: @user.email).authenticate('password')
+  end
+
   test "should get index" do
     log_in_as @user
     get users_url
@@ -24,7 +29,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, 
+      post '/signup/', 
         params: { 
           user: { 
             firstName: "Example", 

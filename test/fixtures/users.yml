@@ -30,6 +30,6 @@ two:
   zipCode: 12345
   city: sacremento
   dob: Date.today
-  password_digest: password # Encrypted 'password' string
+  password_digest: $2a$10$dekW1Xm2nPjclC0OebL/KuROMh8jQbkHOICWGstEhf5FomwdkekhK # Encrypted 'password' string
   activated: true
   activated_at: <%= Time.zone.now %>
