@@ -17,7 +17,6 @@ and (min-width : 321px) {}*/
 /*@media only screen 
 and (max-width : 320px) {}*/
 
-.pp-description > a { color: #DFA94F; text-decoration: none; }
 hr { 
 	visibility: hidden; 
 	padding: 0 !important; 
@@ -34,69 +33,37 @@ hr {
 	padding: 0 4px; 
 	margin: 0 auto;
 }
-.subsection-header 
-{ line-height: 1.3em !important; }
-.m-bottom-40 
-{ margin-bottom: 40px; }
-.x 
-{ color: #ddd; font-size: 12px; }
-/**********************************************************************
- **********************************************************************
- * HOME PAGE 
- **********************************************************************
- **********************************************************************/
-/* SPLASH
- ****************************************/
-#particles-js 
-{ height: 106% !important; }
-#home > .full-page-banner 
-{ height: 95%; }
-nav .navbar-toggle.collapsed i 
-{ display:block; }
-nav .navbar-header button 
-{ margin: 15px !important; }
-nav .navbar-header a img 
-{ margin: auto 15px !important; }
-.full-page-banner > .introduction-content > .container
-{ padding-top: 100px !important; margin-bottom: 20px; }
-#landing-logo 
-{ width: 300px; margin: 0 auto; margin-bottom: 10px; }
-#landing-caption 
-{ width: 222px; }
-#logo-caption,
-#ctdn-label 
-{ font-size: 1.5em; }
-#logo-caption {
-	width: 222px;
-	left: 0;
+.subsection-header { 
+	line-height: 1.3em !important; 
+}
+.m-bottom-40 { 
+	margin-bottom: 40px; 
+}
+.x { 
+	color: #ddd; 
+	font-size: 12px; 
+}
+.one-edge-shadow {
+  box-shadow: 0 8px 6px -6px #444;
+}
+
+.login-holder,
+.signup-holder {
+	border: 2px solid #F1F1F1;
+	border-radius: 4px;
+	background-color: #F5F5F5;
+	padding: 20px;
+	box-shadow: 0 8px 6px -6px #444;
+	max-width: 300px;
 	margin: 0 auto;
-	margin-bottom: 30px; margin-top: 10px;
-	color: #666;
-	line-height: 1.3em;
 }
-.countdown-holder {
-	position: relative !important;
-	margin: 5px auto;
-	left: 0 !important;
-}
-.countdown-holder div 
-{ left: 0 !important; }
-#countdown-container {
-	background: rgba(240,240,240,0.9);
-	border: 1px solid rgba(235,235,235,0.9);
-	padding: 0 5px;
-	width: 222px;
-	margin: 0 auto;
-	margin-bottom: 20px;
-}
-#ctdn-label 
-{ padding-bottom: 10px; }
-#countdown {
-	font-size: 1.55em;
-	margin-bottom: 25px;
-}
-#btn-nest 
-{ margin: 0 auto; }
+
+/** NAV **/
+nav .navbar-toggle.collapsed i { display: block; }
+nav .navbar-header button { margin: 15px !important; }
+nav .navbar-header a img { margin: auto 15px !important; }
+
+/** BUTTONS & LINKS **/
 .kamikaze_btn a,
 .kamikaze_btn.inv a {
 	font-size: 1.2em;
@@ -109,18 +76,100 @@ nav .navbar-header a img
 	display: block;
 	margin: 10px auto;
 }
+
 .kamikaze_btn a,
 .kamikaze_btn.inv a:hover {
 	color:#FFFFFF; 
 	background-color:#DFA94F; 
 	border-color:#DFA94F;
 }
+
 .kamikaze_btn a:hover, 
 .kamikaze_btn.inv a {
 	color:#DFA94F; 
 	background-color:transparent; 
 	border-color:#DFA94F;
 }
+.pp-description > a { 
+	color: #DFA94F; 
+	text-decoration: none; 
+}
+
+/** SOCIAL **/
+.github-link { color: #24292E; }
+.facebook-link { color: #337ab7; }
+.twitter-link { color: #1DA1F2; }
+
+/**********************************************************************
+ **********************************************************************
+ * HOME PAGE 
+ **********************************************************************
+ **********************************************************************/
+/* SPLASH
+ ****************************************/
+#particles-js 
+{ height: 106% !important; }
+#home > .full-page-banner 
+{ height: 95%; }
+
+.full-page-banner > .introduction-content > .container
+{ 
+	padding-top: 100px !important; 
+	margin-bottom: 20px; 
+}
+
+#landing-logo { 
+	width: 300px; 
+	margin: 0 auto;
+	margin-bottom: 10px; 
+}
+
+#logo-caption,
+#ctdn-label { 
+	font-size: 1.5em; 
+}
+
+#logo-caption {
+	width: 222px;
+	left: 0;
+	margin: 0 auto;
+	margin-bottom: 30px; margin-top: 10px;
+	color: #666;
+	line-height: 1.3em;
+}
+
+.countdown-holder {
+	position: relative !important;
+	margin: 5px auto;
+	left: 0 !important;
+}
+
+.countdown-holder div { 
+	left: 0 !important; 
+}
+
+#countdown-container {
+	background: rgba(240,240,240,0.9);
+	border: 1px solid rgba(235,235,235,0.9);
+	padding: 0 5px;
+	width: 222px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+#ctdn-label { 
+	padding-bottom: 10px; 
+}
+
+#countdown {
+	font-size: 1.55em;
+	margin-bottom: 25px;
+}
+
+#btn-nest { 
+	margin: 0 auto; 
+}
+
 /* ABOUT
  ****************************************/
 #about {
@@ -132,18 +181,11 @@ nav .navbar-header a img
 	color: #DFA94F !important;
 	margin-top: 70px !important;
 }
-#social-links 
-{ height: 160px; }
+#social-links { height: 160px; }
 .github-link,
 .facebook-link,
-.twitter-link 
-{ background-color: none !important; }
-.github-link 
-{ color: #24292E; }
-.facebook-link 
-{ color: #337ab7; }
-.twitter-link 
-{ color: #1DA1F2; }
+.twitter-link { background-color: none !important; }
+
 .token-doc a {
 	width: 210px;
 	height: 230px;
@@ -153,8 +195,9 @@ nav .navbar-header a img
 	border: solid 3px #DFA94F !important;
 	color: #DFA94F !important;
 }
-.token-doc .jri-image-holder 
-{ margin: 10px auto !important; }
+.token-doc .jri-image-holder { 
+	margin: 10px auto !important; 
+}
 .token-doc .jri-inner-li {
 	color: #888;
 	font-size:1.2em;
@@ -375,7 +418,6 @@ form#new_user label
 
 
 
-
 /* OCD IS REAL */
 @media only screen
 and (min-width: 350px) {
@@ -384,10 +426,12 @@ and (min-width: 350px) {
 }
 @media only screen
 and (min-width: 400px) {
-	#what-is-flipcoin .subsection-header .br 
-	{ display: inline-block; }
-	#sale-terms .col-sm-6:first-of-type .paragraph:last-of-type
-	{ margin-bottom: 10px; }
+	#what-is-flipcoin .subsection-header .br { 
+		display: inline-block; 
+	}
+	#sale-terms .col-sm-6:first-of-type .paragraph:last-of-type { 
+		margin-bottom: 10px; 
+	}
 }
 
 /* iPads(portrait and landscape) + ----------- */
