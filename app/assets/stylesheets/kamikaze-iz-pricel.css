@@ -388,20 +388,19 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	text-align: center; 
 }
 
-form#new_user input { 
-	width: 250px; 
-	margin: 8px 10px;
-	margin-left: 0;
-}
-
 #ERRexistence { 
 	margin-top: 20px !important; 
 	margin-bottom: 40px !important; 
 }
 
-form#new_user label 
-{ text-align: left; }
-
+form .REG label {
+	text-align: left;
+}
+form .REG input {
+	width: 250px; 
+	margin: 8px 10px;
+	margin-left: 0;
+}
 .REG.state { 
 	margin-left: 0; 
 }

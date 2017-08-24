@@ -3,7 +3,7 @@
 <div class="signup">
 <div class="container">
 	<div class="signup-holder profile-form">
-		<h2>Profile Settings</h2>
+		<h2 class="greetings">Profile Settings</h2>
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
 			<div class="center-block">
@@ -47,11 +47,11 @@
 				</div>
 			</div>
 			<div class="center-block">
-				<div class="REG pass">
+				<div class="REG state">
 					<%= f.label :state, value: 'State/Province *' %>
 					<%= f.text_field :state, class: 'form-control' %>
 				</div>
-				<div class="REG confirm">
+				<div class="REG dob">
 					<%= f.label :dob, value: 'Date of Birth *' %>
 					<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
 				</div>
