@@ -2,8 +2,8 @@
 
 <div class="login">
 <div class="container">
-  <div class="row">
-    <div class="login-holder one-edge-shadow col-md-6">
+  <div>
+    <div class="login-holder one-edge-shadow">
       <h2>FlipCoin Member Login</h2>
       <p>New user?<br><%= link_to "Sign up now!", signup_path %></p>
       <%= form_for(:session, url: login_path) do |f| %>
@@ -21,6 +21,7 @@
 </div>
 <style>
   .login-holder {
+    width: 50%;
     border: 2px solid #F1F1F1;
     border-radius: 4px;
     background-color: #F5F5F5;
@@ -28,6 +29,7 @@
     box-shadow: 0 8px 6px -6px #444;
     max-width: 300px;
     margin: 0 auto;
+    padding: 20px !important;
   }
   .login-holder > form {
     text-align: center;
@@ -41,13 +43,14 @@
   }
   .login-holder p {
     text-align: center;
-    margin: 10px auto;
+    margin: 30px auto;
+    color: #656565;
   }
   .login-holder p a {
     color: #DFA94F; 
     text-decoration: none; 
   }
-  .login-holder .kamikaze_btn {
+  .login-holder .kamikaze_btn-noa {
     margin: 10px auto;
   }
 </style>
