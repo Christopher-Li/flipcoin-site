@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170817172326) do
+ActiveRecord::Schema.define(version: 20170824014405) do
 
   create_table "users", force: :cascade do |t|
     t.string "email"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170817172326) do
     t.string "zipCode"
     t.string "city"
     t.date "dob"
+    t.string "contract_digest"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

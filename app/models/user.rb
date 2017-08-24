@@ -62,6 +62,10 @@ class User < ApplicationRecord
       self.activation_digest = User.digest(activation_token)
     end
 
+    def create_contract_digest
+      self.contract_digest = SecureRandom.hex
+    end
+
     def validate(record)
       unless record.ethAdd.starts_with? '0x'
         record.errors[:ethAdd] << "Need address starting with '0x'!"
