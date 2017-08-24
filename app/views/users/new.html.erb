@@ -2,7 +2,7 @@
 
 <div class="signup">
 <div class="container">
-	<div class="signup-holder col-sm-9">
+	<div class="signup-holder">
 		<h2>FlipCoin Token Sale Registration</h2>
 		<p id="ERRexistence" class="pp-description">Already registered? <%= link_to "Login", login_path %></p>
 		<%= form_for(@user, url: '/signup') do |f| %>
@@ -81,6 +81,9 @@
 	</div>
 </div>
 <style>
-
+	.signup-holder {
+		width: 66%; 
+		max-width: 600px; 
+	}
 </style>
 </div>
