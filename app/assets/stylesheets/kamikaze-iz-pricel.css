@@ -370,7 +370,8 @@ nav .navbar-header a img { margin: auto 15px !important; }
  **********************************************************************
  **********************************************************************/
 .signup-holder {
-	width: 66%; max-width: 600px; 
+	width: 66%; 
+	min-width: 292px; max-width: 600px; 
 	margin: 10px auto;
 }
 .signup h2 { 
