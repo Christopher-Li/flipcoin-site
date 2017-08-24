@@ -64,6 +64,8 @@ nav .navbar-header button { margin: 15px !important; }
 nav .navbar-header a img { margin: auto 15px !important; }
 
 /** BUTTONS & LINKS **/
+.kamikaze_btn-noa,
+.kamikaze_btn-noa.inv,
 .kamikaze_btn a,
 .kamikaze_btn.inv a {
 	font-size: 1.2em;
@@ -77,6 +79,8 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin: 10px auto;
 }
 
+.kamikaze_btn-noa,
+.kamikaze_btn-noa.inv:hover,
 .kamikaze_btn a,
 .kamikaze_btn.inv a:hover {
 	color:#FFFFFF; 
@@ -84,6 +88,8 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	border-color:#DFA94F;
 }
 
+.kamikaze_btn-noa:hover,
+.kamikaze_btn-noa.inv,
 .kamikaze_btn a:hover, 
 .kamikaze_btn.inv a {
 	color:#DFA94F; 
