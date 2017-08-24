@@ -1,7 +1,7 @@
 <% provide(:title, @user.firstName + " " + @user.lastName ) %>
 
 <!-- <p id="notice"><%= notice %></p> -->
-<div class="container STATE one-edge-shadow" id="STATEprofile">
+<div class="container STATE one-edge-shadow profile-form">
   <h2 class="greeting">Welcome <%= @user.firstName %></h2>
   <p class="pp-description">We are currently in Presale. Once we begin distribution, you will find the address to the Crowdsale contract here.</p>
   <p class="pp-description">
@@ -15,7 +15,7 @@
   </p>
   
 </div>
-<div id="user-edit" class="kamikaze_btn inv">
+<div id="user-edit" class="CTRL kamikaze_btn inv">
 	<% if current_user.admin %>
 		<%= link_to 'Edit', edit_user_path(@user) %>
 	<% end %>

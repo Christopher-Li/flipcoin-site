@@ -402,24 +402,24 @@ form#new_user input {
 form#new_user label 
 { text-align: left; }
 
-#REGstate { 
+.REG.state { 
 	margin-left: 0; 
 }
-#REGdob { 
+.REG.dob { 
 	margin-left: -16px; 
 	margin-bottom: 10px; 
 }
-#REGdob > label {
+.REG.dob > label {
  margin: 8px 10px; 
  margin-left:0; 
 } 
-#REGdob > select { 
+.REG.dob > select { 
 	display: inline-block; 
 }
-#REGestimate { 
+.REG.estimate { 
 	margin-top: 40px; 
 }
-#REGsubmit input {
+.REG.submit input {
 	font-size: 1.4em;
 	text-align: center;
 	padding: 16px 20px;
@@ -433,7 +433,7 @@ form#new_user label
 	margin: 10px auto !important;
 	margin-top: 40px !important;
 }
-#REGsubmit input:hover {
+.REG.submit input:hover {
 	color:#DFA94F; 
 	background-color:transparent; 
 	border-color:#DFA94F;
@@ -452,7 +452,7 @@ form#new_user label
     background-color: #F5F5F5;
     padding: 20px;
     box-shadow: 0 8px 6px -6px #444;
-    max-width: 300px;
+    min-width: 292px; max-width: 300px;
     margin: 0 auto;
     padding: 20px !important;
   }
@@ -463,13 +463,21 @@ form#new_user label
     text-align: left;
   }
   .login-holder > h2 {
-    font-size: 1.5em;
     margin: 10px auto;
+    color: #545454 !important;
+	margin-top: 30px !important;
+	font-size: 1.8em;
+	text-align: center;
+
   }
   .login-holder p {
     text-align: center;
     margin: 30px auto;
     color: #656565;
+  }
+  #ERRnexistence {
+  	margin-top: 20px !important;
+	margin-bottom: 40px !important;
   }
   .login-holder p a {
     color: #DFA94F; 
@@ -481,8 +489,12 @@ form#new_user label
   }
 
 
-
- #STATEprofile {
+/**********************************************************************
+ **********************************************************************
+ * PROFILE PAGE (IMMEDIATELY AFTER LOGIN)
+ **********************************************************************
+ **********************************************************************/
+ .profile-form {
  	max-width: 560px;
 	text-align: center;
 	padding: 0 !important;
@@ -490,21 +502,41 @@ form#new_user label
 	background: #F9F9F9;
 	border: solid 2px #F1F1F1;
  }
- #STATEprofile .greeting {
+ .profile-form .greeting {
  	color: white;
  	background: #DFA94F;
  }
- #STATEprofile p {
+ .profile-form p {
  	width: 80%;
  	font-size: 1.1em;
  }
- #STATEprofile p i {
+ .profile-form p i {
  	color: #DFA94F;
  }
  #user-edit {
  	display: block;
  	margin: 100px auto;
  }
+
+
+/**********************************************************************
+ **********************************************************************
+ * EDIT PROFILE SETTINGS
+ **********************************************************************
+ **********************************************************************/
+.CTRL.kamikaze_btn a,
+.CTRL.kamikaze_btn.inv a:hover {
+	background: #767676;
+	color: white;
+	border-color: #767676;
+}
+.CTRL.kamikaze_btn.inv a,
+.CTRL.kamikaze_btn a:hover {
+	background: transparent;
+	color: #767676;
+	border-color: #767676;
+}
+
 
 
 /* OCD IS REAL */
@@ -591,10 +623,10 @@ and (min-width : 768px) {
 	{ font-size: 1.15em; }
 
 
-	#STATEprofile {
+	.profile-form {
 		margin-top: 40px;
 	}
-	#STATEprofile p {
+	.profile-form p {
 		font-size: 1.3em;
 	}
 }
@@ -608,8 +640,8 @@ and (min-width : 768px) {
 
 @media only screen
 and (min-width: 600px) {
-	#REGstate { margin-left: -16px; }
-	#REGdob { margin-left: 0 !important; }
+	.REG.state { margin-left: -16px; }
+	.REG.dob { margin-left: 0 !important; }
 }
 @media only screen
 and (min-width: 777px)
