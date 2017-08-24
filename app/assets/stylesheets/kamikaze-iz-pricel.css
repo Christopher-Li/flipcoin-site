@@ -506,6 +506,7 @@ form .REG input {
  	margin-top: 0 !important;
  	margin-bottom: 25px !important;
  	background: #DFA94F;
+ 	border: 1px solid #DFA94F;
  }
  .profile-form p {
  	width: 80%;
