@@ -366,7 +366,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
  **********************************************************************
  **********************************************************************/
 .signup-holder {
-	width: 100%; 
+	width: 66%; max-width: 600px; 
 	margin: 10px auto;
 }
 .signup h2 { 
@@ -375,31 +375,45 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	font-size: 1.8em; 
 	text-align: center; 
 }
-#ERRexistence 
-{ margin-top: 20px !important; margin-bottom: 40px !important; }
+.REG{ 
+	display: inline-block; 
+}
+.center-block { 
+	margin: 5px auto; 
+	text-align: center; 
+}
 
 form#new_user input { 
 	width: 250px; 
 	margin: 8px 10px;
 	margin-left: 0;
 }
-.REG
-{ display: inline-block; }
-.center-block 
-{ margin: 5px auto; text-align: center; }
+
+#ERRexistence { 
+	margin-top: 20px !important; 
+	margin-bottom: 40px !important; 
+}
+
 form#new_user label 
 { text-align: left; }
 
-#REGstate
-{ margin-left: 0; }
-#REGdob 
-{ margin-left: -16px; margin-bottom: 10px; }
-#REGdob > label 
-{ margin: 8px 10px; margin-left:0; } 
-#REGestimate 
-{ margin-top: 40px; }
-#REGdob > select 
-{ display: inline-block; }
+#REGstate { 
+	margin-left: 0; 
+}
+#REGdob { 
+	margin-left: -16px; 
+	margin-bottom: 10px; 
+}
+#REGdob > label {
+ margin: 8px 10px; 
+ margin-left:0; 
+} 
+#REGdob > select { 
+	display: inline-block; 
+}
+#REGestimate { 
+	margin-top: 40px; 
+}
 #REGsubmit input {
 	font-size: 1.4em;
 	text-align: center;
@@ -421,6 +435,54 @@ form#new_user label
 }
 
 
+/**********************************************************************
+ **********************************************************************
+ * LOGIN PAGE 
+ **********************************************************************
+ **********************************************************************/
+.login-holder {
+    width: 50%;
+    border: 2px solid #F1F1F1;
+    border-radius: 4px;
+    background-color: #F5F5F5;
+    padding: 20px;
+    box-shadow: 0 8px 6px -6px #444;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px !important;
+  }
+  .login-holder > form {
+    text-align: center;
+  }
+  .login-holder > form > label {
+    text-align: left;
+  }
+  .login-holder > h2 {
+    font-size: 1.5em;
+    margin: 10px auto;
+  }
+  .login-holder p {
+    text-align: center;
+    margin: 30px auto;
+    color: #656565;
+  }
+  .login-holder p a {
+    color: #DFA94F; 
+    text-decoration: none; 
+  }
+  .login-holder .kamikaze_btn-noa {
+    margin: 10px auto;
+    margin-top: 30px;
+  }
+
+
+
+ #STATEprofile {
+
+ }
+ #STATEprofile p {
+ 	width: 80%;
+ }
 
 
 /* OCD IS REAL */
