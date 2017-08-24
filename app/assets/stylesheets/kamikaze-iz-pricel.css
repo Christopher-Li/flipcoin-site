@@ -502,7 +502,9 @@ form .REG input {
 	border: solid 2px #F1F1F1;
  }
  .profile-form .greeting {
- 	color: white;
+ 	color: white !important;
+ 	margin-top: 0 !important;
+ 	margin-bottom: 25px !important;
  	background: #DFA94F;
  }
  .profile-form p {
@@ -515,6 +517,10 @@ form .REG input {
  #user-edit {
  	display: block;
  	margin: 100px auto;
+ }
+ #edit-ctrls {
+ 	text-align: center;
+	margin-bottom: 60px;
  }
 
 
