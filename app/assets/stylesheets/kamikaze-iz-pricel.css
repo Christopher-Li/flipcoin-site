@@ -419,7 +419,7 @@ form#new_user label
 .REG.estimate { 
 	margin-top: 40px; 
 }
-.REG.submit input {
+.REGsubmit input {
 	font-size: 1.4em;
 	text-align: center;
 	padding: 16px 20px;
@@ -433,7 +433,7 @@ form#new_user label
 	margin: 10px auto !important;
 	margin-top: 40px !important;
 }
-.REG.submit input:hover {
+.REGsubmit input:hover {
 	color:#DFA94F; 
 	background-color:transparent; 
 	border-color:#DFA94F;

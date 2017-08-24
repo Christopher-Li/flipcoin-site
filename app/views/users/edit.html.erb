@@ -2,7 +2,7 @@
 
 <div class="signup">
 <div class="container">
-	<div class="signup-holder">
+	<div class="signup-holder profile-form">
 		<h2>Profile Settings</h2>
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
@@ -62,28 +62,30 @@
 					<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
 				</div>
 				<div class="REGsubmit">
-					<%= f.submit "Save Changes", class: "btn" %>
+					<%= f.submit "Save Changes", class: "kamikaze_btn-noa" %>
 				</div>
 			</div>
+			<!-- <%= f.label :admin %>
+						<br />
+						<input id="admin_true" name="admin" type="radio" value="true" />
+						<label for="admin_true">True</label>
+						<input id="admin_false" name="admin" type="radio" value="false" />
+						<label for="admin_false">False</label>
+						<br /><br />
+			-->
 		<% end %>
-<!-- 				<%= f.label :admin %>
-			<br />
-			<input id="admin_true" name="admin" type="radio" value="true" />
-			<label for="admin_true">True</label>
-			<input id="admin_false" name="admin" type="radio" value="false" />
-			<label for="admin_false">False</label>
-			<br /><br />
--->
 	</div>
 </div>
 </div>
+<div id="edit-ctrls">
+	<div class="CTRL kamikaze_btn">
+		<%= link_to 'Show', @user %>
+	</div>
+	<div class="CTRL kamikaze_btn inv">
+		<%= link_to 'Back', users_path %>
+	</div>
+</div>
 <!-- <%= render 'form', user: @user %> -->
-<div class="CTRL kamikaze_btn">
-	<%= link_to 'Show', @user %>
-</div>
-<div class="CTRL kamikaze_btn inv">
-	<%= link_to 'Back', users_path %>
-</div>
 
 
 
