@@ -54,8 +54,7 @@ hr {
 	background-color: #F5F5F5;
 	padding: 20px;
 	box-shadow: 0 8px 6px -6px #444;
-	max-width: 300px;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 /** NAV **/
