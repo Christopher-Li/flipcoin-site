@@ -478,10 +478,17 @@ form#new_user label
 
 
  #STATEprofile {
-
+ 	max-width: 600px;
+	text-align: center;
+	margin-top: 40px;
+	padding: 0 !important;
+	padding-bottom: 20px !important;
+	background: #F9F9F9;
+	border: solid 2px #F1F1F1;
  }
  #STATEprofile p {
  	width: 80%;
+ 	font-size:;
  }
 
 
