@@ -49,10 +49,10 @@ hr {
 
 .login-holder,
 .signup-holder {
-	border: 2px solid #F1F1F1;
-	border-radius: 4px;
-	background-color: #F5F5F5;
-	padding: 20px;
+	border: 2px solid #F1F1F1 !important
+	border-radius: 4px !important;
+	background-color: #F5F5F5 !important;
+	padding: 20px !important;
 	box-shadow: 0 8px 6px -6px #444;
 	margin: 10px auto;
 }
