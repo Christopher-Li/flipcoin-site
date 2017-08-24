@@ -482,13 +482,24 @@ form#new_user label
 	text-align: center;
 	margin-top: 40px;
 	padding: 0 !important;
-	padding-bottom: 20px !important;
+	padding-bottom: 40px !important;
 	background: #F9F9F9;
 	border: solid 2px #F1F1F1;
  }
+ #STATEprofile .greeting {
+ 	color: white;
+ 	background: #DFA94F;
+ }
  #STATEprofile p {
  	width: 80%;
- 	font-size: 1.3em;
+ 	font-size: 1.1em;
+ }
+ #STATEprofile p i {
+ 	color: #DFA94F;
+ }
+ #user-edit {
+ 	display: block;
+ 	margin: 100px auto;
  }
 
 
