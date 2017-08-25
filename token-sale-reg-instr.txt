@@ -1,0 +1,19 @@
+I need this to be what happens when customers login (see 2 attached sheets):
+
+a. First screen: Are you an individual or entity?
+
+b. If individual: see attached--it needs to be converted with docusign/checking boxes to make it easier. Every field that has an asterisk next to it should be required.
+
+1. The individual fills in his info (all info that wasn't filled in during registration must be filled in)
+2. The individual signals that he is either an accredited investor (4 possible choices) or sophisticated investor (1 possible choice)--check boxes 
+3. The individual prints and signs name, and dates agreement
+4. The questionnaire is securely emailed to rich@goralaw.com and daniel@coinflip.tech.
+
+b2. If entity
+1. The entity fills in its info (asterisks are necessary)
+2. The entity selects option "a-k," or "other purchasers." If the entity selects k, it needs to fill in additional info.--check boxes
+3. Entity signs and dates agreement via a representative of the entity.
+4. The questionnaire is securely emailed to rich@goralaw.com and daniel@coinflip.tech
+
+c. Sale page--we give them an ethereum/bitcoin address to send funds to, and we send flipcoin to their preferred address in return for the amount they send. Can we have a screen that converts dollars to ethereum/bitcoin? So if they write "100 dollars", it gives them the amount of btc/eth to send. Could we readjust the ethereum required at the beginning of each transaction? I think we can probably just use Coinbase/Bitstamp's price API and it would be simple. 
+

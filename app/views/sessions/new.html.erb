@@ -1,3 +1,8 @@
+<!--
+  FLIPCOIN MEMBER LOGIN
+  August 25, 2017
+  -->
+
 <% provide(:title, "Log in") %>
 
 <div class="login">
@@ -5,7 +10,10 @@
   <div>
     <div class="login-holder one-edge-shadow">
       <h2>FlipCoin Member Login</h2>
-      <p id="ERRnexistence" class="pp-description">New user?<br><%= link_to "Sign up now!", signup_path %></p>
+      <p id="ERRnexistence" class="pp-description">
+        New user?<br>
+        <%= link_to "Sign up now!", signup_path %>
+      </p>
       <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.label :email %>

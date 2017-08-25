@@ -1,8 +1,16 @@
+<!-- 
+  FLIPCOIN PRESALE IS NOW LIVE!
+  August 25, 2017
+  -->
+
 <% provide(:title, @user.firstName + " " + @user.lastName ) %>
 
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container STATE one-edge-shadow profile-form">
-  <h2 class="greeting">Welcome <%= @user.firstName %></h2>
+  <h2 class="greeting">
+    FlipCoin Presale - Now Live!<br>
+    <span>Become a Member Today</span>
+    </h2>
   <p class="pp-description">
  	 We are currently in Presale. Once we begin distribution, you will find the address to the Crowdsale contract here.
   </p>
@@ -20,6 +28,6 @@
 </div>
 <div id="user-edit" class="CTRL kamikaze_btn inv">
 	<% if current_user.admin %>
-		<%= link_to 'Edit', edit_user_path(@user) %>
+		<%= link_to 'Edit Profile', edit_user_path(@user) %>
 	<% end %>
 </div>
