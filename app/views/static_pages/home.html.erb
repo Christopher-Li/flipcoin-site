@@ -25,10 +25,10 @@
 	        <li><a href="#tokensale">Token Sale</a></li>
 	        <li><a href="#our-team">Team</a></li>
 	        <% if current_user %>
-	        	<li><a href="/login" id="login-nav">Login</a></li>
+	        	<li><%= link_to 'Profile', current_user, :id => "login-nav" %></li>
 	        <% else %>
-				<li><a href="/signup" id="login-nav">Register</a></li>
-			<% end %>
+						<li><a href="/signup" id="login-nav">Register</a></li>
+					<% end %>
 	      </ul>
 	    </div>
 	  </div>

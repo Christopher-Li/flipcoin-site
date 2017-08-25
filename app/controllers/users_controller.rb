@@ -64,11 +64,12 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params_wa_np)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
-        format.json { render :show, status: :ok, location: @user }
-      else
+    if @user.update(user_params_wa_np)
+      flash[:info] = "User was successfully updated."
+      redirect_to @user
+      # format.json { render :show, status: :ok, location: @user }
+    else
+      respond_to do |format|
         format.html { render :edit }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
@@ -112,7 +113,20 @@ class UsersController < ApplicationController
     end
 
     def user_params_wa_np
-      params.require(:user).permit(:firstName, :lastName, :email, :admin)
+      params.require(:user).permit(
+        :firstName, 
+        :lastName, 
+        :email, 
+        :ethAdd,
+        :bitAdd,
+        :estimatedContribution,
+        :phoneNumber,
+        :address1,
+        :address2,
+        :city,
+        :state,
+        :zipCode,
+        :dob)
     end
 
     def logged_in_user

@@ -4,80 +4,80 @@
 -->
 
 <% provide(:title, "Edit") %>
+<!--
+	PROFILE SETTINGS
+	August 25, 2017
+-->
+
+<% provide(:title, "Edit") %>
 
 <div class="signup">
 <div class="container">
-	<div class="signup-holder profile-form">
-		<h2 class="greeting">Profile Settings</h2>
-		<%= form_for(@user) do |f| %>
+	<div class="signup-holder">
+		<h2>Edit your Profile</h2>
+		<br /><br />
+		<%= form_for(@user, url: '/signup') do |f| %>
 			<%= render 'shared/error_messages' %>
-			<div class="center-block">
-				<div class="REG fname">
-					<%= f.label :firstName %>
-					<%= f.text_field :firstName, class: 'form-control' %>
+				<div class="center-block">
+					<div class="REG fname">
+						<%= f.label :firstName, value: 'First Name (required)' %>
+						<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
+					</div>
+					<div class="REG lname">
+						<%= f.label :lastName, value: 'Last Name (required)' %>
+						<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
+					</div>
 				</div>
-				<div class="REG lname">
-					<%= f.label :lastName %>
-					<%= f.text_field :lastName, class: 'form-control' %>
+				<div class="center-block">
+					<div class="REG email">
+						<%= f.label :email, value: 'Email (required)' %>
+						<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
+					</div>
+					<div class="REG phone">
+						<%= f.label :phoneNumber, value: 'Phone Number' %>
+						<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
+					</div>
 				</div>
-			</div>
-			<div class="center-block">
-				<div class="REG email">
-					<%= f.label :email %>
-					<%= f.text_field :email, class: 'form-control' %>
+					<!-- DELETED ADDRESS INPUTS -->
+				<div class="center-block">
+					<div class="REG add1">
+						<%= f.label :address1, value: 'Address Line 1 (required)' %>
+						<%= f.text_field :address1, class: 'form-control' %>
+					</div>
+					<div class="REG add2">
+						<%= f.label :address2, value: 'Address Line 2' %>
+						<%= f.text_field :address2, class: 'form-control' %>
+					</div>
 				</div>
-				<div class="REG phone">
-					<%= f.label :phoneNumber, value: 'Phone Number' %>
-					<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
+				<div class="center-block">
+					<div class="REG city">
+						<%= f.label :city, value: 'City (required)' %>
+						<%= f.text_field :city, class: 'form-control' %>
+					</div>
+					<div class="REG zip">
+						<%= f.label :zipCode, value: 'Postal / Zip Code (required)' %>
+						<%= f.text_field :zipCode, class: 'form-control' %>
+					</div>
 				</div>
-			</div>
-			<div class="center-block">
-				<div class="REG add1">
-					<%= f.label :address1, value: 'Address Line 1' %>
-					<%= f.text_field :address1, class: 'form-control' %>
+				<div class="center-block">
+					<div class="REG state">
+						<%= f.label :state, value: 'State/Province (required)' %>
+						<%= f.text_field :state, class: 'form-control' %>
+					</div>
+					<div class="REG dob">
+						<%= f.label :dob, value: 'Date of Birth (required)' %>
+						<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
+					</div>
 				</div>
-				<div class="REG add2">
-					<%= f.label :address2, value: 'Address Line 2' %>
-					<%= f.text_field :address2, class: 'form-control' %>
-				</div>
-			</div>
-			<div class="center-block">
-				<div class="REG city">
-					<%= f.label :city, value: 'City *' %>
-					<%= f.text_field :city, class: 'form-control' %>
-				</div>
-				<div class="REG zip">
-					<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
-					<%= f.text_field :zipCode, class: 'form-control' %>
-				</div>
-			</div>
-			<div class="center-block">
-				<div class="REG state">
-					<%= f.label :state, value: 'State/Province *' %>
-					<%= f.text_field :state, class: 'form-control' %>
-				</div>
-				<div class="REG dob">
-					<%= f.label :dob, value: 'Date of Birth *' %>
-					<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
-				</div>
-			</div>
-			<div class="center-block">
-				<div class="REG estimate">
-					<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+		  	<div class="center-block">
+		  		<div class="REG estimate">
+			  		<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
 					<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
 				</div>
 				<div class="REGsubmit">
-					<%= f.submit "Save Changes", class: "kamikaze_btn-noa" %>
-				</div>
-			</div>
-			<!-- <%= f.label :admin %>
-						<br />
-						<input id="admin_true" name="admin" type="radio" value="true" />
-						<label for="admin_true">True</label>
-						<input id="admin_false" name="admin" type="radio" value="false" />
-						<label for="admin_false">False</label>
-						<br /><br />
-			-->
+	    			<%= f.submit "Save", class: "btn" %>
+	    		</div>
+	    	</div>
 		<% end %>
 	</div>
 </div>
