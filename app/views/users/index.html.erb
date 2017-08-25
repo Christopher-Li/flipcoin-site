@@ -15,10 +15,10 @@
       <th>Email</th>
       <th>Phone Number</th>
       <th>Estimated Contribution</th>
+      <th>Contract Digest</th>
       <th>Ethereum Address</th>
       <th>Bitcoin Address</th>
-      <th>Address 1</th>
-      <th>Address 2</th>
+      <th>Address</th>
       <th>City</th>
       <th>State/Province</th>
       <th>Zip Code</th>
@@ -40,10 +40,10 @@
         <td><%= user.email %></td>
         <td><%= user.phoneNumber %></td>
         <td><%= user.estimatedContribution %></td>
+        <td><%= user.contract_digest %></td>
         <td><%= user.ethAdd %></td>
         <td><%= user.bitAdd %></td>
-        <td><%= user.address1 %></td>
-        <td><%= user.address2 %></td>
+        <td><%= user.address1 %> <%= user.address2 %></td>
         <td><%= user.city %></td>
         <td><%= user.state %></td>
         <td><%= user.zipCode %></td>
