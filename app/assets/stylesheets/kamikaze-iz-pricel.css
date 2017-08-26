@@ -114,8 +114,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .kamikaze_btn-noa.inv:hover,
 .kamikaze_btn .btn,
 .kamikaze_btn.inv .btn:hover,
-.kamikaze_btn a,
-.kamikaze_btn.inv a:hover {
+.kamikaze_btn a {
 	color:#FFFFFF !important; 
 	background-color:#DFA94F !important; 
 	border-color:#DFA94F !important;
@@ -136,6 +135,12 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 #btn-nest .kamikaze_btn.inv a {
 	color: #DFA94F !important;
+	background: transparent !important;
+	border-color: #DFA94F !important;
+}
+#btn-nest .kamikaze_btn.inv a:hover {
+	color: #FFF !important;
+	background-color: #DFA94F !important;
 }
 .pp-description > a { 
 	color: #DFA94F; 

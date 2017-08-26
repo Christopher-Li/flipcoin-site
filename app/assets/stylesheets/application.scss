@@ -15,10 +15,10 @@
  */
 
 /* Override materialize color variable */
-@import "materialize/components/color";
+/*@import "materialize/components/color";
 $coinflip-orange: #DFA94F;
 $primary-color: color("coinflip-orange", "lighten-2") !default;
-$secondary-color: color("coinflip-orange", "base") !default;
+$secondary-color: color("coinflip-orange", "base") !default;*/
 /* Import materialize & set font */
 @import "materialize";
 * {
