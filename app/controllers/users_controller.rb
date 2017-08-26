@@ -40,6 +40,33 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.admin = false
+    @user.isEntity = true
+    
+    logger.debug "User params: #{@user}"
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+    else
+      render 'new'
+    end
+    # respond_to do |format|
+    #   if @user.save
+    #     log_in @user
+    #     format.html { redirect_to @user, notice: 'User was successfully created.' }
+    #     format.json { render :show, status: :created, location: @user }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @user.errors, status: :unprocessable_entity }
+    #   end
+    # end
+  end
+
+  def createentity
+    @user = User.new(user_params)
+    @user.admin = false
+    @user.isEntity = false
+    @user.lastName = "N/A"
     
     logger.debug "User params: #{@user}"
     if @user.save
