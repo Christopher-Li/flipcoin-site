@@ -124,15 +124,14 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .kamikaze_btn-noa:hover,
 .kamikaze_btn-noa.inv,
 .kamikaze_btn .btn:hover, 
-.kamikaze_btn.inv .btn,
-.kamikaze_btn a:hover,
-.kamikaze_btn.inv a {
+.kamikaze_btn.inv .btn {
 	color:#555 !important; 
 	/*background-color:transparent !important; */
 	/*border-color:#DFA94F ;*/
 }
 #btn-nest .kamikaze_btn a:hover,
 #btn-nest .kamikaze_btn.inv a {
+	color: #FFF !important;
 	background-color: transparent !important;
 	border-color: #DFA94F;
 }
