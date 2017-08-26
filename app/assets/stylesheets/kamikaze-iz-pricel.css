@@ -16,11 +16,13 @@ and (min-width : 321px) {}*/
 /* Smartphones (portrait) ----------- */
 /*@media only screen 
 and (max-width : 320px) {}*/
-
 hr { 
 	visibility: hidden; 
 	padding: 0 !important; 
 	margin-top: 0 !important;
+}
+.logo {
+	padding: 10px !important;
 }
 .paragraph {
 	font-size: 1.2em !important;
@@ -28,6 +30,10 @@ hr {
 	padding-left: 15px;
 	padding-top: 5px;
 }
+.paragraph a {
+	color: #DFA94F !important;
+}
+.paragraph.center { text-align: center; }
 .pp-description {
 	font-size: 1.1em;
 	line-height: 1.3em;
@@ -77,9 +83,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 /** BUTTONS & LINKS **/
 .kamikaze_btn-noa,
 .kamikaze_btn-noa.inv,
-.kamikaze_btn a,
-.kamikaze_btn.inv a {
-	font-size: 1.2em;
+.kamikaze_btn .btn,
+.kamikaze_btn.inv .btn {
+	/*font-size: 1.2em;
 	text-align: center;
 	padding: 16px 20px;
 	position: relative;
@@ -87,25 +93,27 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	border: solid 1px transparent;
 
 	display: block;
-	margin: 10px auto;
+	margin: 10px auto;*/
+	display: block;
+	margin: 20px auto;
 }
 
 .kamikaze_btn-noa,
 .kamikaze_btn-noa.inv:hover,
-.kamikaze_btn a,
-.kamikaze_btn.inv a:hover {
-	color:#FFFFFF; 
-	background-color:#DFA94F; 
-	border-color:#DFA94F;
+.kamikaze_btn .btn,
+.kamikaze_btn.inv .btn:hover {
+	color:#FFFFFF !important; 
+	background-color:#DFA94F !important; 
+	border-color:#DFA94F !important;
 }
 
 .kamikaze_btn-noa:hover,
 .kamikaze_btn-noa.inv,
-.kamikaze_btn a:hover, 
-.kamikaze_btn.inv a {
-	color:#DFA94F; 
-	background-color:transparent; 
-	border-color:#DFA94F;
+.kamikaze_btn .btn:hover, 
+.kamikaze_btn.inv .btn {
+	color:#555 !important; 
+	/*background-color:transparent !important; */
+	/*border-color:#DFA94F ;*/
 }
 .pp-description > a { 
 	color: #DFA94F; 
@@ -409,16 +417,17 @@ form .REG input {
 	margin-bottom: 10px; 
 }
 .REG.dob > label {
- margin: 8px 10px; 
- margin-left:0; 
+	margin: 8px 10px; 
+	margin-left: 36px; 
 } 
 .REG.dob > select { 
 	display: inline-block; 
+	width: 70%;
 }
 .REG.estimate { 
 	margin-top: 40px; 
 }
-.REGsubmit input {
+/*.REGsubmit input {
 	font-size: 1.4em;
 	text-align: center;
 	padding: 16px 20px;
@@ -436,7 +445,7 @@ form .REG input {
 	color:#DFA94F; 
 	background-color:transparent; 
 	border-color:#DFA94F;
-}
+}*/
 
 
 /**********************************************************************
@@ -482,7 +491,7 @@ form .REG input {
     color: #DFA94F; 
     text-decoration: none; 
   }
-  .login-holder .kamikaze_btn-noa {
+  .login-holder .kamikaze_btn {
     margin: 10px auto;
     margin-top: 30px;
   }
@@ -600,8 +609,9 @@ and (min-width : 768px) {
 	#countdown-container 
 	{ width: 491px; }
 	#countdown,
-	#ctdn-label 
-	{ display: inline-block; }
+	#ctdn-label { 
+		display: inline-block; 
+	}
 	#countdown {
 		color: #888;
 		margin-left: 10px;
@@ -613,7 +623,8 @@ and (min-width : 768px) {
 	.kamikaze_btn a,
 	.kamikaze_btn.inv a
 	{ font-size: 1.4em; }
-	.kamikaze_btn 
+
+	.CTRL.kamikaze_btn 
 	{ display: inline-block; margin: 10px 20px; }
 
 	#what-is-flipcoin .kamikaze_btn 
@@ -641,6 +652,15 @@ and (min-width : 768px) {
 	.profile-form p {
 		font-size: 1.3em;
 	}
+
+	.REG.state > label {
+		width: 80px;
+		margin-left: 31px;
+	}
+	.REG.state > input {
+		width: 150px;
+		margin-left: 31px;
+	}
 }
 
 
@@ -652,8 +672,19 @@ and (min-width : 768px) {
 
 @media only screen
 and (min-width: 600px) {
-	.REG.state { margin-left: -16px; }
-	.REG.dob { margin-left: 0 !important; }
+	.REG.state { 
+		
+	}
+	.REG.dob { 
+		margin-left: 0 !important; 
+	}
+	.REG.dob > label {
+ 		margin-left: 27px; 
+	} 
+	.REG.dob > select { 
+		width: 24.5%;
+	}
+
 }
 @media only screen
 and (min-width: 777px)
@@ -667,6 +698,9 @@ and (max-width: 850px) {
 and (min-width: 980px) {
 	#chart-key {
 		padding-top: 133px;
+	}
+	.REG.dob > select {
+		width: 30%;
 	}
 }
 

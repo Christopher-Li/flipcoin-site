@@ -9,13 +9,87 @@
 <div class="container">
 	<div class="signup-holder" id ="signup-collapse">
 		<h2>FlipCoin Token Sale Registration</h2>
-		<p class="pp-description">
-			Registration will be paused for the next 24 hours as we prepare to launch FlipCoins on the Ethereum network!!
-		</p>
-		<p id="ERRexistence" class="pp-description">Already registered? <%= link_to "Login", login_path %></p>
-		<p class="pp-description">
+		<p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
+		<!-- <div class="collapse in" id="individual"> -->
+		  <!-- <div class="card card-block"> -->
+				<%= form_for(@user, url: '/signup') do |f| %>
+					<%= render 'shared/error_messages' %>
+					<div class="center-block">
+						<div class="REG fname">
+							<%= f.label :firstName, value: 'First Name (required)' %>
+							<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
+						</div>
+						<div class="REG lname">
+							<%= f.label :lastName, value: 'Last Name (required)' %>
+							<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
+						</div>
+					</div>
+					<div class="center-block">
+						<div class="REG email">
+							<%= f.label :email, value: 'Email (required)' %>
+							<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
+						</div>
+						<div class="REG phone">
+							<%= f.label :phoneNumber, value: 'Phone Number' %>
+							<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
+						</div>
+					</div>
+					<!-- DELETED ADDRESS INPUTS -->
+					<div class="center-block">
+						<div class="REG add1">
+							<%= f.label :address1, value: 'Address Line 1 (required)' %>
+							<%= f.text_field :address1, class: 'form-control' %>
+						</div>
+						<div class="REG add2">
+							<%= f.label :address2, value: 'Address Line 2' %>
+							<%= f.text_field :address2, class: 'form-control' %>
+						</div>
+					</div>
+					<div class="center-block">
+						<div class="REG city">
+							<%= f.label :city, value: 'City (required)' %>
+							<%= f.text_field :city, class: 'form-control' %>
+						</div>
+						<div class="REG zip">
+							<%= f.label :zipCode, value: 'Postal / Zip Code (required)' %>
+							<%= f.text_field :zipCode, class: 'form-control' %>
+						</div>
+					</div>
+					<div class="center-block">
+						<div class="REG state">
+							<%= f.label :state, value: 'State/Province (required)' %>
+							<%= f.text_field :state, class: 'form-control' %>
+						</div>
+						<div class="REG dob">
+							<%= f.label :dob, value: 'Date of Birth (required)' %>
+							<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
+						</div>
+					</div>
+					<div class="center-block">	
+						<div class="REG pass">
+							<%= f.label :password, value: 'Password (required)' %>
+							<%= f.password_field :password, class: 'form-control' %>
+						</div>
+						<div class="REG confirm">
+							<%= f.label :password_confirmation, "Password Confirmation (required)" %>
+				  		<%= f.password_field :password_confirmation, class: 'form-control' %>
+			  		</div>
+			  	</div>
+			  	<div class="center-block">
+			  		<div class="REG estimate">
+				  		<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+							<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
+						</div>
+						<div class="REGsubmit kamikaze_btn">
+		    			<%= f.submit "Submit", class: "btn" %>
+		    		</div>
+	    		</div>
+				<% end %>
+	  <p class="paragraph center" style="padding-left:0 !important;">
 			Questions?<br>
 			Give us a call! (224)-688-9977
+		</p>
+		<p class="pp-description shrink">*: please note this number is for internal feedback & is not legally binding in any way.
 		</p>
 	</div>
 </div>
