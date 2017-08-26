@@ -19,9 +19,6 @@
       <th>Ethereum Address</th>
       <th>Bitcoin Address</th>
       <th>Address</th>
-      <th>City</th>
-      <th>State/Province</th>
-      <th>Zip Code</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -43,10 +40,7 @@
         <td><%= user.contract_digest %></td>
         <td><%= user.ethAdd %></td>
         <td><%= user.bitAdd %></td>
-        <td><%= user.address1 %> <%= user.address2 %></td>
-        <td><%= user.city %></td>
-        <td><%= user.state %></td>
-        <td><%= user.zipCode %></td>
+        <td><%= user.address1 %> <%= user.address2 %>, <%= user.city %>, <%= user.state %>, <%= user.zipCode %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
