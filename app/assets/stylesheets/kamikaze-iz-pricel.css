@@ -129,11 +129,13 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	/*background-color:transparent !important; */
 	/*border-color:#DFA94F ;*/
 }
-#btn-nest .kamikaze_btn a:hover,
-#btn-nest .kamikaze_btn.inv a {
-	color: #FFF !important;
+#btn-nest .kamikaze_btn a:hover {
+	color: #DFA94F !important;
 	background-color: transparent !important;
-	border-color: #DFA94F;
+	border-color: #DFA94F !important;
+}
+#btn-nest .kamikaze_btn.inv a {
+	color: #DFA94F !important;
 }
 .pp-description > a { 
 	color: #DFA94F; 
