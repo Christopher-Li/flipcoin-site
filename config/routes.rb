@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get '/faq', to: 'static_pages#faq'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
+  post '/signupentity', to: 'users#createEntity'
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
