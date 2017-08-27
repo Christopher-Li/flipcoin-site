@@ -16,11 +16,11 @@
       </p>
       <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.label :email %>
         <%= f.email_field :email, class: 'form-control' %>
+        <%= f.label :email %>
 
-        <%= f.label :password %>
         <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password %>
         <div class="kamikaze_btn">
           <%= f.submit "Log in", class: "btn" %>
         </div>
