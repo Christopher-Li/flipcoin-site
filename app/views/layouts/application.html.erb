@@ -91,6 +91,10 @@ Created: July 2017
           <li><%= link_to 'Logout', logout_path, method: :delete %></li>
         <% end %>
       </ul>
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
+
     <% end %>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

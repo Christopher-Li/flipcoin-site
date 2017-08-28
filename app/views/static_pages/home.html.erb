@@ -35,6 +35,9 @@
 			<li><a href="/signup" id="login-nav">Register</a></li>
 		<% end %>
   </ul>
+  <% flash.each do |message_type, message| %>
+    <div class="alert alert-<%= message_type %>"><%= message %></div>
+  <% end %>
 	
 	<div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
