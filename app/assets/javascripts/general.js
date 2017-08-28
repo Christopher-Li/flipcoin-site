@@ -59,3 +59,5 @@ $('a[href*="#"]')
     }
   }
 });
+
+$(".button-collapse").sideNav();

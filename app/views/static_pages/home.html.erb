@@ -3,36 +3,39 @@
 
 <body id="homebody" class="staticPagesBody">
 	<!-- Navigation bar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <% flash.each do |message_type, message| %>
-	    <div class="alert alert-<%= message_type %>"><%= message %></div>
-	  <% end %>
-	  <div class="container">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <i class="fa fa-navicon" id="ham"></i>
-	      </button>
-	      <a href="#home">
-	      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
-	      </a>
-	    </div>
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#about">About</a></li>
-	        <li><a href="#tokensale">Token Sale</a></li>
-	        <li><a href="#our-team">Team</a></li>
-	        <% if current_user %>
-	        	<li><%= link_to 'Profile', current_user, :id => "login-nav" %></li>
-	        <% else %>
-						<li><a href="/signup" id="login-nav">Register</a></li>
-					<% end %>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
+	<div class="navbar-fixed">
+		<nav class= "white">
+			<div class="nav-wrapper">
+				<div class="container">
+					<a href="#home" class="brand-logo">
+		      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
+		      </a>
+				  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons grey-text text-darken-1">menu</i></a>
+				  <ul class="right hide-on-med-and-down">
+				  	<li><a class="grey-text text-darken-1" href="#about">About</a></li>
+		        <li><a class="grey-text text-darken-1" href="#tokensale">Token Sale</a></li>
+		        <li><a class="grey-text text-darken-1" href="#our-team">Team</a></li>
+				    <% if current_user %>
+		        	<li><%= link_to 'Profile', current_user, :id => "login-nav" %></li>
+		        <% else %>
+							<li><a class="grey-text text-darken-1" href="/signup" id="login-nav">Register</a></li>
+						<% end %>
+				  </ul>
+				 </div>
+			</div>
+		</nav>
+	</div>
+	<ul class="side-nav" id="mobile-demo">
+    <li><a href="#about">About</a></li>
+    <li><a href="#tokensale">Token Sale</a></li>
+    <li><a href="#our-team">Team</a></li>
+    <% if current_user %>
+    	<li><%= link_to 'Profile', current_user, :id => "login-nav" %></li>
+    <% else %>
+			<li><a href="/signup" id="login-nav">Register</a></li>
+		<% end %>
+  </ul>
+	
 	<div class="main-outer text-center" id="home">
 	<!-- Home Banner -->
 	<div id="particles-js" style="background-position: 50% 50%;"></div>
