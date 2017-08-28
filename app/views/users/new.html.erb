@@ -61,7 +61,7 @@
 							<%= f.label :state, value: 'State/Province (required)' %>
 						</div>
 						<div class="REG dob">
-							<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
+							<%= f.text_field :dob, class: "form-control datepicker"%>
 							<%= f.label :dob, value: 'Date of Birth (required)' %>
 						</div>
 					</div>
