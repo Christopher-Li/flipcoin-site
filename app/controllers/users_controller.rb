@@ -19,11 +19,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/new
-  def new
-    @user = User.new
-  end
-
   # GET /users/1/edit
   def edit
     curr = current_user
@@ -35,9 +30,12 @@ class UsersController < ApplicationController
     end
   end
 
-  # POST /users
-  # POST /users.json
-  def create
+  def newindividual
+    @user = User.new
+  end
+
+  # POST /signup/individual
+  def createindividual
     @user = User.new(user_params)
     @user.admin = false
     @user.isEntity = true
@@ -48,7 +46,7 @@ class UsersController < ApplicationController
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
     else
-      render 'new'
+      render 'newindividual'
     end
     # respond_to do |format|
     #   if @user.save
@@ -62,6 +60,11 @@ class UsersController < ApplicationController
     # end
   end
 
+  def newentity
+    @user = User.new
+  end
+
+  # POST /signup/entity
   def createentity
     @user = User.new(user_params)
     @user.admin = false
@@ -74,18 +77,8 @@ class UsersController < ApplicationController
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
     else
-      render 'new'
+      render 'newentity'
     end
-    # respond_to do |format|
-    #   if @user.save
-    #     log_in @user
-    #     format.html { redirect_to @user, notice: 'User was successfully created.' }
-    #     format.json { render :show, status: :created, location: @user }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @user.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   # PATCH/PUT /users/1

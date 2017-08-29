@@ -3,7 +3,7 @@
 	August 25, 2017
 -->
 
-<% provide(:title, "Sign Up") %>
+<% provide(:title, "Sign Up Individual") %>
 
 <div class="signup">
 <div class="container">
@@ -12,7 +12,7 @@
 		<p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
 		<!-- <div class="collapse in" id="individual"> -->
 		  <!-- <div class="card card-block"> -->
-				<%= form_for(@user, url: '/signup') do |f| %>
+				<%= form_for(@user, url: '/signup/individual') do |f| %>
 					<%= render 'shared/error_messages' %>
 					<div class="center-block">
 						<div class="REG fname">
