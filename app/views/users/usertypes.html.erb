@@ -10,9 +10,15 @@
   <div class="signup-holder" id ="signup-collapse">
     <h2>FlipCoin Token Sale Registration</h2>
     <p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
-    <p>Are you an individual or an entity?</p>
-    <%= link_to 'Individual', '/signup/individual', :class => "btn" %>
-    <%= link_to 'entity', 'signup/entity', :class => "btn" %>
+    <p class="paragraph center">Are you an individual or an entity?</p>
+    <div class="center-block" style="margin-bottom:10px">
+      <div class="kamikaze_btn inline">
+        <%= link_to 'Individual', '/signup/individual', :class => "none" %>
+      </div>
+      <div class="kamikaze_btn inline">
+        <%= link_to 'Entity', 'signup/entity', :class => "none" %>
+      </div>
+    </div>
     <p class="paragraph center" style="padding-left:0 !important;">
       Questions?<br>
       Give us a call! (224)-688-9977
