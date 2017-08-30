@@ -40,9 +40,8 @@ hr {
 	padding: 3px 16px;
 	margin-top: 8px !important;
 	text-align: center !important;
-	width: 95%; max-width: 600px;
-	margin: 0 auto !important; 
-	margin-top: 20px !important;
+	width: 95%; 
+	margin: 0 auto !important; margin-top: 20px !important;
 }
 .pp-description.shrink {
 	font-size: 0.8em;
