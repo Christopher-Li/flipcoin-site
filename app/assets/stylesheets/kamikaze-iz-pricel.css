@@ -21,14 +21,8 @@ hr {
 	padding: 0 !important; 
 	margin-top: 0 !important;
 }
-label, input {
-	margin-bottom: 10px !important;
-}
 .logo {
 	padding: 10px !important;
-}
-.center-block {
-	text-align: center; 
 }
 .paragraph {
 	font-size: 1.2em !important;
@@ -97,15 +91,9 @@ nav .navbar-header button { margin: 15px !important; }
 nav .navbar-header a img { margin: auto 15px !important; }
 
 /** BUTTONS & LINKS **/
-.kamikaze_btn.inline,
-.kamikaze_btn.inline.inv,
-.kamikaze_btn.inline a,
-.kamikaze_btn.inline.inv a {
-	display: inline-block;
-}
 .kamikaze_btn a,
 .kamikaze_btn.inv a {
-	font-size: 1.1em !important;
+	font-size: 1.2em;
 	text-align: center;
 	padding: 16px 20px;
 	position: relative;
@@ -114,10 +102,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
 
 	display: block;
 	margin: 10px auto;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-}
-.kamikaze_btn a:hover {
-	color:#555 !important; 
 }
 .kamikaze_btn-noa,
 .kamikaze_btn-noa.inv,
@@ -137,22 +121,27 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	border-color:#DFA94F !important;
 }
 
+.kamikaze_btn-noa:hover,
+.kamikaze_btn-noa.inv,
+.kamikaze_btn .btn:hover, 
+.kamikaze_btn.inv .btn {
+	color:#555 !important; 
+	/*background-color:transparent !important; */
+	/*border-color:#DFA94F ;*/
+}
 #btn-nest .kamikaze_btn a:hover {
 	color: #DFA94F !important;
 	background-color: transparent !important;
 	border-color: #DFA94F !important;
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 #btn-nest .kamikaze_btn.inv a {
 	color: #DFA94F !important;
 	background: transparent !important;
 	border-color: #DFA94F !important;
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 #btn-nest .kamikaze_btn.inv a:hover {
 	color: #FFF !important;
 	background-color: #DFA94F !important;
-	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
 }
 .pp-description > a { 
 	color: #DFA94F; 
@@ -323,12 +312,8 @@ nav .navbar-header a img { margin: auto 15px !important; }
     padding-left: 3px;
     margin-bottom: 28px;
 }
-#sale-terms h4 > a { 
-	font-size: 11px; 
-}
-#chart > img {
-	max-width: 100%;
-}
+#sale-terms h4 > a 
+{ font-size: 10px; }
 /* OUR TEAM
  ****************************************/
 #team {
@@ -420,9 +405,6 @@ nav .navbar-header a img { margin: auto 15px !important; }
  * SIGNUP PAGE 
  **********************************************************************
  **********************************************************************/
-.signup .container .paragraph {
-	padding-left: 0 !important;
-}
 .signup-holder {
 	width: 66%; 
 	min-width: 292px; max-width: 600px; 
@@ -436,13 +418,10 @@ nav .navbar-header a img { margin: auto 15px !important; }
 }
 .REG{ 
 	display: inline-block; 
-	margin: 5px 10px; 
 }
-#signup-collapse .kamikaze_btn {
-	width: 180px;
-}
-#signup-collapse .kamikaze_btn a {
-	width: 180px !important;
+.center-block { 
+	margin: 5px auto; 
+	text-align: center; 
 }
 
 #ERRexistence { 
@@ -453,7 +432,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 form .REG label {
 	text-align: left;
 }
-/*form .REG input {
+form .REG input {
 	width: 250px; 
 	margin: 8px 10px;
 	margin-left: 0;
@@ -475,7 +454,7 @@ form .REG label {
 }
 .REG.estimate { 
 	margin-top: 40px; 
-}*/
+}
 /*.REGsubmit input {
 	font-size: 1.4em;
 	text-align: center;
@@ -633,26 +612,19 @@ and (min-width : 768px) {
 		line-height: 1.5em !important;
 		padding-left: 55px !important;
 	}
-	.pp-description { 
-		width: 100%; 
-		text-align:center!important; 
-	}
-	.pp-center { 
-		width: 60%; 
-	}
+	.pp-description 
+	{ width: 100%; text-align:center!important; }
+	.pp-center 
+	{ width: 60%; }
 	#particles-js,
-	#home > .full-page-banner { 
-		height: 95%; 
-	}
-	.full-page-banner > .introduction-content > .container { 
-		padding-top: 130px !important; 
-	}
-	nav .navbar-toggle.collapsed i { 
-		display: none; 
-	}
-	#landing-logo { 
-		width: 530px; 
-	}
+	#home > .full-page-banner 
+	{ height: 95%; }
+	.full-page-banner > .introduction-content > .container 
+	{ padding-top: 130px !important; }
+	nav .navbar-toggle.collapsed i 
+	{ display: none; }
+	#landing-logo 
+	{ width: 530px; }
 	#logo-caption {
 		font-size: 1.9em;
 		color: #666;
@@ -662,9 +634,8 @@ and (min-width : 768px) {
 		margin-bottom: 30px;
 		width: 530px;
 	}
-	#countdown-container { 
-		width: 491px; 
-	}
+	#countdown-container 
+	{ width: 491px; }
 	#countdown,
 	#ctdn-label { 
 		display: inline-block; 
@@ -674,15 +645,12 @@ and (min-width : 768px) {
 		margin-left: 10px;
 		margin-bottom: 25px;
 	}
-	#btn-nest { 
-		width: 530px; 
-		text-align: center; 
-	}
+	#btn-nest 
+	{ width: 530px; text-align: center; }
 
 	.kamikaze_btn a,
-	.kamikaze_btn.inv a { 
-		font-size: 1.4em; 
-	}
+	.kamikaze_btn.inv a
+	{ font-size: 1.4em; }
 
 	.CTRL.kamikaze_btn,
 	#btn-nest .kamikaze_btn { 
@@ -690,30 +658,23 @@ and (min-width : 768px) {
 		margin: 10px 20px; 
 	}
 
-	#what-is-flipcoin .kamikaze_btn { 
-		display: block; 
-		margin: 20px auto; 
-	}
+	#what-is-flipcoin .kamikaze_btn 
+	{ display: block; margin: 20px auto; }
 
 	.token-doc,
-	.token-doc a { 
-		display: inline-block; 
-	}
+	.token-doc a 
+	{ display: inline-block; }
 
-	#sale-terms h4 { 
-		font-size: 1.6em !important; 
-	}
+	#sale-terms h4 
+	{ font-size: 1.6em !important; }
 
-	#chart-key { 
-		padding-top: 50px; 
-	}
+	#chart-key 
+	{ padding-top: 50px; }
 
-	#team .pp-holder .pp-role { 
-		font-size: 1.2em; 
-	}
-	#team .pp-holder .pp-description { 
-		font-size: 1.15em; 
-	}
+	#team .pp-holder .pp-role 
+	{ font-size: 1.2em; }
+	#team .pp-holder .pp-description 
+	{ font-size: 1.15em; }
 
 
 	.profile-form {
@@ -721,6 +682,15 @@ and (min-width : 768px) {
 	}
 	.profile-form p {
 		font-size: 1.3em;
+	}
+
+	.REG.state > label {
+		width: 80px;
+		margin-left: 31px;
+	}
+	.REG.state > input {
+		width: 150px;
+		margin-left: 31px;
 	}
 }
 
@@ -733,7 +703,18 @@ and (min-width : 768px) {
 
 @media only screen
 and (min-width: 600px) {
-	
+	.REG.state { 
+		
+	}
+	.REG.dob { 
+		margin-left: 0 !important; 
+	}
+	.REG.dob > label {
+ 		margin-left: 27px; 
+	} 
+	.REG.dob > select { 
+		width: 24.5%;
+	}
 
 }
 @media only screen
@@ -741,13 +722,16 @@ and (min-width: 777px)
 and (max-width: 850px) {
 	.m-bottom-40 
 	{ margin-bottom: 60px; }
-	.col.m6 
+	.col-sm-6 
 	{ padding: 0; }
 }
 @media only screen
 and (min-width: 980px) {
 	#chart-key {
 		padding-top: 133px;
+	}
+	.REG.dob > select {
+		width: 30%;
 	}
 }
 
