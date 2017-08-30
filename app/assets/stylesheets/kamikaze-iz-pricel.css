@@ -39,10 +39,7 @@ label, input {
 .paragraph a {
 	color: #DFA94F !important;
 }
-.paragraph.center { 
-	text-align: center; 
-	padding-left: 0 !important;
-}
+.paragraph.center { text-align: center; }
 .pp-description {
 	font-size: 1.1em;
 	line-height: 1.3em;
@@ -427,7 +424,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-left: 0 !important;
 }
 .signup-holder {
-	width: 75%; 
+	width: 66%; 
 	min-width: 292px; max-width: 600px; 
 	margin: 10px auto;
 }
@@ -452,15 +449,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin-top: 20px !important; 
 	margin-bottom: 40px !important; 
 }
-#textarea1 {
-	overflow-y: scroll;
-}
 
 form .REG label {
 	text-align: left;
-}
-.REGsubmit .kamikaze_btn {
-	margin: 10px auto;
 }
 /*form .REG input {
 	width: 250px; 
