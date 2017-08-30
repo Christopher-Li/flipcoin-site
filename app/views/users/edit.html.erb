@@ -9,7 +9,7 @@
 <div class="container">
 	<div class="signup-holder profile-form">
 		<h2 class="greeting">Edit your Profile</h2>
-		<%= form_for(@user) do |f| %>
+		<%= form_for(@user, url: '/signup') do |f| %>
 			<%= render 'shared/error_messages' %>
 				<div class="center-block">
 					<div class="REG fname">
