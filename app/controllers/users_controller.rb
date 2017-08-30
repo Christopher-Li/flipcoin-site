@@ -62,7 +62,6 @@ class UsersController < ApplicationController
 
   def newentity
     @user = User.new
-    organizationType = {}
   end
 
   # POST /signup/entity
@@ -71,12 +70,6 @@ class UsersController < ApplicationController
     @user.admin = false
     @user.isEntity = false
     @user.lastName = "N/A"
-    @user.organizationType = ""
-    params[:organizationType].each do |key, value|
-      if value != "0" then
-        @user.organizationType += " & " + value
-      end
-    end
     
     logger.debug "User params: #{@user}"
     if @user.save
@@ -136,21 +129,7 @@ class UsersController < ApplicationController
         :city,
         :state,
         :zipCode,
-        :dob,
-        :organizationType1,
-        :organizationType2,
-        :organizationType3,
-        :organizationType4,
-        :organizationType5,
-        :organizationType6,
-        :organizationType7,
-        :organizationType8,
-        :organizationType9,
-        :organizationType10,
-        :organizationType11,
-        :organizationType12,
-        :citizenship,
-        :socialsecurity)
+        :dob)
     end
 
     def user_params_wa_np
@@ -167,21 +146,7 @@ class UsersController < ApplicationController
         :city,
         :state,
         :zipCode,
-        :dob,
-        :organizationType1,
-        :organizationType2,
-        :organizationType3,
-        :organizationType4,
-        :organizationType5,
-        :organizationType6,
-        :organizationType7,
-        :organizationType8,
-        :organizationType9,
-        :organizationType10,
-        :organizationType11,
-        :organizationType12,
-        :citizenship,
-        :socialsecurity)
+        :dob)
     end
 
     def logged_in_user
