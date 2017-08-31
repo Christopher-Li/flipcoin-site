@@ -60,25 +60,27 @@ $('a[href*="#"]')
   }
 });
 
+$(document).ready(function(){
+  // Materialize css
+  // mobile navbar
+  $('.button-collapse').sideNav({
+      menuWidth: 300, // Default
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens,
+    }
+  );
 
-// Materialize css
-// mobile navbar
-$('.button-collapse').sideNav({
-    menuWidth: 300, // Default
-    edge: 'left', // Choose the horizontal origin
-    closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    draggable: true // Choose whether you can drag to open on touch screens,
-  }
-);
+  // date picker for registration
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 90, // Creates a dropdown of 15 years to control year,
+    today: 'Today',
+    clear: 'Clear',
+    close: 'Ok',
+    closeOnSelect: false // Close upon selecting a date,
+  });
 
-// date picker for registration
-$('.datepicker').pickadate({
-  selectMonths: true, // Creates a dropdown to control month
-  selectYears: 90, // Creates a dropdown of 15 years to control year,
-  today: 'Today',
-  clear: 'Clear',
-  close: 'Ok',
-  closeOnSelect: false // Close upon selecting a date,
 });
 
 
