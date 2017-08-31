@@ -39,6 +39,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.admin = false
     @user.isEntity = true
+    @user. organtizationType = "N/A"
     
     logger.debug "User params: #{@user}"
     if @user.save
