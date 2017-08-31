@@ -174,14 +174,16 @@ nav .navbar-header a img { margin: auto 15px !important; }
  **********************************************************************/
 /* SPLASH
  ****************************************/
-#particles-js 
-{ height: 106% !important; }
-#home > .full-page-banner 
-{ height: 95%; }
+#particles-js { 
+	height: 106% !important; 
+}
+#home > .full-page-banner { 
+	height: 95%; 
+}
 
 .full-page-banner > .introduction-content > .container
 { 
-	padding-top: 100px !important; 
+	padding-top: 60px !important; 
 	margin-bottom: 20px; 
 }
 
@@ -459,8 +461,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 form .REG label {
 	text-align: left;
 }
-.REGsubmit .kamikaze_btn {
-	margin: 10px auto;
+.REGsubmit.kamikaze_btn {
+	margin: 5px auto;
+	margin-bottom: 30px;
 }
 /*form .REG input {
 	width: 250px; 
@@ -654,7 +657,7 @@ and (min-width : 768px) {
 		height: 95%; 
 	}
 	.full-page-banner > .introduction-content > .container { 
-		padding-top: 130px !important; 
+		padding-top: 50px !important; 
 	}
 	nav .navbar-toggle.collapsed i { 
 		display: none; 

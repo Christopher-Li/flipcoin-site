@@ -10,31 +10,28 @@
   <div class="signup-holder" id ="signup-collapse">
     <h2>FlipCoin Token Sale Registration</h2>
     <p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
-    <!-- <div class="collapse in" id="individual"> -->
-      <!-- <div class="card card-block"> -->
         <%= form_for(@user, url: '/signup/entity') do |f| %>
           <%= render 'shared/error_messages' %>
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
-              <%= f.label :firstName, value: 'Entity Name (required)' %>
+              <%= f.text_field :firstName, class: 'form-control validate' %>
+              <%= f.label :firstName, value: 'Entity Name *' %>
             </div>
           </div>
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
-              <%= f.label :email, value: 'Email (required)' %>
+              <%= f.text_field :email, class: 'form-control validate' %>
+              <%= f.label :email, value: 'Email *' %>
             </div>
             <div class="REG input-field">
-              <%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
+              <%= f.text_field :phoneNumber, class: 'form-control' %>
               <%= f.label :phoneNumber, value: 'Phone Number' %>
             </div>
           </div>
-            <!-- DELETED ADDRESS INPUTS -->
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :address1, class: 'form-control' %>
-              <%= f.label :address1, value: 'Address Line 1 (required)' %>
+              <%= f.text_field :address1, class: 'form-control validate' %>
+              <%= f.label :address1, value: 'Address Line 1 *' %>
             </div>
             <div class="REG input-field">
               <%= f.text_field :address2, class: 'form-control' %>
@@ -43,43 +40,45 @@
           </div>
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :city, class: 'form-control' %>
-              <%= f.label :city, value: 'City (required)' %>
+              <%= f.text_field :city, class: 'form-control validate' %>
+              <%= f.label :city, value: 'City *' %>
             </div>
             <div class="REG input-field">
-              <%= f.text_field :zipCode, class: 'form-control' %>
-              <%= f.label :zipCode, value: 'Postal / Zip Code (required)' %>
+              <%= f.text_field :zipCode, class: 'form-control validate' %>
+              <%= f.label :zipCode, value: 'Postal / Zip Code *' %>
             </div>
           </div>
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :state, class: 'form-control' %>
-              <%= f.label :state, value: 'State/Province (required)' %>
+              <%= f.text_field :state, class: 'form-control validate' %>
+              <%= f.label :state, value: 'State/Province *' %>
             </div>
             <div class="REG input-field">
-              <%= f.text_field :dob, class: "form-control datepicker"%>
-              <%= f.label :dob, value: 'Date of Birth (required)' %>
+              <%= f.text_field :dob, class: "form-control datepicker validate"%>
+              <%= f.label :dob, value: 'Date of Birth *' %>
             </div>
           </div>
           <div class="center-block">  
             <div class="REG input-field">
-              <%= f.password_field :password, class: 'form-control' %>
-              <%= f.label :password, value: 'Password (required)' %>
+              <%= f.password_field :password, class: 'form-control validate' %>
+              <%= f.label :password, value: 'Password *' %>
             </div>
             <div class="REG input-field">
-              <%= f.password_field :password_confirmation, class: 'form-control' %>
-              <%= f.label :password_confirmation, "Password Confirmation (required)" %>
+              <%= f.password_field :password_confirmation, class: 'form-control validate' %>
+              <%= f.label :password_confirmation, "Confirm Password *" %>
             </div>
           </div>
           <div class="center-block">
             <div class="REG input-field">
-              <%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
-              <%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
+              <%= f.text_field :estimatedContribution, class: 'form-control validate' %>
+              <%= f.label :estimatedContribution, value: '*Planned Contribution (USD)' %>
             </div>
           </div>
           <div class="center-block">
-            <p class="paragraph center">
-            To be qualified to purchase the Tokens, the Purchaser must either (i) be an Accredited Investor, or (ii) have, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment.
+            <p class="paragraph center" style="width:90%; padding:20px!important;margin:0 auto;">
+            To be qualified to purchase the Tokens, the Purchaser must either <br><br>
+            (i) be an Accredited Investor, or <br><br>
+            (ii) have, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment.
             </p>
             <p class="paragraph center">
             Please check the appropriate description which applies to you.
@@ -155,7 +154,7 @@
             <p class="paragraph center">
               By clicking submit, you effectively aggree to our terms & services (above).
             <div class="REGsubmit kamikaze_btn">
-              <%= f.submit "Submit", class: "none" %>
+              <%= f.submit "Submit", class: "btn" %>
             </div>
           </div>
         <% end %>
