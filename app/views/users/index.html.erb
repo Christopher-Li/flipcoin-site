@@ -26,9 +26,9 @@
   <tbody>
     <% @users.each do |user| %>
       <% if user.admin == true %>
-        <tr class="success">
+        <tr class="admin">
       <% elsif user.activated == false %>
-        <tr class="warning">
+        <tr class="notAuthenticated">
       <% else %>
         <tr>
       <% end %>

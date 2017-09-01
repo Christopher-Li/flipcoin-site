@@ -1,4 +1,12 @@
 
+tr.admin {
+  background-color: #dff0d8;
+}
+
+tr.notAuthenticated {
+  background-color: #fcf8e3;
+}
+
 .greeting {
   line-height: 2.3em;
   font-size: 2.3em;
