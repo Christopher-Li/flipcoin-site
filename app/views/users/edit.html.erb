@@ -14,17 +14,17 @@
 				<div class="center-block">
 					<div class="REG fname">
 						<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
-						<%= f.label :firstName, value: 'First Name (required)' %>
+						<%= f.label :firstName, value: 'First Name *' %>
 					</div>
 					<div class="REG lname">
 						<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
-						<%= f.label :lastName, value: 'Last Name (required)' %>
+						<%= f.label :lastName, value: 'Last Name *' %>
 					</div>
 				</div>
 				<div class="center-block">
 					<div class="REG email">
 						<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
-						<%= f.label :email, value: 'Email (required)' %>
+						<%= f.label :email, value: 'Email *' %>
 					</div>
 					<div class="REG phone">
 						<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
@@ -35,7 +35,7 @@
 				<div class="center-block">
 					<div class="REG add1">
 						<%= f.text_field :address1, class: 'form-control' %>
-						<%= f.label :address1, value: 'Address Line 1 (required)' %>
+						<%= f.label :address1, value: 'Address Line 1 *' %>
 					</div>
 					<div class="REG add2">
 						<%= f.text_field :address2, class: 'form-control' %>
@@ -45,21 +45,21 @@
 				<div class="center-block">
 					<div class="REG city">
 						<%= f.text_field :city, class: 'form-control' %>
-						<%= f.label :city, value: 'City (required)' %>
+						<%= f.label :city, value: 'City *' %>
 					</div>
 					<div class="REG zip">
 						<%= f.text_field :zipCode, class: 'form-control' %>
-						<%= f.label :zipCode, value: 'Postal / Zip Code (required)' %>
+						<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
 					</div>
 				</div>
 				<div class="center-block">
 					<div class="REG state">
 						<%= f.text_field :state, class: 'form-control' %>
-						<%= f.label :state, value: 'State/Province (required)' %>
+						<%= f.label :state, value: 'State/Province *' %>
 					</div>
 					<div class="REG dob">
-						<%= f.text_field :dob, class: "form-control datepicker"%>
-						<%= f.label :dob, value: 'Date of Birth (required)' %>
+						<%= f.date_field :dob, class: 'form-control' %>	
+						<%= f.label :dob, value: 'Date of Birth *' %>
 					</div>
 				</div>
 		  	<div class="center-block">

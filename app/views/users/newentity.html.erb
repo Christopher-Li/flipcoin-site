@@ -54,8 +54,8 @@
               <%= f.label :state, value: 'State/Province *' %>
             </div>
             <div class="REG input-field">
-              <%= f.text_field :dob, class: "form-control datepicker validate"%>
-              <%= f.label :dob, value: 'Date of Birth *' %>
+              <%= f.date_field :dob, class: 'form-control' %> 
+              <%= f.label :dob, value: 'Starting Date of Company (MM/DD/YYYY) *' %>
             </div>
           </div>
           <div class="center-block">  
@@ -71,7 +71,7 @@
           <div class="center-block">
             <div class="REG input-field">
               <%= f.text_field :estimatedContribution, class: 'form-control validate' %>
-              <%= f.label :estimatedContribution, value: '*Planned Contribution (USD)' %>
+              <%= f.label :estimatedContribution, value: 'Planned Contribution (USD) *' %>
             </div>
           </div>
           <div class="center-block">
