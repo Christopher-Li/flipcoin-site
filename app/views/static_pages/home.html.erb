@@ -10,7 +10,8 @@
 					<a href="#home" class="brand-logo">
 		      	<%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
 		      </a>
-				  <ul class="right">
+		      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars fa-2x grey-text text-darken-1"></i></a>
+				  <ul class="right hide-on-med-and-down">
 				  	<li><a class="grey-text text-darken-1" href="#about">About</a></li>
 		        <li><a class="grey-text text-darken-1" href="#tokensale">Token Sale</a></li>
 		        <li><a class="grey-text text-darken-1" href="#our-team">Team</a></li>
@@ -667,7 +668,6 @@
 	</div>
 	<%= javascript_include_tag 'particles', 'data-turbolinks-track': 'reload' %>
 	<%= javascript_include_tag 'particles-app', 'data-turbolinks-track': 'reload' %>
-	<%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
 	<a href="htts://jackkasbeer.co" style="display:none;">kamikaze was here</a>
 	<script>
 		var diffDay, diffHour, diffMin, diffSec, day, saleEnd, timeDiff, totalDiff;

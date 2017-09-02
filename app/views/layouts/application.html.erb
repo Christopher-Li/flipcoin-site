@@ -11,11 +11,11 @@ Created: July 2017
 <html>
   <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="title" content="FlipCoin (ATM) | Official Page">
   <meta name="description" content="We are excited to offer FlipCoin tokens to our dedicated supporters. FlipCoin is a cryptocurrency token that allows users easier access to CoinFlip and the cash to crypto market. They are treated as a membership token that will provide benefits for those who own it, with access to significant discounts, consulting, crypto networking events, and educational literature/videos created by CoinFlip (among other things).">
-	<meta name="robots" content="index, follow">
-	<meta name="author" content="Christopher Li, Jack Kasbeer">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Christopher Li, Jack Kasbeer">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <!-- Open Graph -->
   <meta property="og:title" content="FlipCoin (ATM) | Official CoinFlip Token"/>
@@ -42,13 +42,10 @@ Created: July 2017
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <%= favicon_link_tag 'favicon.png' %>
   <%= csrf_meta_tags %>
-	
-	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag    'kamikaze-iz-pricel', media: 'all', 'data-turbolinks-track': 'reload' %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </head>
 
   <body>
@@ -60,7 +57,8 @@ Created: July 2017
               <a href="/" class="brand-logo">
                 <%= image_tag("coinflip-coin@.5x.png", :alt => "coinflip logo", :class => "logo") %>
               </a>
-              <ul class="right">
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars fa-2x grey-text text-darken-1"></i></a>
+              <ul class="right hide-on-med-and-down">
                 <% if current_user %>
                   <% if current_user.admin %>
                     <li><%= link_to 'All Users', '/users', :class => "grey-text text-darken-1" %></li>
@@ -98,7 +96,11 @@ Created: July 2017
 
     <% end %>
     <%= yield %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+    <%= javascript_include_tag 'general', 'data-turbolinks-track': 'reload' %>
     <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
   </body>
+</html>
 </html>
