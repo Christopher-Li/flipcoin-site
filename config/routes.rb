@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get '/faq', to: 'static_pages#faq'
+  # temporary
+  get '/users/:id/edit', to: 'static_pages#404'
+  # get '/faq', to: 'static_pages#faq'
+  
   get '/signup', to: 'users#usertypes'
   get '/signup/individual', to: 'users#newindividual'
   post '/signup/individual', to: 'users#createindividual'
@@ -8,6 +11,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  get "/logout", to: 'sessions#destroy'
   resources :users
   resources :account_activations, only: [:edit]
   root 'static_pages#home'
