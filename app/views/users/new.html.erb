@@ -1,83 +1,94 @@
-<% provide(:title, "Sign Up") %>
+<!-- 
+	FLIPCOIN TOKEN SALE REGISTRATION
+	August 25, 2017
+-->
+
+<% provide(:title, "Sign Up Individual") %>
 
 <div class="signup">
 <div class="container">
-	<div class="signup-holder col-sm-9">
+	<div class="signup-holder" id ="signup-collapse">
 		<h2>FlipCoin Token Sale Registration</h2>
-		<p id="ERRexistence" class="pp-description">Existing user? <%= link_to "Login", login_path %></p>
+		<p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
 		<%= form_for(@user, url: '/signup') do |f| %>
 			<%= render 'shared/error_messages' %>
-				<div class="center-block">
-					<div id="REGfname" class="REG">
-						<%= f.label :firstName, value: 'First Name *' %>
-						<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
-					</div>
-					<div id="REGlname" class="REG">
-						<%= f.label :lastName, value: 'Last Name *' %>
-						<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
-					</div>
+			<div class="center-block">
+				<div class="REG fname input-field">
+					<%= f.text_field :firstName, class: 'form-control validate' %>
+					<%= f.label :firstName, value: 'First Name *' %>
 				</div>
-				<div class="center-block">
-					<div id="REGemail" class="REG">
-						<%= f.label :email, value: 'Email *' %>
-						<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
-					</div>
-					<div id="REGphone" class="REG">
-						<%= f.label :phoneNumber, value: 'Phone Number' %>
-						<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
-					</div>
+				<div class="REG lname input-field">
+					<%= f.text_field :lastName, class: 'form-control validate' %>
+					<%= f.label :lastName, value: 'Last Name *' %>
 				</div>
-					<!-- DELETED ADDRESS INPUTS -->
-				<div class="center-block">
-					<div id="REGadd1" class="REG">
-						<%= f.label :address1, value: 'Address Line 1 *' %>
-						<%= f.text_field :address1, class: 'form-control' %>
-					</div>
-					<div id="REGadd2" class="REG">
-						<%= f.label :address2, value: 'Address Line 2' %>
-						<%= f.text_field :address2, class: 'form-control' %>
-					</div>
+			</div>
+			<div class="center-block">
+				<div class="REG email input-field">
+					<%= f.text_field :email, class: 'form-control validate' %>
+					<%= f.label :email, value: 'Email *' %>
 				</div>
-				<div class="center-block">
-					<div id="REGcity" class="REG">
-						<%= f.label :city, value: 'City *' %>
-						<%= f.text_field :city, class: 'form-control' %>
-					</div>
-					<div id="REGzip" class="REG">
-						<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
-						<%= f.text_field :zipCode, class: 'form-control' %>
-					</div>
+				<div class="REG phone input-field">
+					<%= f.text_field :phoneNumber, class: 'form-control' %>
+					<%= f.label :phoneNumber, value: 'Phone Number' %>
 				</div>
-				<div class="center-block">
-					<div id="REGstate" class="REG">
-						<%= f.label :state, value: 'State/Province *' %>
-						<%= f.text_field :state, class: 'form-control' %>
-					</div>
-					<div id="REGdob" class="REG">
-						<%= f.label :dob, value: 'Date of Birth *' %>
-						<%= f.date_select :dob, class: 'form-control', start_year: Date.today.year - 100, end_year: Date.today.year %>
-					</div>
+			</div>
+			<!-- DELETED ADDRESS INPUTS -->
+			<div class="center-block">
+				<div class="REG add1 input-field">
+					<%= f.text_field :address1, class: 'form-control validate' %>
+					<%= f.label :address1, value: 'Address Line 1 *' %>
 				</div>
-				<div class="center-block">	
-					<div id="REGpass" class="REG">
-						<%= f.label :password, value: 'Password *' %>
-						<%= f.password_field :password, class: 'form-control' %>
-					</div>
-					<div id="REGconfirm" class="REG">
-						<%= f.label :password_confirmation, "Password Confirmation *" %>
-				  		<%= f.password_field :password_confirmation, class: 'form-control' %>
-			  		</div>
-			  	</div>
-			  	<div class="center-block">
-			  		<div id="REGestimate" class="REG">
-				  		<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
-						<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
-					</div>
-					<div id="REGsubmit">
-		    			<%= f.submit "Submit", class: "btn" %>
-		    		</div>
-		    	</div>
+				<div class="REG add2 input-field">
+					<%= f.text_field :address2, class: 'form-control' %>
+					<%= f.label :address2, value: 'Address Line 2' %>
+				</div>
+			</div>
+			<div class="center-block">
+				<div class="REG city input-field">
+					<%= f.text_field :city, class: 'form-control validate' %>
+					<%= f.label :city, value: 'City *' %>
+				</div>
+				<div class="REG zip input-field">
+					<%= f.text_field :zipCode, class: 'form-control validate' %>
+					<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+				</div>
+			</div>
+			<div class="center-block">
+				<div class="REG state input-field">
+					<%= f.text_field :state, class: 'form-control validate' %>
+					<%= f.label :state, value: 'State/Province (*)' %>
+				</div>
+				<div class="REG dob input-field">
+					<%= f.text_field :dob, class: "form-control datepicker validate"%>
+					<%= f.label :dob, value: 'Date of Birth *' %>
+				</div>
+			</div>
+			<div class="center-block">	
+				<div class="REG pass input-field">
+					<%= f.password_field :password, class: 'form-control validate' %>
+					<%= f.label :password, value: 'Password *' %>
+				</div>
+				<div class="REG confirm input-field">
+		  		<%= f.password_field :password_confirmation, class: 'form-control validate' %>
+		  		<%= f.label :password_confirmation, "Password Confirmation *" %>
+	  		</div>
+	  	</div>
+	  	<div class="center-block">
+	  		<div class="REG estimate input-field">
+				<%= f.text_field :estimatedContribution, class: 'form-control validate' %>
+				<%= f.label :estimatedContribution, value: '*Planned Contribution (USD)' %>
+			</div>
+			<div class="REGsubmit kamikaze_btn">
+				<%= f.submit "Submit", class: "btn" %>
+			</div>
+		</div>
 		<% end %>
+	  	<p class="paragraph center" style="padding-left:0 !important;">
+			Questions?<br>
+			Give us a call! (224)-688-9977
+		</p>
+		<p class="pp-description shrink">*: please note this number is for internal feedback & is not legally binding in any way.
+		</p>
 	</div>
 </div>
 </div>
