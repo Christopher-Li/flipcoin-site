@@ -85,54 +85,30 @@
             </p>
           </div>
           <div class="center-block">
-            <div class="input-field">
-              <%= check_box("organizationType", 1, {id: "organizationType1"}, "A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.") %>
-              <label for="organizationType1">A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 2, {id: "organizationType2"}, "A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.") %>
-              <label for="organizationType2">A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 3, {id: "organizationType3"}, "An insurance company, as defined in Section 2(13) of the Securities Act.") %>
-              <label for="organizationType3">An insurance company, as defined in Section 2(13) of the Securities Act.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 4, {id: "organizationType4"}, "An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.") %>
-              <label for="organizationType4">An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 5, {id: "organizationType5"}, "A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.") %>
-              <label for="organizationType5">A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 6, {id: "organizationType6"}, "A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.") %>
-              <label for="organizationType6">A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 7, {id: "organizationType7"}, "a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.") %>
-              <label for="organizationType7">a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 8, {id: "organizationType8"}, "A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.") %>
-              <label for="organizationType8">A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 9, {id: "organizationType9"}, "A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.") %>
-              <label for="organizationType9">A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 10, {id: "organizationType10"}, "A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.") %>
-              <label for="organizationType10">A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 11, {id: "organizationType11"}, "An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.") %>
-              <label for="organizationType11">An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.</label>
-            </div>
-            <div class="input-field">
-              <%= check_box("organizationType", 12, {id: "organizationType12"}, "The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.") %>
-              <label for="organizationType12">The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.</label>
-            </div>
+            <%= check_box("organizationType", 1, {id: "organizationType1"}, "A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.") %>
+            <label for="organizationType1">A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.</label>
+            <%= check_box("organizationType", 2, {id: "organizationType2"}, "A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.") %>
+            <label for="organizationType2">A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.</label>
+            <%= check_box("organizationType", 3, {id: "organizationType3"}, "An insurance company, as defined in Section 2(13) of the Securities Act.") %>
+            <label for="organizationType3">An insurance company, as defined in Section 2(13) of the Securities Act.</label>
+            <%= check_box("organizationType", 4, {id: "organizationType4"}, "An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.") %>
+            <label for="organizationType4">An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.</label>
+            <%= check_box("organizationType", 5, {id: "organizationType5"}, "A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.") %>
+            <label for="organizationType5">A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.</label>
+            <%= check_box("organizationType", 6, {id: "organizationType6"}, "A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.") %>
+            <label for="organizationType6">A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.</label>
+            <%= check_box("organizationType", 7, {id: "organizationType7"}, "a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.") %>
+            <label for="organizationType7">a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.</label>
+            <%= check_box("organizationType", 8, {id: "organizationType8"}, "A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.") %>
+            <label for="organizationType8">A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.</label>
+            <%= check_box("organizationType", 9, {id: "organizationType9"}, "A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.") %>
+            <label for="organizationType9">A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.</label>
+            <%= check_box("organizationType", 10, {id: "organizationType10"}, "A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.") %>
+            <label for="organizationType10">A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.</label>
+            <%= check_box("organizationType", 11, {id: "organizationType11"}, "An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.") %>
+            <label for="organizationType11">An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.</label>
+            <%= check_box("organizationType", 12, {id: "organizationType12"}, "The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.") %>
+            <label for="organizationType12">The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.</label>
           </div>
           <div class="center-block">
             <div class="input-field">
@@ -151,8 +127,8 @@
             </div>
           </div>
           <div class="center-block">
-            <p class="paragraph center">
-              By clicking submit, you effectively aggree to our terms & services (above).
+            <p>By signing this form, you are certifying that all of the information provide is true to the best of your knowledge, and that you have read the most recent White Paper and adhere to the information above. Please sign the full name of your company.</p>
+            <%= text_field(:signature, 'sig',class: 'form-control validate') %>
             <div class="REGsubmit kamikaze_btn">
               <%= f.submit "Submit", class: "btn" %>
             </div>

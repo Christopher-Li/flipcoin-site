@@ -20,6 +20,7 @@ class User < ApplicationRecord
   validates :state, presence: true
   validates :dob, presence: true
   validates :organizationType, presence: true
+  validates :citizenship, presence: true
   # validates :ethAdd, allow_nil: true, length: {is: 42}
 
   def User.digest(string)

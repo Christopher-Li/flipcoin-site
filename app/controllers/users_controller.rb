@@ -30,6 +30,33 @@ class UsersController < ApplicationController
     end
   end
 
+  def new
+    @user = User.new
+  end
+
+  # POST /signup/individual
+  def createUser(signature, usersName, err)
+    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
+    if @user.valid?
+      if signature.downcase != usersName.downcase
+        @user.errors.add(:signature, err)
+        true
+      else
+        @user.save
+        @user.send_activation_email
+        flash[:info] = "Please check your email to activate your account."
+        redirect_to root_url
+        false
+      end
+    else
+      @user.save
+      if signature.downcase != usersName.downcase
+        @user.errors.add(:signature, err)
+      end
+      true
+    end
+  end
+
   def newindividual
     @user = User.new
   end
@@ -39,26 +66,20 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.admin = false
     @user.isEntity = true
-    @user.organizationType = "N/A"
+    @user.organizationType = ""
+    params[:organizationType].each do |key, value|
+      if value != "0" then
+        @user.organizationType += " & " + value
+      end
+    end
     
-    logger.debug "User params: #{@user}"
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
-      redirect_to root_url
-    else
+    if createUser(params[:signature]['sig'], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
+      if not @user.errors[:organizationType].empty?
+        @user.errors.delete(:organizationType)
+        @user.errors.add(:Must, "select an individual type.")
+      end
       render 'newindividual'
     end
-    # respond_to do |format|
-    #   if @user.save
-    #     log_in @user
-    #     format.html { redirect_to @user, notice: 'User was successfully created.' }
-    #     format.json { render :show, status: :created, location: @user }
-    #   else
-    #     format.html { render :new }
-    #     format.json { render json: @user.errors, status: :unprocessable_entity }
-    #   end
-    # end
   end
 
   def newentity
@@ -72,6 +93,7 @@ class UsersController < ApplicationController
     @user.admin = false
     @user.isEntity = false
     @user.lastName = "N/A"
+    @user.citizenship = "N/A"
     @user.organizationType = ""
     params[:organizationType].each do |key, value|
       if value != "0" then
@@ -79,12 +101,11 @@ class UsersController < ApplicationController
       end
     end
     
-    logger.debug "User params: #{@user}"
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
-      redirect_to root_url
-    else
+    if createUser(params[:signature]['sig'], @user.firstName, "must be 'entityName'")
+      if not @user.errors[:organizationType].empty?
+        @user.errors.delete(:organizationType)
+        @user.errors.add(:Must, "select an entity type.")
+      end
       render 'newentity'
     end
   end
@@ -138,18 +159,6 @@ class UsersController < ApplicationController
         :state,
         :zipCode,
         :dob,
-        :organizationType1,
-        :organizationType2,
-        :organizationType3,
-        :organizationType4,
-        :organizationType5,
-        :organizationType6,
-        :organizationType7,
-        :organizationType8,
-        :organizationType9,
-        :organizationType10,
-        :organizationType11,
-        :organizationType12,
         :citizenship,
         :socialsecurity)
     end
@@ -169,18 +178,6 @@ class UsersController < ApplicationController
         :state,
         :zipCode,
         :dob,
-        :organizationType1,
-        :organizationType2,
-        :organizationType3,
-        :organizationType4,
-        :organizationType5,
-        :organizationType6,
-        :organizationType7,
-        :organizationType8,
-        :organizationType9,
-        :organizationType10,
-        :organizationType11,
-        :organizationType12,
         :citizenship,
         :socialsecurity)
     end
