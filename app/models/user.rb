@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # validates_with BitcoinAddressValidator :bitAdd
   attr_accessor :activation_token
 	before_save :downcase_email
-  before_save :create_activation_digest
-  before_save :create_contract_digest
+  before_create :create_activation_digest
+  before_create :create_contract_digest
 	validates :firstName, presence: true, length: {maximum: 20}
 	validates :lastName, presence: true, length: {maximum: 20}
 	validates :email, format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i },
