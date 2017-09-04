@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   # temporary
   get '/users/:id/edit', to: 'static_pages#404'
   # get '/faq', to: 'static_pages#faq'
+  get '/users/new', to: 'users#usertypes'
   
   get '/signup', to: 'users#usertypes'
   get '/signup/individual', to: 'users#newindividual'
