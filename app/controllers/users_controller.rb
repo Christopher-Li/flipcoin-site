@@ -65,7 +65,7 @@ class UsersController < ApplicationController
   def createindividual
     @user = User.new(user_params)
     @user.admin = false
-    @user.isEntity = true
+    @user.isEntity = false
     @user.organizationType = ""
     params[:organizationType].each do |key, value|
       if value != "0" then
@@ -91,7 +91,7 @@ class UsersController < ApplicationController
   def createentity
     @user = User.new(user_params)
     @user.admin = false
-    @user.isEntity = false
+    @user.isEntity = true
     @user.lastName = "N/A"
     @user.citizenship = "N/A"
     @user.organizationType = ""
