@@ -382,7 +382,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .partner-logo {
 	width: 350px !important;
 	position: relative;
-	margin: 5px auto;
+	margin: 5px auto !important;
 }
 /* CUSTOMER TESTIMONIAL
  ****************************************/
