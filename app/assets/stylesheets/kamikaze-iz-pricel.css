@@ -447,6 +447,21 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	font-size: 1.8em; 
 	text-align: center; 
 }
+.signup-holder h4 {
+    font-size: 1.7em;
+    color: #656565;
+    margin-left: 60px;
+    margin-top: 40px; margin-bottom: 20px;
+}
+.signup .paragraph.important {
+	width: 88%;
+	margin: 10px auto;
+	margin-bottom: 30px;
+}
+.signup .center-block.checkboxes input,
+.signup .center-block.checkboxes label {
+	text-align: left;
+}
 .REG{ 
 	display: inline-block; 
 	margin: 5px 10px; 
@@ -473,6 +488,12 @@ form .REG label {
 	margin: 5px auto;
 	margin-bottom: 30px;
 }
+
+/*.input-field.block {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}*/
 
 
 /**********************************************************************
@@ -699,6 +720,10 @@ and (min-width : 768px) {
 	}
 	.profile-form p {
 		font-size: 1.3em;
+	}
+
+	.signup .paragraph.important {
+		width: 75%;
 	}
 }
 
