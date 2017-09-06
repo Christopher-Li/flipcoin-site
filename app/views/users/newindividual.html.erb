@@ -8,13 +8,15 @@
 <div class="signup">
 <div class="container">
 	<div class="signup-holder" id ="signup-collapse">
-		<h2>FlipCoin Token Sale Registration</h2>
-		<p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %></p>
+		<div class="signup-intro">
+			<h2>FlipCoin Token Sale Registration</h2>
+			<p id="ERRexistence" class="paragraph center">Already registered? <%= link_to "Login", login_path %>
+			</p>
+		</div>
 		<%= form_for(@user, url: '/signup/individual') do |f| %>
 			<%= render 'shared/error_messages' %>
-		<p class="paragraph important">
-		IMPORTANT! Before leaving any fields blank, please understand all are required (except 'Address Line 2').<br>
-		If you have any questions regarding the information being asked in the is form, please do not hesitate to contact us (number at the bottom), and thank you for your patience & cooperation.
+			<p class="paragraph important">
+			IMPORTANT! Before leaving any fields blank, please understand <span class="bold">all fields are required</span> (except 'Address Line 2').  If you have any questions regarding the information being asked in the is form, please do not hesitate to contact us (number at the bottom).  Thank you for your patience & cooperation.
 		</p>
 		<h4>Personal Information</h4>
 		<div class="center-block">
@@ -92,9 +94,10 @@
 	  			<%= f.label :password_confirmation, "Password Confirmation" %>
   			</div>
 		</div>
+		<h4>Legal Information</h4>
 		<p class="paragraph important">
 			I am an Accredited Investor (as defined in Rule 501 of Regulation D promulgated under the Securities Act) because I certify that (check all appropriate descriptions that apply):
-			</p>
+		</p>
 		<div class="center-block checkboxes">
         	<%= check_box("organizationType", 1, {id: "organizationType1"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
         	<label for="organizationType1">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer' means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
@@ -107,9 +110,10 @@
         	<%= check_box("organizationType", 5, {id: "organizationType5"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
         	<label for="organizationType5">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer/ means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
 	    </div>
-	    <div>
+	    <h4>Signature & Submission</h4>
+	    <div class="center-block important">
 	      <div class="input-field">
-	        <textarea id="textarea1" style="resize:none" readonly rows=20 cols=40 class="materialize-textarea">
+	        <textarea id="textarea1" style="resize:none" readonly rows=20 cols=40 class="materialize-textarea" style="text-align:left;">
 	        I represent that:
 
 	          a.  The entity has, and if applicable, its officers, employees, directors or equity owners have, sufficient knowledge and experience in similar investments to evaluate the merits and risks of an investment in cryptocurrency and blockchain technology, or the entity has retained an attorney, accountant, financial advisor or consultant as its purchaser representative.
@@ -124,19 +128,21 @@
 	        </textarea>
 	      </div>
 	    </div>
-	    <div class="center-block">
+	    <div class="center-block important">
 	    	<p>By signing this form, you are certifying that all of the information provided is true to the best of your knowledge, and that you have read the most recent White Paper and the attached legal document (above). Please sign your full name.</p>
 	    	<%= text_field(:signature, 'sig',class: 'form-control validate') %>
+	    </div>
+	    <div class="center-block important">
 	  		<div class="REGsubmit kamikaze_btn">
-					<%= f.submit "Submit", class: "btn" %>
-				</div>
+				<%= f.submit "Submit", class: "btn" %>
+			</div>
 		  	<p class="paragraph center" style="padding-left:0 !important;">
-					Questions?<br>
-					Give us a call! (224)-688-9977
-				</p>
-				<p class="pp-description shrink">
-					*: please note this number is for internal feedback & is not legally binding in any way.
-				</p>
+				Questions?<br>
+				Give us a call! (224)-688-9977
+			</p>
+			<p class="pp-description shrink">
+				*: please note this number is for internal feedback & is not legally binding in any way.
+			</p>
 		</div>
 	<% end %>
 </div>

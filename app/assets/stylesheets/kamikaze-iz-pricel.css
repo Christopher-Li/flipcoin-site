@@ -444,19 +444,29 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .signup h2 { 
 	color: #545454 !important; 
 	margin-top: 30px !important; 
-	font-size: 1.8em; 
+	font-size: 2.2em; 
 	text-align: center; 
 }
 .signup-holder h4 {
     font-size: 1.7em;
     color: #656565;
-    margin-left: 60px;
+    margin-left: 10px;
     margin-top: 40px; margin-bottom: 20px;
 }
 .signup .paragraph.important {
 	width: 88%;
 	margin: 10px auto;
 	margin-bottom: 30px;
+}
+.signup .signup-intro {
+
+}
+span.bold {
+	color: #9E6D1D;
+}
+.signup .center-block.checkboxes {
+	width: 88%;
+	margin: 10px auto;
 }
 .signup .center-block.checkboxes input,
 .signup .center-block.checkboxes label {
@@ -488,12 +498,6 @@ form .REG label {
 	margin: 5px auto;
 	margin-bottom: 30px;
 }
-
-/*.input-field.block {
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}*/
 
 
 /**********************************************************************
@@ -722,8 +726,15 @@ and (min-width : 768px) {
 		font-size: 1.3em;
 	}
 
-	.signup .paragraph.important {
+	.signup .paragraph.important,
+	.signup .center-block.important {
 		width: 75%;
+	}
+	.signup .center-block.checkboxes {
+		width: 75%;
+	}
+	.signup-holder h4 {
+		margin-left: 60px;
 	}
 }
 
