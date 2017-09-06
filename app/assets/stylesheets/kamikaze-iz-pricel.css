@@ -437,7 +437,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-left: 0 !important;
 }
 .signup-holder {
-	width: 75%; 
+	width: 100%; 
 	min-width: 292px; max-width: 600px; 
 	margin: 10px auto;
 }
@@ -457,6 +457,10 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	width: 88%;
 	margin: 10px auto;
 	margin-bottom: 30px;
+}
+.signup .container {
+	width: 100%;
+	margin-top: 10px;
 }
 .signup .signup-intro {
 
@@ -759,7 +763,13 @@ and (min-width : 768px) {
 
 @media only screen
 and (min-width: 600px) {
-	
+	.signup .container {
+		width: 90%;
+		margin-top: 50px;
+	}
+	.signup-holder {
+		width: 75%;
+	}
 
 }
 @media only screen
