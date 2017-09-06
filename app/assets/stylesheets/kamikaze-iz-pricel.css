@@ -472,6 +472,9 @@ span.bold {
 .signup .center-block.checkboxes label {
 	text-align: left;
 }
+.REG.input-field input {
+	font-size: 1.1rem !important;
+}
 .REG{ 
 	display: inline-block; 
 	margin: 5px 10px; 
@@ -489,6 +492,7 @@ span.bold {
 }
 #textarea1 {
 	overflow-y: scroll;
+	height: 200px;
 }
 
 form .REG label {
@@ -497,6 +501,14 @@ form .REG label {
 .REGsubmit.kamikaze_btn {
 	margin: 5px auto;
 	margin-bottom: 30px;
+}
+
+
+.inline {
+	display: inline-block;
+	display: none;
+	color: #DFA94F;
+	margin: 10px; margin-top: 3px;
 }
 
 
@@ -734,7 +746,7 @@ and (min-width : 768px) {
 		width: 75%;
 	}
 	.signup-holder h4 {
-		margin-left: 60px;
+		margin-left: 50px;
 	}
 }
 
