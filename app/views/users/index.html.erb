@@ -13,11 +13,13 @@
       <th>ID</th>
       <th>Name</th>
       <th>Email</th>
+      <th>Type</th>
       <th>Phone Number</th>
       <th>Estimated Contribution</th>
       <th>Contract Digest</th>
       <th>Ethereum Address</th>
       <th>Bitcoin Address</th>
+      <th>Citizenship</th>
       <th>Address</th>
       <th colspan="3"></th>
     </tr>
@@ -35,11 +37,17 @@
         <td><%= user.id %></td>
         <td><%= user.firstName %> <%= user.lastName %></td>
         <td><%= user.email %></td>
+        <% if user.isEntity %>
+          <td>Entity</td>
+        <% else %>
+          <td>Individual</td>
+        <% end %>
         <td><%= user.phoneNumber %></td>
         <td><%= user.estimatedContribution %></td>
         <td><%= user.contract_digest %></td>
         <td><%= user.ethAdd %></td>
         <td><%= user.bitAdd %></td>
+        <td><%= user.citizenship %></td>
         <td><%= user.address1 %> <%= user.address2 %>, <%= user.city %>, <%= user.state %>, <%= user.zipCode %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
