@@ -39,8 +39,10 @@
         <td><%= user.email %></td>
         <% if user.isEntity %>
           <td>Entity</td>
-        <% else %>
+        <% elsif user.isEntity == false %>
           <td>Individual</td>
+        <% elsif user.isEntity == nil %>
+          <td>N/A</td>
         <% end %>
         <td><%= user.phoneNumber %></td>
         <td><%= user.estimatedContribution %></td>
