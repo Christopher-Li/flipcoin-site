@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:edit, :update, :show]
-  before_action :if_logged_in_redirect, only: [:new]
+  before_action :if_logged_in_redirect, only: [:newindividual, :newentity]
   before_action :user_must_be_admin, only: [:index]
   # GET /users
   # GET /users.json
@@ -101,7 +101,11 @@ class UsersController < ApplicationController
       end
     end
     
-    if createUser(params[:signature]['sig'], @user.firstName, "must be 'entityName'")
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+    else
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an entity type.")
