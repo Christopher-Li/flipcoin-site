@@ -380,9 +380,14 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	padding-bottom: 50px !important;
 }
 .partner-logo {
-	width: 350px !important;
+	width: 350px;
 	position: relative;
 	margin: 5px auto !important;
+}
+.partner-logo img {
+	width: 100%;
+	margin: 0;
+	padding: 0;
 }
 /* CUSTOMER TESTIMONIAL
  ****************************************/
@@ -736,6 +741,12 @@ and (min-width : 768px) {
 	}
 	#team .pp-holder .pp-description { 
 		font-size: 1.15em; 
+	}
+
+
+	.partner-logo {
+		float: left;
+		width: 32.5%;
 	}
 
 
