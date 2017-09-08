@@ -121,7 +121,21 @@
         <%= check_box("organizationType", 12, {id: "organizationType12"}, "The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.") %>
         <label for="organizationType12">The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.</label>
       </div>
-
+      <div class="center-block">
+        <p class="paragraph important">If you selection the option above ("The undersigned entity...") please complete the following fields</p>
+      </div>
+      <div class="center-block">
+        <div class="input-field">
+          <textarea class="form-control materialize-textarea validate" name="user[equityOwners]" id="user_equityOwners"></textarea>
+          <%= f.label :equityOwners, "List all equity owners:" %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="input-field">
+        <textarea class="form-control materialize-textarea validate" name="user[entityType]" id="user_entityTYpe"></textarea>
+          <%= f.label :entityType, "What is the type of the entity?" %>
+        </div>
+      </div>
       <h4 style="margin-bottom:40px;">Terms of Agreement</h4>
 
       <div class="center-block important">

@@ -168,7 +168,9 @@ class UsersController < ApplicationController
         :zipCode,
         :dob,
         :citizenship,
-        :socialsecurity)
+        :socialsecurity,
+        :equityOwners,
+        :entityType)
     end
 
     def user_params_wa_np
@@ -187,7 +189,9 @@ class UsersController < ApplicationController
         :zipCode,
         :dob,
         :citizenship,
-        :socialsecurity)
+        :socialsecurity,
+        :equityOwners,
+        :entityType)
     end
 
     def logged_in_user
