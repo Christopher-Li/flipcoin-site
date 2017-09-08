@@ -19,7 +19,7 @@
     <%= form_for(@user, url: '/signup/individual') do |f| %>
       <%= render 'shared/error_messages' %>
       <p class="paragraph important">
-        IMPORTANT! Before leaving any fields blank, please understand <span class="bold">all fields are required</span> (except 'Address Line 2').  If you have any questions regarding the information being asked in the is form, please do not hesitate to contact us (number at the bottom).  Thank you for your patience & cooperation.
+        IMPORTANT! Before leaving any fields blank, please understand <span class="bold">all fields are required</span> (except 'Address Line 2').  If you have any questions regarding the information being asked in the form, please do not hesitate to contact us (number at the bottom).  Thank you for your patience & cooperation.
       </p>
 
       <h4>Personal Information</h4>
@@ -106,7 +106,7 @@
         I am an Accredited Investor (as defined in Rule 501 of Regulation D promulgated under the Securities Act) because I certify that (check all appropriate descriptions that apply):
       </p>
       <div class="center-block checkboxes">
-            <%= check_box("organizationType", 1, {id: "organizationType1"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
+            <%= check_box("organizationType", 1, {id: "organizationType1"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer' means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
             <label for="organizationType1">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer' means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
             <%= check_box("organizationType", 2, {id: "organizationType2"}, "I am a natural person whose individual net worth, or joint net worth with my spouse, exceeds $1,000,000. For purposes of this item 6, net worth means the excess of total assets at fair market value (including personal and real property, but excluding the estimated fair market value of a person's primary home) over total liabilities. Total liabilities excludes any mortgage on the primary home in an amount of up to the home's estimated fair market value as long as the mortgage was incurred more than 60 days before the Tokens are purchased, but includes (i) any mortgage amount in excess of the home's fair market value and (ii) any mortgage amount that was borrowed during the 60-day period before the closing date for the sale of Tokens for the purpose of investing in the Tokens.") %>
             <label for="organizationType2">I am a natural person whose individual net worth, or joint net worth with my spouse, exceeds $1,000,000. For purposes of this item 6, 'net worth' means the excess of total assets at fair market value (including personal and real property, but excluding the estimated fair market value of a person's primary home) over total liabilities. Total liabilities excludes any mortgage on the primary home in an amount of up to the home's estimated fair market value as long as the mortgage was incurred more than 60 days before the Tokens are purchased, but includes (i) any mortgage amount in excess of the home's fair market value and (ii) any mortgage amount that was borrowed during the 60-day period before the closing date for the sale of Tokens for the purpose of investing in the Tokens.</label>
@@ -114,8 +114,8 @@
             <label for="organizationType3">I am a natural person who had individual income exceeding $200,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year.  For purposes of this Section 6, 'income' means annual adjusted gross income, as reported for federal income tax purposes, plus (i) the amount of any tax-exempt interest income received; (ii) the amount of losses claimed as a limited partner in a limited partnership; (iii) any deduction claimed for depletion; (iv) amounts contributed to an IRA or Keogh retirement plan; and (v) alimony paid; and (vi) any gains excluded from the calculation of adjusted gross income pursuant to the provisions of Section 1202 of the Internal Revenue Code of 1986, as amended.</label>
             <%= check_box("organizationType", 4, {id: "organizationType4"}, "I am a natural person who had joint income with my spouse exceeding $300,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year, as defined above.") %>
             <label for="organizationType4">I am a natural person who had joint income with my spouse exceeding $300,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year, as defined above.</label>
-            <%= check_box("organizationType", 5, {id: "organizationType5"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
-            <label for="organizationType5">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer/ means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
+            <%= check_box("organizationType", 5, {id: "organizationType5"}, "I am qualified to purchase the Tokens because I have, either alone or with my purchaser representative or representatives, such knowledge and experience in financial and business matters that I am capable of evaluating the merits and risks of such investment, as discussed in Section 2(a) in the attached legal document") %>
+            <label for="organizationType5">I am qualified to purchase the Tokens because I have, either alone or with my purchaser representative or representatives, such knowledge and experience in financial and business matters that I am capable of evaluating the merits and risks of such investment, as discussed in Section 2(a) in the attached legal document</label>
         </div>
 
         <h4 style="margin-bottom:40px;">Terms of Agreement</h4>
@@ -136,13 +136,13 @@
               e.  The entity understands that the Issuer will rely upon the completeness and accuracy of the Purchaser's responses to the questions in this Questionnaire in establishing that the contemplated transactions are exempt from the Securities Act, and hereby affirms that all such responses are accurate and complete.  The entity will notify the Issuer immediately of any changes in any of such information occurring prior to the acceptance of its subscription.
             </textarea>
           </div>
-          <div class="inline">
-            <%= link_to "CoinFlipLegal_Individual.pdf" %>
-          </div>
-          <div class="inline">
-            <%= link_to "Whitepaper.pdf" %>
-          </div>
-        </div>
+					<div>
+	        	<%= link_to "CoinFlip Individual Legal", "/CoinFlipLegal_Individual.pdf", {:style  => "color:#DFA94F", :target => "_blank"} %>
+	        </div>
+	        <div>
+						<%= link_to "Whitepaper", "/Whitepaper.pdf", {:style  => "color:#DFA94F", :target => "_blank"} %>
+					</div>
+				</div>
 
         <h4>Signature & Submission</h4>
 
