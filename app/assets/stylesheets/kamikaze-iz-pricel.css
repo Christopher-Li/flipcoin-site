@@ -727,6 +727,10 @@ and (min-width : 768px) {
 		padding-top: 50px; 
 	}
 
+	.pp-holder {
+		width: 42%;
+		float: left;
+	}
 	#team .pp-holder .pp-role { 
 		font-size: 1.2em; 
 	}
