@@ -73,7 +73,11 @@ class UsersController < ApplicationController
       end
     end
     
-    if createUser(params[:signature]['sig'], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
+    if @user.save
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
+    else
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
