@@ -82,6 +82,10 @@ class UsersController < ApplicationController
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
       end
+      if not @user.errors[:dob].empty?
+        @user.errors.delete(:dob)
+        @user.errors.add(:date, "of birth must follow the format of YYYY/MM/DD.")
+      end
       render 'newindividual'
     end
   end
@@ -113,6 +117,10 @@ class UsersController < ApplicationController
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an entity type.")
+      end
+      if not @user.errors[:dob].empty?
+        @user.errors.delete(:dob)
+        @user.errors.add(:Company, "birthday must follow the format of YYYY/MM/DD.")
       end
       render 'newentity'
     end
