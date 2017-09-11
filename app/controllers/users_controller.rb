@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:edit, :update, :show]
+  before_action :update_user_only_allow_nil_isEntity, only: [:updateType, :editindividual, :editentity]
   before_action :if_logged_in_redirect, only: [:newindividual, :newentity, :usertypes]
   before_action :user_must_be_admin, only: [:index]
   # GET /users
@@ -45,6 +46,7 @@ class UsersController < ApplicationController
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
       end
+      flash[:info] = "User was successfully updated."
       render 'editindividual'
     end
   end
@@ -63,16 +65,22 @@ class UsersController < ApplicationController
       end
     end
     
-    @user.assign_attributes(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: true)
+    @user.assign_attributes(
+      citizenship: "N/A", 
+      organizationType: orgType, 
+      isEntity: true, 
+      equityOwners: user_params_update[:equityOwners],
+      entityType: user_params_update[:entityType])
 
     if @user.save
       redirect_to current_user
     else
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
-        @user.errors.add(:Must, "select an individual type.")
+        @user.errors.add(:Must, "select an entity type.")
       end
-      render 'editindividual'
+      flash[:info] = "User was successfully updated."
+      render 'editentity'
     end
   end
 
@@ -293,7 +301,9 @@ class UsersController < ApplicationController
 
     def user_params_update
       params.require(:user).permit(
-        :citizenship)
+        :citizenship,
+        :equityOwners,
+        :entityType)
     end
 
     def logged_in_user
@@ -305,6 +315,12 @@ class UsersController < ApplicationController
       else
         flash[:danger] = "Please log in."
         redirect_to login_url
+      end
+    end
+
+    def update_user_only_allow_nil_isEntity
+      if current_user.isEntity != nil
+        redirect_to current_user
       end
     end
 

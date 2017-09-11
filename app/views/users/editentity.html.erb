@@ -9,14 +9,9 @@
 <div class="container">
   <div class="signup-holder" id ="signup-collapse">
     <div class="signup-intro">
-
       <h2>FlipCoin Entity Update</h2>
-
-      <p id="ERRexistence" class="paragraph center">
-        Already registered? <%= link_to "Login", login_path %>
-      </p>
     </div>
-    <%= form_for(@user, url: '/signup/entity') do |f| %>
+    <%= form_for(@user, url: '/update/entity') do |f| %>
       <%= render 'shared/error_messages' %>
       <h4>Legal Information</h4>
 
