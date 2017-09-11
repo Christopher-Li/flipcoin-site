@@ -12,76 +12,12 @@
 
       <h2>FlipCoin Entity Update</h2>
 
-    </div>
-    <%= form_for(@user, url: '/update/entity') do |f| %>
-      <%= render 'shared/error_messages' %>
-      <p class="paragraph important">
-        IMPORTANT! Before leaving any fields blank, please understand <span class="bold">all fields are required</span> (except 'Address Line 2').  If you have any questions regarding the information being asked in the is form, please do not hesitate to contact us (number at the bottom).  Thank you for your patience & cooperation.
+      <p id="ERRexistence" class="paragraph center">
+        Already registered? <%= link_to "Login", login_path %>
       </p>
-
-      <h4>Entity Information</h4>
-
-      <div class="center-block">
-        <div class="REG input-field">
-          <%= f.text_field :firstName, class: 'form-control validate' %>
-          <%= f.label :firstName, value: 'Name' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.text_field :estimatedContribution, class: 'form-control validate' %>
-          <%= f.label :estimatedContribution, value: 'Planned Contribution (USD)*' %>
-        </div>
-      </div>
-      <div class="center-block">
-        <div class="REG input-field">
-          <%= f.text_field :email, class: 'form-control validate' %>
-          <%= f.label :email, value: 'Contact Email' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.text_field :phoneNumber, class: 'form-control' %>
-          <%= f.label :phoneNumber, value: 'Phone Number' %>
-        </div>
-      </div>
-      <div class="center-block">
-        <div class="REG input-field">
-          <%= f.text_field :address1, class: 'form-control validate' %>
-          <%= f.label :address1, value: 'Address Line 1' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.text_field :address2, class: 'form-control' %>
-          <%= f.label :address2, value: 'Address Line 2' %>
-        </div>
-      </div>
-      <div class="center-block">
-        <div class="REG input-field">
-          <%= f.text_field :city, class: 'form-control validate' %>
-          <%= f.label :city, value: 'City' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.text_field :zipCode, class: 'form-control validate' %>
-          <%= f.label :zipCode, value: 'Postal/Zip Code' %>
-        </div>
-      </div>
-      <div class="center-block">
-        <div class="REG input-field">
-          <%= f.text_field :state, class: 'form-control validate' %>
-          <%= f.label :state, value: 'State/Province' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.text_field :dob, class: "form-control datepicker validate"%>
-          <%= f.label :dob, value: 'Company Birthday' %>
-        </div>
-      </div>
-      <div class="center-block">  
-        <div class="REG input-field">
-          <%= f.password_field :password, class: 'form-control validate' %>
-          <%= f.label :password, value: 'Password' %>
-        </div>
-        <div class="REG input-field">
-          <%= f.password_field :password_confirmation, class: 'form-control validate' %>
-          <%= f.label :password_confirmation, "Confirm Password" %>
-        </div>
-      </div>
-
+    </div>
+    <%= form_for(@user, url: '/signup/entity') do |f| %>
+      <%= render 'shared/error_messages' %>
       <h4>Legal Information</h4>
 
       <p class="paragraph important">
@@ -105,8 +41,8 @@
         <label for="organizationType5">A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.</label>
         <%= check_box("organizationType", 6, {id: "organizationType6"}, "A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.") %>
         <label for="organizationType6">A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.</label>
-        <%= check_box("organizationType", 7, {id: "organizationType7"}, "a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.") %>
-        <label for="organizationType7">a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.</label>
+        <%= check_box("organizationType", 7, {id: "organizationType7"}, "An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.") %>
+        <label for="organizationType7">An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.</label>
         <%= check_box("organizationType", 8, {id: "organizationType8"}, "A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.") %>
         <label for="organizationType8">A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.</label>
         <%= check_box("organizationType", 9, {id: "organizationType9"}, "A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.") %>
@@ -118,7 +54,21 @@
         <%= check_box("organizationType", 12, {id: "organizationType12"}, "The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.") %>
         <label for="organizationType12">The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.</label>
       </div>
-
+      <div class="center-block">
+        <p class="paragraph important">If you selection the option above ("The undersigned entity...") please complete the following fields</p>
+      </div>
+      <div class="center-block">
+        <div class="input-field">
+          <textarea class="form-control materialize-textarea validate" name="user[equityOwners]" id="user_equityOwners"></textarea>
+          <%= f.label :equityOwners, "List all equity owners:" %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="input-field">
+        <textarea class="form-control materialize-textarea validate" name="user[entityType]" id="user_entityTYpe"></textarea>
+          <%= f.label :entityType, "What is the type of the entity?" %>
+        </div>
+      </div>
       <h4 style="margin-bottom:40px;">Terms of Agreement</h4>
 
       <div class="center-block important">
@@ -138,11 +88,11 @@
             e.  The entity understands that the Issuer will rely upon the completeness and accuracy of the Purchaser's responses to the questions in this Questionnaire in establishing that the contemplated transactions are exempt from the Securities Act, and hereby affirms that all such responses are accurate and complete.  The entity will notify the Issuer immediately of any changes in any of such information occurring prior to the acceptance of its subscription.
           </textarea>
         </div>
-        <div class="inline">
-          <%= link_to "CoinFlipLegal_Entity.pdf" %>
+        <div>
+          <%= link_to "CoinFlip Entity Legal", "/CoinFlipLegal_Entity.pdf", {:style  => "color:#DFA94F", :target => "_blank"} %>
         </div>
-        <div class="inline">
-          <%= link_to "Whitepaper.pdf" %>
+        <div>
+          <%= link_to "Whitepaper", "/Whitepaper.pdf", {:style  => "color:#DFA94F", :target => "_blank"} %>
         </div>
       </div>
 
