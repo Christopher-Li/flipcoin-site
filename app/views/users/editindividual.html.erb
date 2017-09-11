@@ -1,0 +1,90 @@
+<!-- 
+  FLIPCOIN TOKEN SALE REGISTRATION
+  August 25, 2017
+-->
+
+<% provide(:title, "Sign Up Individual") %>
+
+<div class="signup">
+<div class="container">
+  <div class="signup-holder" id ="signup-collapse">
+    <div class="signup-intro">
+
+      <h2>FlipCoin Individual Update</h2>
+    </div>
+    <%= form_for(@user, url: '/update/individual') do |f| %>
+      <%= render 'shared/error_messages' %>
+      <h4>Personal Information</h4>
+
+      <div class="center-block">
+        <div class="REG pass input-field">
+          <%= f.text_field :citizenship, class: 'form-control validate' %>
+          <%= f.label :citizenship, value: 'Citizenship' %>
+        </div>
+      </div>
+
+      <h4>Legal Information</h4>
+
+      <p class="paragraph important">
+        I am an Accredited Investor (as defined in Rule 501 of Regulation D promulgated under the Securities Act) because I certify that (check all appropriate descriptions that apply):
+      </p>
+      <div class="center-block checkboxes">
+            <%= check_box("organizationType", 1, {id: "organizationType1"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
+            <label for="organizationType1">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer' means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
+            <%= check_box("organizationType", 2, {id: "organizationType2"}, "I am a natural person whose individual net worth, or joint net worth with my spouse, exceeds $1,000,000. For purposes of this item 6, net worth means the excess of total assets at fair market value (including personal and real property, but excluding the estimated fair market value of a person's primary home) over total liabilities. Total liabilities excludes any mortgage on the primary home in an amount of up to the home's estimated fair market value as long as the mortgage was incurred more than 60 days before the Tokens are purchased, but includes (i) any mortgage amount in excess of the home's fair market value and (ii) any mortgage amount that was borrowed during the 60-day period before the closing date for the sale of Tokens for the purpose of investing in the Tokens.") %>
+            <label for="organizationType2">I am a natural person whose individual net worth, or joint net worth with my spouse, exceeds $1,000,000. For purposes of this item 6, 'net worth' means the excess of total assets at fair market value (including personal and real property, but excluding the estimated fair market value of a person's primary home) over total liabilities. Total liabilities excludes any mortgage on the primary home in an amount of up to the home's estimated fair market value as long as the mortgage was incurred more than 60 days before the Tokens are purchased, but includes (i) any mortgage amount in excess of the home's fair market value and (ii) any mortgage amount that was borrowed during the 60-day period before the closing date for the sale of Tokens for the purpose of investing in the Tokens.</label>
+            <%= check_box("organizationType", 3, {id: "organizationType3"}, "I am a natural person who had individual income exceeding $200,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year.  For purposes of this Section 6, income means annual adjusted gross income, as reported for federal income tax purposes, plus (i) the amount of any tax-exempt interest income received; (ii) the amount of losses claimed as a limited partner in a limited partnership; (iii) any deduction claimed for depletion; (iv) amounts contributed to an IRA or Keogh retirement plan; and (v) alimony paid; and (vi) any gains excluded from the calculation of adjusted gross income pursuant to the provisions of Section 1202 of the Internal Revenue Code of 1986, as amended.") %>
+            <label for="organizationType3">I am a natural person who had individual income exceeding $200,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year.  For purposes of this Section 6, 'income' means annual adjusted gross income, as reported for federal income tax purposes, plus (i) the amount of any tax-exempt interest income received; (ii) the amount of losses claimed as a limited partner in a limited partnership; (iii) any deduction claimed for depletion; (iv) amounts contributed to an IRA or Keogh retirement plan; and (v) alimony paid; and (vi) any gains excluded from the calculation of adjusted gross income pursuant to the provisions of Section 1202 of the Internal Revenue Code of 1986, as amended.</label>
+            <%= check_box("organizationType", 4, {id: "organizationType4"}, "I am a natural person who had joint income with my spouse exceeding $300,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year, as defined above.") %>
+            <label for="organizationType4">I am a natural person who had joint income with my spouse exceeding $300,000 in each of the last two calendar years and I have a reasonable expectation of reaching the same income level in the current calendar year, as defined above.</label>
+            <%= check_box("organizationType", 5, {id: "organizationType5"}, "I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, executive officer means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)") %>
+            <label for="organizationType5">I am a director, executive officer or general partner of the Issuer, or a director, executive officer or general partner of a general partner of the Issuer. (For purposes of this Section 6, 'executive officer/ means the president; any vice president in charge of a principal business unit, division or function, such as sales, administration or finance; or any other person or persons who perform(s) similar policymaking functions for the Issuer.)</label>
+        </div>
+
+        <h4 style="margin-bottom:40px;">Terms of Agreement</h4>
+
+        <div class="center-block important">
+          <div class="input-field">
+            <textarea id="textarea1" style="resize:none" readonly rows="20" cols="40" class="materialize-textarea" style="text-align:left;">
+              I represent that:
+
+              a.  The entity has, and if applicable, its officers, employees, directors or equity owners have, sufficient knowledge and experience in similar investments to evaluate the merits and risks of an investment in cryptocurrency and blockchain technology, or the entity has retained an attorney, accountant, financial advisor or consultant as its purchaser representative.
+
+              b.  and, if applicable, my purchaser representative, have received the white paper relating to this offering (the "White Paper"); and I understand the White Paper and the risks involved in this offering. I and have been given the opportunity to ask questions and obtain material and relevant information from the Issuer enabling me to make an informed investment decision. All data that I have requested, and that is important for my investment decision, has been furnished to me.
+
+              c.  Any Tokens the entity may acquire will be for its own account for investment and not with any view to the distribution thereof, and it will not sell, assign, transfer or otherwise dispose of any of the Tokens, or any interest therein, in violation of the Securities Act or any applicable state securities law.
+
+              d.  The entity understands that (i) any Tokens it may acquire will not be registered under the Securities Act or any applicable state securities law and may not be sold or otherwise disposed of unless it is registered or sold or otherwise disposed of in a transaction that is exempt from such registration, and (ii) the certificates representing the Tokens will bear appropriate legends restricting the transferability thereof.
+
+              e.  The entity understands that the Issuer will rely upon the completeness and accuracy of the Purchaser's responses to the questions in this Questionnaire in establishing that the contemplated transactions are exempt from the Securities Act, and hereby affirms that all such responses are accurate and complete.  The entity will notify the Issuer immediately of any changes in any of such information occurring prior to the acceptance of its subscription.
+            </textarea>
+          </div>
+          <div class="inline">
+            <%= link_to "CoinFlipLegal_Individual.pdf" %>
+          </div>
+          <div class="inline">
+            <%= link_to "Whitepaper.pdf" %>
+          </div>
+        </div>
+
+        <h4>Signature & Submission</h4>
+
+        <div class="center-block important">
+          <p class="paragraph">By signing this form, you are certifying that all of the information provided is true to the best of your knowledge, and that you have read the most recent White Paper and the attached legal document (above). Please sign your full name(<%= @user.firstName + " " + @user.lastName %>).</p>
+          <%= text_field(:signature, 'sig', placeholder: "John Doe",class: 'form-control validate') %>
+        </div>
+        <div class="center-block important">
+          <div class="REGsubmit kamikaze_btn">
+          <%= f.submit "Submit", class: "btn" %>
+        </div>
+          <p class="paragraph center" style="padding-left:0 !important;">
+          Questions?<br>
+          Give us a call! (224)-688-9977
+        </p>
+        <p class="pp-description shrink">
+          *: please note this number is for internal feedback & is not legally binding in any way.
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>

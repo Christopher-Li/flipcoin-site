@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:edit, :update, :show]
-  before_action :if_logged_in_redirect, only: [:newindividual, :newentity]
+  before_action :if_logged_in_redirect, only: [:newindividual, :newentity, :usertypes]
   before_action :user_must_be_admin, only: [:index]
   # GET /users
   # GET /users.json
@@ -19,33 +19,78 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/1/edit
-  def edit
-    curr = current_user
-    if curr && curr.admin
-    elsif curr
-      redirect_to curr
-    else
-      redirect_to log_in
-    end
-  end
-
   def new
     @user = User.new
   end
+  ####################### UPDATING INDIVIDUALS #######################
+  def editindividual
+    @user = current_user
+  end
 
-  # POST /signup/individual
-  def createUser(signature, usersName, err)
+  def updateindividual
+    @user = current_user
+    orgType = ""
+    params[:organizationType].each do |key, value|
+      if value != "0" then
+        orgType += " & " + value
+      end
+    end
+    
+    @user.assign_attributes(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: false)
+
+    # if not signatureValid(params[:signature]['sig'], @user.firstName + " " + @user.lastName)
+    #   @users.errors.add(:signature, "must be 'firstName lastName'")
+    #   render 'editindividual'
+    # end
+
+    # if @user.update(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: false)
+    #   redirect_to current_user
+    # else
+    #   if not @user.errors[:organizationType].empty?
+    #     @user.errors.delete(:organizationType)
+    #     @user.errors.add(:Must, "select an individual type.")
+    #   end
+    #   @user.errors.delete(:isEntity)
+    #   render 'editindividual'
+    # end
+    if updateUser(params[:signature]['sig'], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
+      if not @user.errors[:organizationType].empty?
+        @user.errors.delete(:organizationType)
+        @user.errors.add(:Must, "select an individual type.")
+      end
+      # @user.errors.delete(:isEntity)
+      render 'editindividual'
+    end
+  end
+
+  ####################### UPDATING ENTITIES #######################
+  def editentity
+    @user = current_user
+  end
+
+  def updateentity
+    @user = current_user
+  end
+
+  ####################### USER UPDATE HELPER #######################
+  
+  def signatureValid(signature, usersName)
+    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
+    if signature.downcase != usersName.downcase
+      false
+    end
+    true 
+  end
+  def updateUser(signature, usersName, err)
     logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
     if @user.valid?
       if signature.downcase != usersName.downcase
         @user.errors.add(:signature, err)
         true
       else
+        flash[:success] = "Successfully updated user."
         @user.save
-        @user.send_activation_email
-        flash[:info] = "Please check your email to activate your account."
-        redirect_to root_url
+        redirect_to current_user
         false
       end
     else
@@ -56,6 +101,8 @@ class UsersController < ApplicationController
       true
     end
   end
+
+  ####################### CREATING INDIVIDUALS #######################
 
   def newindividual
     @user = User.new
@@ -90,6 +137,8 @@ class UsersController < ApplicationController
     end
   end
 
+  ####################### CREATING ENTITIES #######################
+
   def newentity
     @user = User.new
     organizationType = {}
@@ -123,6 +172,42 @@ class UsersController < ApplicationController
         @user.errors.add(:Company, "birthday must follow the format of YYYY/MM/DD.")
       end
       render 'newentity'
+    end
+  end
+
+  ####################### USER CREATION HELPER #######################
+  
+  def createUser(signature, usersName, err)
+    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
+    if @user.valid?
+      if signature.downcase != usersName.downcase
+        @user.errors.add(:signature, err)
+        true
+      else
+        @user.save
+        @user.send_activation_email
+        flash[:info] = "Please check your email to activate your account."
+        redirect_to root_url
+        false
+      end
+    else
+      @user.save
+      if signature.downcase != usersName.downcase
+        @user.errors.add(:signature, err)
+      end
+      true
+    end
+  end
+
+  ####################### EDITTING #######################
+  # GET /users/1/edit
+  def edit
+    curr = current_user
+    if curr && curr.admin
+    elsif curr
+      redirect_to curr
+    else
+      redirect_to log_in
     end
   end
 
@@ -200,6 +285,11 @@ class UsersController < ApplicationController
         :socialsecurity,
         :equityOwners,
         :entityType)
+    end
+
+    def user_params_update
+      params.require(:user).permit(
+        :citizenship)
     end
 
     def logged_in_user

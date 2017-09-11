@@ -1,0 +1,170 @@
+<!-- 
+  FLIPCOIN TOKEN SALE REGISTRATION
+  August 25, 2017
+-->
+
+<% provide(:title, "Sign Up Entity") %>
+
+<div class="signup">
+<div class="container">
+  <div class="signup-holder" id ="signup-collapse">
+    <div class="signup-intro">
+
+      <h2>FlipCoin Entity Update</h2>
+
+    </div>
+    <%= form_for(@user, url: '/update/entity') do |f| %>
+      <%= render 'shared/error_messages' %>
+      <p class="paragraph important">
+        IMPORTANT! Before leaving any fields blank, please understand <span class="bold">all fields are required</span> (except 'Address Line 2').  If you have any questions regarding the information being asked in the is form, please do not hesitate to contact us (number at the bottom).  Thank you for your patience & cooperation.
+      </p>
+
+      <h4>Entity Information</h4>
+
+      <div class="center-block">
+        <div class="REG input-field">
+          <%= f.text_field :firstName, class: 'form-control validate' %>
+          <%= f.label :firstName, value: 'Name' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.text_field :estimatedContribution, class: 'form-control validate' %>
+          <%= f.label :estimatedContribution, value: 'Planned Contribution (USD)*' %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="REG input-field">
+          <%= f.text_field :email, class: 'form-control validate' %>
+          <%= f.label :email, value: 'Contact Email' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.text_field :phoneNumber, class: 'form-control' %>
+          <%= f.label :phoneNumber, value: 'Phone Number' %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="REG input-field">
+          <%= f.text_field :address1, class: 'form-control validate' %>
+          <%= f.label :address1, value: 'Address Line 1' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.text_field :address2, class: 'form-control' %>
+          <%= f.label :address2, value: 'Address Line 2' %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="REG input-field">
+          <%= f.text_field :city, class: 'form-control validate' %>
+          <%= f.label :city, value: 'City' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.text_field :zipCode, class: 'form-control validate' %>
+          <%= f.label :zipCode, value: 'Postal/Zip Code' %>
+        </div>
+      </div>
+      <div class="center-block">
+        <div class="REG input-field">
+          <%= f.text_field :state, class: 'form-control validate' %>
+          <%= f.label :state, value: 'State/Province' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.text_field :dob, class: "form-control datepicker validate"%>
+          <%= f.label :dob, value: 'Company Birthday' %>
+        </div>
+      </div>
+      <div class="center-block">  
+        <div class="REG input-field">
+          <%= f.password_field :password, class: 'form-control validate' %>
+          <%= f.label :password, value: 'Password' %>
+        </div>
+        <div class="REG input-field">
+          <%= f.password_field :password_confirmation, class: 'form-control validate' %>
+          <%= f.label :password_confirmation, "Confirm Password" %>
+        </div>
+      </div>
+
+      <h4>Legal Information</h4>
+
+      <p class="paragraph important">
+        To be qualified to purchase the Tokens, the Purchaser must either: <br><br>
+        (i) be an Accredited Investor,<br><br>
+        (ii) or have, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment.
+      </p>
+      <p class="paragraph important">
+        Please check the description that applies most closely to this entity:
+      </p>
+      <div class="center-block checkboxes">
+        <%= check_box("organizationType", 1, {id: "organizationType1"}, "A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.") %>
+        <label for="organizationType1">A bank, as defined in Section 3(a)(2) of the Securities Act or any savings and loan association or other institution as defined in Section 3(a)(5)(A) of the Securities Act, whether acting in an individual or a fiduciary capacity.</label>
+        <%= check_box("organizationType", 2, {id: "organizationType2"}, "A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.") %>
+        <label for="organizationType2">A broker or dealer registered under Section 15 of the Securities Exchange Act of 1934, as amended.</label>
+        <%= check_box("organizationType", 3, {id: "organizationType3"}, "An insurance company, as defined in Section 2(13) of the Securities Act.") %>
+        <label for="organizationType3">An insurance company, as defined in Section 2(13) of the Securities Act.</label>
+        <%= check_box("organizationType", 4, {id: "organizationType4"}, "An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.") %>
+        <label for="organizationType4">An investment company registered under the Investment Company Act of 1940 or a business development company, as defined in Section 2(a)(48) of that act.</label>
+        <%= check_box("organizationType", 5, {id: "organizationType5"}, "A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.") %>
+        <label for="organizationType5">A Small Business Investment Company licensed by the U.S. Small Business Administration under Section 301(c) or (d) of the Small Business Investment Act of 1958.</label>
+        <%= check_box("organizationType", 6, {id: "organizationType6"}, "A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.") %>
+        <label for="organizationType6">A plan established and maintained by a state, its political subdivisions or any agency or instrumentality of a state or its political subdivisions for the benefit of its employees, if the plan has total assets in excess of $5 million.</label>
+        <%= check_box("organizationType", 7, {id: "organizationType7"}, "a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.") %>
+        <label for="organizationType7">a.  An employee benefit plan within the meaning of Title I of the Employee Retirement Income Security Act of 1974, if the investment decision is being made by a plan fiduciary, as defined in Section 3(21) of such act, and the plan fiduciary is either a bank, an insurance company, or a registered investment adviser, or if the employee benefit plan has total assets in excess of $5 million.</label>
+        <%= check_box("organizationType", 8, {id: "organizationType8"}, "A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.") %>
+        <label for="organizationType8">A private business development company, as defined in Section 202(a)(22) of the Investment Advisers Act of 1940.</label>
+        <%= check_box("organizationType", 9, {id: "organizationType9"}, "A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.") %>
+        <label for="organizationType9">A corporation, Massachusetts or similar business trust, or partnership, or an organization described in Section 501(c)(3) of the Internal Revenue Code of 1986, as amended, that was not formed for the specific purpose of acquiring the Securities, and that has total assets in excess of $5 million.</label>
+        <%= check_box("organizationType", 10, {id: "organizationType10"}, "A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.") %>
+        <label for="organizationType10">A trust with total assets in excess of $5 million not formed for the specific purpose of acquiring the Securities, whose purchase is directed by a sophisticated person as described in Rule 506(b)(2)(ii) under the Securities Act.</label>
+        <%= check_box("organizationType", 11, {id: "organizationType11"}, "An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.") %>
+        <label for="organizationType11">An entity in which all of the equity owners are accredited investors and meet the criteria listed in Part I, Section 6 of this Questionnaire.</label>
+        <%= check_box("organizationType", 12, {id: "organizationType12"}, "The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.") %>
+        <label for="organizationType12">The undersigned entity is qualified to purchase the Tokens because it has, and if applicable, its officers, employees, directors or equity owners have, either alone or with its purchaser representative or representatives, such knowledge and experience in financial and business matters that it is capable of evaluating the merits and risks of such investment, as discussed in Section 3(a) below.</label>
+      </div>
+
+      <h4 style="margin-bottom:40px;">Terms of Agreement</h4>
+
+      <div class="center-block important">
+        <div class="input-field">
+          <label for="textarea1" style="margin-top:8px;">
+          The undersigned entity represents that...
+          </label>
+          <textarea id="textarea1" style="resize:none" readonly rows="20" cols="40" class="materialize-textarea" style="text-align:left;">
+            a.  The entity has, and if applicable, its officers, employees, directors or equity owners have, sufficient knowledge and experience in similar investments to evaluate the merits and risks of an investment in cryptocurrency and blockchain technology, or the entity has retained an attorney, accountant, financial advisor or consultant as its purchaser representative.
+
+            b.  and, if applicable, my purchaser representative, have received the white paper relating to this offering (the "White Paper"); and I understand the White Paper and the risks involved in this offering. I and have been given the opportunity to ask questions and obtain material and relevant information from the Issuer enabling me to make an informed investment decision. All data that I have requested, and that is important for my investment decision, has been furnished to me.
+
+            c.  Any Tokens the entity may acquire will be for its own account for investment and not with any view to the distribution thereof, and it will not sell, assign, transfer or otherwise dispose of any of the Tokens, or any interest therein, in violation of the Securities Act or any applicable state securities law.
+
+            d.  The entity understands that (i) any Tokens it may acquire will not be registered under the Securities Act or any applicable state securities law and may not be sold or otherwise disposed of unless it is registered or sold or otherwise disposed of in a transaction that is exempt from such registration, and (ii) the certificates representing the Tokens will bear appropriate legends restricting the transferability thereof.
+
+            e.  The entity understands that the Issuer will rely upon the completeness and accuracy of the Purchaser's responses to the questions in this Questionnaire in establishing that the contemplated transactions are exempt from the Securities Act, and hereby affirms that all such responses are accurate and complete.  The entity will notify the Issuer immediately of any changes in any of such information occurring prior to the acceptance of its subscription.
+          </textarea>
+        </div>
+        <div class="inline">
+          <%= link_to "CoinFlipLegal_Entity.pdf" %>
+        </div>
+        <div class="inline">
+          <%= link_to "Whitepaper.pdf" %>
+        </div>
+      </div>
+
+      <h4>Signature & Submission</h4>
+
+      <div class="center-block important">
+        <p class="paragraph important">By signing this form, you are certifying that all of the information provided is true to the best of your knowledge, and that you have read the most recent White Paper and the attached legal document (above). Please sign the full name of your company.</p>
+        <%= text_field(:signature, 'sig', placeholder: "John Doe", class: 'form-control validate') %>
+      </div>
+      <div class="center-block important">
+        <div class="REGsubmit kamikaze_btn">
+          <%= f.submit "Submit", class: "btn" %>
+        </div>
+      </div>
+      <p class="paragraph center">
+        Questions?<br>
+        Give us a call! (224)-688-9977
+      </p>
+      <p class="pp-description shrink">
+        *: please note this number is for internal feedback & is not legally binding in any way.
+      </p>
+    <% end %>
+  </div>
+</div>
+</div>
