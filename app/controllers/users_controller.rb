@@ -38,27 +38,13 @@ class UsersController < ApplicationController
     
     @user.assign_attributes(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: false)
 
-    # if not signatureValid(params[:signature]['sig'], @user.firstName + " " + @user.lastName)
-    #   @users.errors.add(:signature, "must be 'firstName lastName'")
-    #   render 'editindividual'
-    # end
-
-    # if @user.update(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: false)
-    #   redirect_to current_user
-    # else
-    #   if not @user.errors[:organizationType].empty?
-    #     @user.errors.delete(:organizationType)
-    #     @user.errors.add(:Must, "select an individual type.")
-    #   end
-    #   @user.errors.delete(:isEntity)
-    #   render 'editindividual'
-    # end
-    if updateUser(params[:signature]['sig'], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
+    if @user.save
+      redirect_to current_user
+    else
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
       end
-      # @user.errors.delete(:isEntity)
       render 'editindividual'
     end
   end
@@ -70,6 +56,24 @@ class UsersController < ApplicationController
 
   def updateentity
     @user = current_user
+    orgType = ""
+    params[:organizationType].each do |key, value|
+      if value != "0" then
+        orgType += " & " + value
+      end
+    end
+    
+    @user.assign_attributes(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: true)
+
+    if @user.save
+      redirect_to current_user
+    else
+      if not @user.errors[:organizationType].empty?
+        @user.errors.delete(:organizationType)
+        @user.errors.add(:Must, "select an individual type.")
+      end
+      render 'editindividual'
+    end
   end
 
   ####################### USER UPDATE HELPER #######################
