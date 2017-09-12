@@ -39,16 +39,23 @@ class UsersController < ApplicationController
     
     @user.assign_attributes(citizenship: user_params[:citizenship], organizationType: orgType, isEntity: false)
 
-    if @user.save
-      redirect_to current_user
-    else
+    if updateUser(params[:signature][:sig], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
       end
-      flash[:info] = "User was successfully updated."
       render 'editindividual'
     end
+    # if @user.save
+    #   redirect_to current_user
+    # else
+    #   if not @user.errors[:organizationType].empty?
+    #     @user.errors.delete(:organizationType)
+    #     @user.errors.add(:Must, "select an individual type.")
+    #   end
+    #   flash[:info] = "User was successfully updated."
+    #   render 'editindividual'
+    # end
   end
 
   ####################### UPDATING ENTITIES #######################
@@ -87,31 +94,35 @@ class UsersController < ApplicationController
   ####################### USER UPDATE HELPER #######################
   
   def signatureValid(signature, usersName)
-    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
-    if signature.downcase != usersName.downcase
-      false
+    logger.debug "User params: #{usersName.downcase} #{signature.downcase}"
+    logger.debug "signatureValid: #{usersName.downcase == signature.downcase}"
+    if signature.downcase == usersName.downcase
+      ret = true
+    else
+      ret = false
     end
-    true 
+    ret
   end
+
   def updateUser(signature, usersName, err)
-    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
     if @user.valid?
       if signature.downcase != usersName.downcase
         @user.errors.add(:signature, err)
-        true
+        ret = true
       else
         flash[:success] = "Successfully updated user."
         @user.save
         redirect_to current_user
-        false
+        ret = false
       end
     else
       @user.save
       if signature.downcase != usersName.downcase
         @user.errors.add(:signature, err)
       end
-      true
+      ret = true
     end
+    ret
   end
 
   ####################### CREATING INDIVIDUALS #######################
@@ -132,11 +143,7 @@ class UsersController < ApplicationController
       end
     end
     
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = "Please check your email to activate your account."
-      redirect_to root_url
-    else
+    if createUser(params[:signature][:sig], @user.firstName + " " + @user.lastName, "must be 'firstName lastName'")
       if not @user.errors[:organizationType].empty?
         @user.errors.delete(:organizationType)
         @user.errors.add(:Must, "select an individual type.")
@@ -190,25 +197,28 @@ class UsersController < ApplicationController
   ####################### USER CREATION HELPER #######################
   
   def createUser(signature, usersName, err)
-    logger.debug "User params: #{@user.firstName} #{@user.lastName} #{params[:signature]}"
+    logger.debug "User params: #{usersName} #{signature}"
     if @user.valid?
-      if signature.downcase != usersName.downcase
+      if !signatureValid(signature, usersName)
         @user.errors.add(:signature, err)
-        true
+        ret = true
       else
         @user.save
         @user.send_activation_email
         flash[:info] = "Please check your email to activate your account."
         redirect_to root_url
-        false
+        ret = false
       end
     else
       @user.save
-      if signature.downcase != usersName.downcase
+      logger.debug "outs #{signatureValid(signature, usersName)}"
+      if !signatureValid(signature, usersName)
         @user.errors.add(:signature, err)
+        logger.debug "here"
       end
-      true
+      ret = true
     end
+    ret
   end
 
   ####################### EDITTING #######################
@@ -309,7 +319,7 @@ class UsersController < ApplicationController
     def logged_in_user
       if logged_in?
         if current_user.isEntity == nil
-          flash[:info] = "In order to comply with Know Your Customer Regulation, please update your information."
+          flash[:info] = "In order to comply with Know Your Customer Regulations, please update your information."
           redirect_to "/update"
         end
       else
