@@ -309,7 +309,7 @@ class UsersController < ApplicationController
     def logged_in_user
       if logged_in?
         if current_user.isEntity == nil
-          flash[:info] = "In order to comply with Know Your Customers Regulation, please update your information."
+          flash[:info] = "In order to comply with Know Your Customer Regulation, please update your information."
           redirect_to "/update"
         end
       else
