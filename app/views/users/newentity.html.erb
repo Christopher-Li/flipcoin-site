@@ -74,6 +74,12 @@
           <%= f.label :dob, value: 'Company Birthday (YYYY/MM/DD)' %>
         </div>
       </div>
+      <div class="center-block">
+        <div class="REG pass input-field">
+          <%= f.text_field :ethAdd, class: 'form-control validate', placeholder: '0x...' %>
+          <%= f.label :ethAdd, value: 'Ethereum Address' %>
+        </div>
+      </div>
       <div class="center-block">  
         <div class="REG input-field">
           <%= f.password_field :password, class: 'form-control validate' %>

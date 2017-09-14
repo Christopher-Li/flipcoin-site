@@ -86,6 +86,12 @@
         </div>
       </div>
       <div class="center-block">
+        <div class="REG pass input-field">
+          <%= f.text_field :ethAdd, class: 'form-control validate', placeholder: '0x...' %>
+          <%= f.label :ethAdd, value: 'Ethereum Address' %>
+        </div>
+      </div>
+      <div class="center-block">
         <div style="display:none;" class="REG confirm input-field">
           <%= f.text_field :socialSecurity, class: 'form-control validate' %>
             <%= f.label :socialSecurity, value: 'Social Security or Taxpayer No (if purchasing over $3000 USD or applicable)' %>
