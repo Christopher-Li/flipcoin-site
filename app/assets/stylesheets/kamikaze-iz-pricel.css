@@ -518,6 +518,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 #textarea1 {
 	overflow-y: scroll;
 	height: 200px;
+	outline: 1px solid #ccc;
+	padding: 3px 10px;
+	margin-left: -10px;
 }
 
 form .REG label {
