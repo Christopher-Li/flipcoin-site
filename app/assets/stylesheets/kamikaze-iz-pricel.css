@@ -24,6 +24,19 @@ hr {
 label, input {
 	margin-bottom: 10px !important;
 }
+.nf {
+	float: none !important;
+	margin: 0 auto;
+}
+.dark-orange {
+	background: #9E6D1D;
+}
+.flip-orange {
+	background: #DFA94F;
+}
+.org {
+	color: #DFA94F !important;
+}
 .logo {
 	padding: 10px !important;
 }
@@ -473,7 +486,7 @@ nav .navbar-header a img { margin: auto 15px !important; }
 .signup .signup-intro {
 
 }
-span.bold {
+.bold, span.bold {
 	color: #9E6D1D;
 }
 .signup .center-block.checkboxes {
@@ -585,11 +598,14 @@ form .REG label {
 	padding-bottom: 40px !important;
 	background: #F9F9F9;
 	border: solid 2px #F1F1F1;
+	margin-top: 40px;
  }
  .profile-form .greeting {
  	color: white !important;
  	margin-top: 0 !important;
  	margin-bottom: 25px !important;
+ 	padding: 10px;
+ 	font-size: 1.5em;
  	background: #DFA94F;
  	border: 1px solid #DFA94F;
  }
@@ -599,13 +615,31 @@ form .REG label {
  	margin-top: -10px;
  	margin-bottom: 25px;
  }
+ .profile-form h5 {
+ 	width: 93%;
+ 	margin: 0 auto;
+ 	margin-bottom: 40px;
+ 	text-align: center;
+ 	font-size: 2.65em;
+ }
+ .profile-form h6 {
+ 	width: 90%;
+	font-size: 1.9em;
+	margin: 30px auto;
+	text-align: center;
+	margin-bottom: 50px;
+ }
  .profile-form p {
- 	width: 80%;
+ 	width: 100%;
  	font-size: 1.2em;
  	margin: 8px auto;
  }
  .profile-form p i {
  	color: #DFA94F;
+ }
+
+ p.note {
+ 	font-size: 0.9em !important;
  }
  #user-edit {
  	display: block;
@@ -631,6 +665,40 @@ form .REG label {
  }
  .caddr > .paragraph > span {
  	color: #f5f5f5;
+ }
+
+ #usr-msg {
+ 	width: 100%;
+	padding: 12px;
+    padding-left: 12px;
+	padding-left: 20px;
+	/*background: #DFA94F;*/
+	margin-top: 0;
+	margin-bottom: 50px;
+	font-size: 1.2em !important;
+	color: #f5f5f5;
+ }
+
+
+
+
+ /* MATERIALIZE OVERRIDE */
+
+ .card .card-content p {
+ 	margin: 0 auto;
+ }
+
+ .profile-form .card .tab a {
+ 	color: rgba(223,169,79,0.7);
+ }
+ .profile-form .card .tab a.active {
+ 	color: #DFA94F;
+ }
+ .profile-form .card .tabs .indicator {
+ 	background-color: #DFA94F !important;
+ }
+ .profile-form .card * {
+ 	outline: none;
  }
 
 
@@ -774,11 +842,22 @@ and (min-width : 768px) {
 	.profile-form {
 		margin-top: 40px;
 	}
-	.profile-form p {
-		font-size: 1.4em !important;
+	.profile-form h5 {
+		font-size: 3em;
 	}
+	.profile-form h6 {
+		font-size: 2.1em;
+	}
+	.profile-form p.lg {
+		font-size: 1.5em !important;
+	}
+	
+	.profile-form .paragraph {
+		width: 70%;
+	}
+
 	.paragraph.announcement {
-		width: 430px;
+		width: 540px;
 		margin-top: 40px;
 		font-size: 1.6em !important;
 		color: #1a1a1a;
@@ -800,6 +879,9 @@ and (min-width : 768px) {
 	.signup-holder h4 {
 		margin-left: 50px;
 	}
+	p.note {
+ 		font-size: 0.9em !important;
+ 	}
 }
 
 
