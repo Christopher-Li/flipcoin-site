@@ -234,6 +234,9 @@ nav .navbar-header a img { margin: auto 15px !important; }
 	margin: 0 auto;
 	margin-bottom: 20px;
 }
+#countdown-container p {
+	font-size: 1.2em !important;
+}
 #ctdn-label { 
 	padding-bottom: 10px; 
 }
@@ -761,7 +764,7 @@ and (min-width : 768px) {
 		height: 95%; 
 	}
 	.full-page-banner > .introduction-content > .container { 
-		padding-top: 50px !important; 
+		padding-top: 20px !important; 
 	}
 	nav .navbar-toggle.collapsed i { 
 		display: none; 
@@ -781,6 +784,9 @@ and (min-width : 768px) {
 	#countdown-container { 
 		width: 491px; 
 	}
+	#countdown-container p {
+	font-size: 1.45em !important;
+}
 	#countdown,
 	#ctdn-label { 
 		display: inline-block; 
