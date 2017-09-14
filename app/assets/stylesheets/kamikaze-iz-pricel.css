@@ -842,6 +842,10 @@ and (min-width : 768px) {
 	.profile-form {
 		margin-top: 40px;
 	}
+	.profile-form .greeting {
+		font-size: 2.3em !important;
+		padding: 7px;
+	}
 	.profile-form h5 {
 		font-size: 3em;
 	}
