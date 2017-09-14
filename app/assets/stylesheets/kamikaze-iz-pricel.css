@@ -39,6 +39,9 @@ label, input {
 .paragraph a {
 	color: #DFA94F !important;
 }
+.paragraph span.lg {
+	font-size: 1.3em !important;
+}
 .paragraph.center { 
 	text-align: center; 
 	padding-left: 0 !important;
@@ -576,7 +579,7 @@ form .REG label {
  **********************************************************************
  **********************************************************************/
  .profile-form {
- 	max-width: 560px;
+ 	max-width: 800px;
 	text-align: center;
 	padding: 0 !important;
 	padding-bottom: 40px !important;
@@ -598,18 +601,36 @@ form .REG label {
  }
  .profile-form p {
  	width: 80%;
- 	font-size: 1.1em;
+ 	font-size: 1.2em;
+ 	margin: 8px auto;
  }
  .profile-form p i {
  	color: #DFA94F;
  }
  #user-edit {
  	display: block;
- 	margin: 100px auto;
+ 	margin: 34px auto;
  }
  #edit-ctrls {
  	text-align: center;
 	margin-bottom: 60px;
+ }
+ .caddr {
+ 	width: 90%;
+ 	margin: 40px auto;
+ 	padding: 10px;
+	background: #DFA94F;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+ }
+ .caddr > .paragraph {
+ 	width: 100% !important;
+ 	overflow-x: scroll;
+ 	font-size: 1.1em !important;
+ }
+ .caddr > .paragraph > span {
+ 	color: #f5f5f5;
  }
 
 
@@ -653,7 +674,7 @@ and (min-width: 400px) {
 @media only screen 
 and (min-width : 768px) {
 	.paragraph {
-		font-size: 1.2em !important;
+		font-size: 1.2em;
 		line-height: 1.5em !important;
 		padding-left: 55px !important;
 	}
@@ -754,7 +775,19 @@ and (min-width : 768px) {
 		margin-top: 40px;
 	}
 	.profile-form p {
-		font-size: 1.3em;
+		font-size: 1.4em !important;
+	}
+	.paragraph.announcement {
+		width: 430px;
+		margin-top: 40px;
+		font-size: 1.6em !important;
+		color: #1a1a1a;
+	}
+	.caddr {
+		width: 78%;
+	}
+	.caddr > .paragraph {
+		font-size: 1.2em !important;
 	}
 
 	.signup .paragraph.important,
