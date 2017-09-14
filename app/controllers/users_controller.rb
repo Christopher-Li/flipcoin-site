@@ -283,6 +283,7 @@ class UsersController < ApplicationController
         :zipCode,
         :dob,
         :citizenship,
+        :ethAdd,
         :socialsecurity,
         :equityOwners,
         :entityType)
@@ -304,6 +305,7 @@ class UsersController < ApplicationController
         :zipCode,
         :dob,
         :citizenship,
+        :ethAdd,
         :socialsecurity,
         :equityOwners,
         :entityType)
