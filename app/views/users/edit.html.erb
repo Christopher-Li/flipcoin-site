@@ -7,66 +7,79 @@
 
 <div class="signup">
 <div class="container">
-	<div class="signup-holder profile-form">
-		<h2 class="greeting">Edit your Profile</h2>
+	<div class="signup-holder" id ="signup-collapse">
+    <div class="signup-intro">
+      <h2 class="greeting">Edit your Profile</h2>
+    </div>
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
 				<div class="center-block">
-					<div class="REG fname">
-						<%= f.text_field :firstName, class: 'form-control', placeholder: "John" %>
-						<%= f.label :firstName, value: 'First Name *' %>
-					</div>
-					<div class="REG lname">
-						<%= f.text_field :lastName, class: 'form-control', placeholder: "Doe" %>
-						<%= f.label :lastName, value: 'Last Name *' %>
-					</div>
+					<% if @user.isEntity %>
+						<div class="REG input-field">
+							<%= f.text_field :firstName, class: 'form-control validate' %>
+          		<%= f.label :firstName, value: 'Name' %>
+						</div>
+					<% else %>
+						<div class="REG input-field">
+							<%= f.text_field :firstName, class: 'form-control validate' %>
+							<%= f.label :firstName, value: 'First Name' %>
+						</div>
+						<div class="REG input-field">
+							<%= f.text_field :lastName, class: 'form-control validate' %>
+							<%= f.label :lastName, value: 'Last Name' %>
+						</div>
+					<% end %>
 				</div>
 				<div class="center-block">
-					<div class="REG email">
-						<%= f.text_field :email, class: 'form-control', placeholder: "johndoe123@example.com" %>
-						<%= f.label :email, value: 'Email *' %>
+					<div class="REG input-field">
+						<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
+						<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD)' %>
 					</div>
-					<div class="REG phone">
+					<div class="REG input-field">
 						<%= f.text_field :phoneNumber, class: 'form-control', placeholder: "1-888-222-6666" %>
 						<%= f.label :phoneNumber, value: 'Phone Number' %>
 					</div>
 				</div>
 					<!-- DELETED ADDRESS INPUTS -->
 				<div class="center-block">
-					<div class="REG add1">
+					<div class="REG input-field">
 						<%= f.text_field :address1, class: 'form-control' %>
-						<%= f.label :address1, value: 'Address Line 1 *' %>
+						<%= f.label :address1, value: 'Address Line 1' %>
 					</div>
-					<div class="REG add2">
+					<div class="REG input-field">
 						<%= f.text_field :address2, class: 'form-control' %>
 						<%= f.label :address2, value: 'Address Line 2' %>
 					</div>
 				</div>
 				<div class="center-block">
-					<div class="REG city">
+					<div class="REG input-field">
 						<%= f.text_field :city, class: 'form-control' %>
-						<%= f.label :city, value: 'City *' %>
+						<%= f.label :city, value: 'City' %>
 					</div>
-					<div class="REG zip">
+					<div class="REG input-field">
 						<%= f.text_field :zipCode, class: 'form-control' %>
-						<%= f.label :zipCode, value: 'Postal / Zip Code *' %>
+						<%= f.label :zipCode, value: 'Postal / Zip Code' %>
 					</div>
 				</div>
 				<div class="center-block">
-					<div class="REG state">
+					<div class="REG input-field">
 						<%= f.text_field :state, class: 'form-control' %>
-						<%= f.label :state, value: 'State/Province *' %>
+						<%= f.label :state, value: 'State/Province' %>
 					</div>
-					<div class="REG dob">
-						<%= f.date_field :dob, class: 'form-control' %>	
-						<%= f.label :dob, value: 'Date of Birth *' %>
+					<div class="REG input-field">
+						<%= f.text_field :ethAdd, class: 'form-control', placeholder: '0x...' %>
+						<%= f.label :ethAdd, value: 'Ethereum Address' %>
 					</div>
+				</div>
+				<div class="center-block">
+					<% if !@user.isEntity %>
+						<div class="REG input-field">
+							<%= f.text_field :citizenship, class: 'form-control validate' %>
+          		<%= f.label :citizenship, value: 'Citizenship' %>
+						</div>
+					<% end %>
 				</div>
 		  	<div class="center-block">
-		  		<div class="REG estimate">
-					<%= f.text_field :estimatedContribution, class: 'form-control', placeholder: "5000" %>
-					<%= f.label :estimatedContribution, value: 'Estimated Contribution (USD) *' %>
-				</div>
 				<div class="REGsubmit">
 	    			<%= f.submit "Save", class: "btn" %>
 	    		</div>

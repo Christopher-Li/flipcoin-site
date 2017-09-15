@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   # temporary
-  get '/users/:id/edit', to: 'static_pages#404'
   get '/users/new', to: 'users#usertypes'
   
   # Updating existing users
