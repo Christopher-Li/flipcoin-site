@@ -1,0 +1,20 @@
+<!--
+  FLIPCOIN MEMBER LOGIN
+  August 25, 2017
+  -->
+
+<div class="login">
+  <div class="container">
+    <div class="login-holder one-edge-shadow">
+    <h2>Forgot password</h2>
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+
+      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :email %>
+      
+      <div class="kamikaze_btn">
+        <%= f.submit "Submit", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

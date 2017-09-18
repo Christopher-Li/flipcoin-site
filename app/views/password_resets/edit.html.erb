@@ -1,0 +1,25 @@
+<!--
+  FLIPCOIN MEMBER LOGIN
+  August 25, 2017
+  -->
+<% provide(:title, 'Reset password') %>
+<div class="login">
+  <div class="container">
+    <div class="login-holder one-edge-shadow">
+    <h2>Reset password</h2>
+    <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+      
+      <%= hidden_field_tag :email, @user.email %>
+
+      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :password %>
+
+      <%= f.password_field :password_confimation, class: 'form-control' %>
+      <%= f.label :password_confimation %>
+      
+      <div class="kamikaze_btn">
+        <%= f.submit "Update Password", class: "btn" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -18,9 +18,12 @@
 
         <%= f.email_field :email, class: 'form-control' %>
         <%= f.label :email %>
-
+        <p class="pp-description">
+          <%= link_to "(forgot password)", new_password_reset_path %>
+        </p>
         <%= f.password_field :password, class: 'form-control' %>
         <%= f.label :password %>
+
         <div class="kamikaze_btn">
           <%= f.submit "Log in", class: "btn" %>
         </div>

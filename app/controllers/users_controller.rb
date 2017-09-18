@@ -239,7 +239,6 @@ class UsersController < ApplicationController
     if @user.update(user_params_wa_np)
       flash[:info] = "User was successfully updated."
       redirect_to @user
-      # format.json { render :show, status: :ok, location: @user }
     else
       respond_to do |format|
         format.html { render :edit }
