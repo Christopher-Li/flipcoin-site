@@ -8,6 +8,7 @@
     <div class="login-holder one-edge-shadow">
     <h2>Reset password</h2>
     <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+      <%= render 'shared/error_messages' %>
       
       <%= hidden_field_tag :email, @user.email %>
 

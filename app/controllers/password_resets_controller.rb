@@ -21,6 +21,7 @@ class PasswordResetsController < ApplicationController
 
 
   def edit
+    logger.debug params
   end
 
   def update
@@ -47,7 +48,17 @@ class PasswordResetsController < ApplicationController
 
     # Confirms a valid user.
     def valid_user
-      unless (@user && @user.activated? && @user.authenticated?(:reset, params[:id]))
+      logger.debug @user.activated?.to_s
+      logger.debug "here"
+      if (@user == nil || !@user.authenticated?(:reset, params[:id]))
+        flash[:danger] = "Invalid link"
+      elsif (!@user.activated?)
+        flash[:danger] = "User's email has not been verified."
+      elsif (!@user.valid?)
+        flash[:danger] = "There is a problem with your account. Please contact us at info@coinflip.tech to reset this account."
+      end
+
+      unless (@user && @user.activated? && @user.authenticated?(:reset, params[:id]) && @user.valid?)
         redirect_to root_url
       end
     end
@@ -59,5 +70,4 @@ class PasswordResetsController < ApplicationController
         redirect_to new_password_reset_url
       end
     end
-  end
 end
